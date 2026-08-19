@@ -1,0 +1,251 @@
+/* ==========================================================================
+   FADED TIMES BARBERSHOP (@fadedtimeslv) - CUSTOM STYLES
+   Las Vegas, NV • 3868 W Sahara Ave
+   ========================================================================== */
+
+:root {
+  --bg-primary: #0a0c10;
+  --bg-secondary: #12151c;
+  --bg-card: #171b24;
+  --bg-card-hover: #1f2430;
+  --gold-primary: #d4af37;
+  --gold-light: #f3e5ab;
+  --gold-dark: #aa820a;
+  --gold-glow: rgba(212, 175, 55, 0.35);
+  --gold-gradient: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa820a 100%);
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+  --border-gold: rgba(212, 175, 55, 0.22);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --accent-red: #ef4444;
+  --accent-green: #10b981;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #272d3b;
+  border-radius: 5px;
+  border: 2px solid var(--bg-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Base & Typography */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+.font-serif-luxury {
+  font-family: 'Cinzel', serif;
+}
+
+.font-heading {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Gold Text Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fce8a6 0%, #d4af37 50%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(90deg, #d4af37 0%, #fff2b2 50%, #d4af37 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Button & Element Glow */
+.gold-glow {
+  box-shadow: 0 0 25px var(--gold-glow);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.45);
+  transform: translateY(-2px);
+}
+
+.card-luxury {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-luxury:hover {
+  background-color: var(--bg-card-hover);
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+/* Barber Pole Subtle Animation Effect */
+.barber-pole-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #ef4444,
+    #ef4444 8px,
+    #ffffff 8px,
+    #ffffff 16px,
+    #2563eb 16px,
+    #2563eb 24px,
+    #ffffff 24px,
+    #ffffff 32px
+  );
+  animation: barberPole 2s linear infinite;
+  background-size: 45px 45px;
+}
+
+@keyframes barberPole {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 45px 0;
+  }
+}
+
+/* Glassmorphic Navbar */
+.glass-nav {
+  background: rgba(10, 12, 16, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+/* Hero Overlay Gradients */
+.hero-gradient-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 12, 16, 0.75) 0%,
+    rgba(10, 12, 16, 0.88) 60%,
+    #0a0c10 100%
+  );
+}
+
+/* Pulsing Status Dot */
+.pulse-green {
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.pulse-gold {
+  box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+  animation: pulseGold 2s infinite;
+}
+
+@keyframes pulseGold {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+  }
+}
+
+/* Lookbook Instagram Card Hover Overlay */
+.ig-card-overlay {
+  opacity: 0;
+  transition: all 0.3s ease;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.88) 100%);
+}
+
+.group:hover .ig-card-overlay {
+  opacity: 1;
+}
+
+/* Custom Modal Animation */
+.modal-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content-box {
+  transform: scale(0.95) translateY(15px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-content-box {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Badge Styling */
+.badge-gold {
+  background: rgba(212, 175, 55, 0.12);
+  color: #f3e5ab;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* FAQ Accordion Styling */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-item.active .faq-content {
+  max-height: 400px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Mobile Sticky Bottom Bar */
+.mobile-bottom-bar {
+  padding-bottom: env(safe-area-inset-bottom, 10px);
+}
+
+/* Neon Glow Effect for Logos/Headings */
+.neon-glow-gold {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(212, 175, 55, 0.3);
+}
