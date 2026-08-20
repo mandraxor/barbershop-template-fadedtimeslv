@@ -278,14 +278,14 @@ function openBookingModal(preselectedServiceKey = null, preselectedBarber = null
   updateSelectedServices();
   goToStep(1);
   modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add('overflow-hidden');
 }
 
 function closeBookingModal() {
   const modal = document.getElementById('booking-modal');
   if (modal) {
     modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
+    document.body.classList.remove('overflow-hidden');
   }
 }
 
@@ -300,17 +300,23 @@ function goToStep(stepNumber) {
   const confirmationScreen = document.getElementById('booking-confirmation');
   if (confirmationScreen) confirmationScreen.classList.add('hidden');
 
+  // Scroll modal body to top smoothly on mobile
+  const modalScrollBody = document.querySelector('.modal-content-box .overflow-y-auto');
+  if (modalScrollBody) {
+    modalScrollBody.scrollTop = 0;
+  }
+
   // Update progress indicators
   const stepIndicators = document.querySelectorAll('.step-indicator');
   stepIndicators.forEach((ind, idx) => {
     if (idx + 1 < stepNumber) {
-      ind.className = 'step-indicator flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500 text-white font-bold text-sm';
+      ind.className = 'step-indicator flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-emerald-500 text-white font-bold text-xs sm:text-sm';
       ind.innerHTML = '<i class="fa-solid fa-check"></i>';
     } else if (idx + 1 === stepNumber) {
-      ind.className = 'step-indicator flex items-center justify-center w-8 h-8 rounded-full bg-amber-400 text-black font-bold text-sm shadow-lg shadow-amber-400/30';
+      ind.className = 'step-indicator flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-amber-400 text-black font-bold text-xs sm:text-sm shadow-lg shadow-amber-400/30';
       ind.innerHTML = `${idx + 1}`;
     } else {
-      ind.className = 'step-indicator flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 text-gray-400 font-semibold text-sm';
+      ind.className = 'step-indicator flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gray-800 text-gray-400 font-semibold text-xs sm:text-sm';
       ind.innerHTML = `${idx + 1}`;
     }
   });
@@ -713,23 +719,62 @@ function initMobileMenu() {
   const mobileDrawer = document.getElementById('mobile-drawer');
   const closeDrawer = document.getElementById('close-mobile-drawer');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const mobileBookingTriggers = mobileDrawer ? mobileDrawer.querySelectorAll('.open-booking-trigger') : [];
 
-  if (menuToggle && mobileDrawer) {
-    menuToggle.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('hidden');
+  function openMobileNav() {
+    if (!mobileDrawer) return;
+    mobileDrawer.classList.remove('hidden');
+    // Force reflow for smooth transition
+    void mobileDrawer.offsetWidth;
+    mobileDrawer.classList.add('open');
+    document.body.classList.add('overflow-hidden');
+  }
+
+  function closeMobileNav() {
+    if (!mobileDrawer) return;
+    mobileDrawer.classList.remove('open');
+    document.body.classList.remove('overflow-hidden');
+    setTimeout(() => {
+      if (!mobileDrawer.classList.contains('open')) {
+        mobileDrawer.classList.add('hidden');
+      }
+    }, 300);
+  }
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (mobileDrawer.classList.contains('open')) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
   }
 
-  if (closeDrawer && mobileDrawer) {
-    closeDrawer.addEventListener('click', () => {
-      mobileDrawer.classList.add('hidden');
-    });
+  if (closeDrawer) {
+    closeDrawer.addEventListener('click', closeMobileNav);
   }
 
   mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (mobileDrawer) mobileDrawer.classList.add('hidden');
-    });
+    link.addEventListener('click', closeMobileNav);
+  });
+
+  mobileBookingTriggers.forEach(btn => {
+    btn.addEventListener('click', closeMobileNav);
+  });
+
+  // Close on backdrop tap or Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMobileNav();
+      closeBookingModal();
+      const lightbox = document.getElementById('lightbox-modal');
+      if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
   });
 }
 
@@ -773,7 +818,7 @@ function initSmoothScroll() {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        const headerOffset = 80;
+        const headerOffset = window.innerWidth < 768 ? 65 : 85;
         const elementPosition = target.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -794,16 +839,16 @@ function showToast(message, type = 'info') {
   if (!toastContainer) {
     toastContainer = document.createElement('div');
     toastContainer.id = 'toast-container';
-    toastContainer.className = 'fixed bottom-20 right-5 z-50 flex flex-col space-y-2 pointer-events-none max-w-sm w-full';
+    toastContainer.className = 'fixed bottom-24 sm:bottom-6 right-4 sm:right-6 left-4 sm:left-auto z-50 flex flex-col space-y-2 pointer-events-none sm:max-w-sm';
     document.body.appendChild(toastContainer);
   }
 
   const toast = document.createElement('div');
   const bgColors = {
-    success: 'bg-emerald-950 border-emerald-500/60 text-emerald-200',
-    error: 'bg-red-950 border-red-500/60 text-red-200',
-    warning: 'bg-amber-950 border-amber-500/60 text-amber-200',
-    info: 'bg-gray-900 border-amber-400/40 text-gray-200'
+    success: 'bg-emerald-950/95 border-emerald-500/60 text-emerald-200 backdrop-blur-md',
+    error: 'bg-red-950/95 border-red-500/60 text-red-200 backdrop-blur-md',
+    warning: 'bg-amber-950/95 border-amber-500/60 text-amber-200 backdrop-blur-md',
+    info: 'bg-gray-900/95 border-amber-400/40 text-gray-200 backdrop-blur-md'
   };
 
   const icons = {
@@ -813,10 +858,10 @@ function showToast(message, type = 'info') {
     info: '<i class="fa-solid fa-circle-info text-amber-400 text-lg mr-3"></i>'
   };
 
-  toast.className = `p-4 rounded-xl border shadow-2xl flex items-center transition-all duration-300 pointer-events-auto transform translate-y-4 opacity-0 ${bgColors[type] || bgColors.info}`;
+  toast.className = `p-4 rounded-2xl border shadow-2xl flex items-center transition-all duration-300 pointer-events-auto transform translate-y-4 opacity-0 ${bgColors[type] || bgColors.info}`;
   toast.innerHTML = `
     ${icons[type] || icons.info}
-    <div class="text-sm font-medium flex-1">${message}</div>
+    <div class="text-xs sm:text-sm font-medium flex-1">${message}</div>
   `;
 
   toastContainer.appendChild(toast);
