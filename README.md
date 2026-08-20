@@ -15,6 +15,13 @@ A modern, mobile-first, high-converting website and interactive booking template
   - Saturday: 9:00 AM – 4:00 PM
   - Sunday & Monday: Closed
 
+- **Owners & Lead Barbers**:
+  - **Daniel** – Co-Owner and Master Barber (frequently highlighted by regulars in reviews as the shop's top cut)
+  - **Fidel** – Co-Owner and Master Barber (hot lather straight razor rituals & luxury beard sculpting)
+- **Active Staff & Barbers**:
+  - **Marco Juarez** – Staff Barber (actively taking client appointments and precision haircuts)
+  - **Polo Juarez** – Staff Barber (actively taking appointments for specialty fades and beard lineups)
+
 ---
 
 ## 🌟 Key Features
@@ -22,11 +29,11 @@ A modern, mobile-first, high-converting website and interactive booking template
 - **Real-Time Shop Status Indicator**: Dynamically calculates whether the shop is open or closed based on actual Las Vegas (PST/PDT) time and displays walk-in wait estimates.
 - **Interactive Multi-Step Booking Modal**:
   - Step 1: Service selection (Signature Haircut $40, Haircut & Beard $50, Beard Trim $20, Kid's Cut $40, Royal VIP $65, etc.)
-  - Step 2: Master Barber selection (Any Available, Sam, Chris, Leo)
+  - Step 2: Barber selection (Any Available, Daniel, Fidel, Marco Juarez, Polo Juarez)
   - Step 3: Date & time slot picker
   - Step 4: Instant booking confirmation with **Add to Google Calendar** and **.ICS download**
-- **Instagram Lookbook Feed (@fadedtimeslv)**: Filterable gallery of skin fades, tapers, beard sculpts, and custom hair art designs with high-res Lightbox viewer.
-- **Meet The Master Barbers**: Individual craftsman spotlights, experience levels, and direct booking links.
+- **Instagram Lookbook Feed (`@fadedtimeslv`)**: Filterable gallery of skin fades, tapers, beard sculpts, and custom hair art designs with high-res Lightbox viewer.
+- **Meet The Master Barbers & Owners**: Spotlight on Daniel, Fidel, Marco Juarez, and Polo Juarez with specialties, roles, and 1-click booking.
 - **Client Testimonials & Reviews**: Verified 5-star reviews filterable by Locals, Strip Tourists, and Beard Care.
 - **Location & Directions**: Embedded map with 1-click Google Maps / Apple Maps directions.
 - **VIP Club**: Promo code generator unlocking 10% discount on first visit (`FADED10`).
