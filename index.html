@@ -383,7 +383,6 @@
     <div class="text-center max-w-3xl mx-auto mb-14">
       <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
         Menu & Pricing
-      </span>
       <h2 class="font-serif font-black text-3xl sm:text-5xl text-white mt-3 mb-4">
         SIGNATURE <span class="text-gold-gradient">SERVICES</span>
       </h2>
@@ -394,7 +393,7 @@
 
     <!-- Service Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
+      <!-- BEGIN SERVICES_LIST -->
       <!-- 1. Signature Haircut -->
       <div class="card-luxury p-7 flex flex-col justify-between relative group">
         <div class="absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700">
@@ -438,12 +437,12 @@
           </div>
           <h3 class="text-xl font-bold text-white mb-2">Haircut & Beard Sculpting</h3>
           <p class="text-gray-400 text-xs leading-relaxed mb-4">
-            The full gentleman's transformation. Precision fade with seamless beard taper, length debulking, razor-sharp beard line shaping, and essential oil conditioning.
+            Full bespoke haircut of your choice combined with precision beard trim, straight razor cheek and neck lining, hot steam towel, and natural beard oil massage.
           </p>
           <ul class="text-xs text-gray-300 space-y-1.5 mb-6">
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Custom haircut + skin fade</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Beard trim & razor cheek/neck lineup</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Hot towel & artisan beard butter</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Fade of choice + razor finish</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Beard length debulking & fade</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Hot towel essential oil steam</li>
           </ul>
         </div>
         <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
@@ -456,23 +455,23 @@
         </div>
       </div>
 
-      <!-- 3. Beard Trim & Hot Towel -->
+      <!-- 3. Beard Trim & Shape -->
       <div class="card-luxury p-7 flex flex-col justify-between relative group">
         <div class="absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700">
           <i class="fa-regular fa-clock text-amber-400 mr-1"></i> 25 min
         </div>
         <div>
           <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center mb-5 text-amber-400 text-xl group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-feather-pointed"></i>
+            <i class="fa-solid fa-spa"></i>
           </div>
           <h3 class="text-xl font-bold text-white mb-2">Beard Trim & Shape</h3>
           <p class="text-gray-400 text-xs leading-relaxed mb-4">
-            Master beard detailing. Includes clipper debulking, scissor stray trimming, hot towel wrap, straight razor edging on cheeks & neckline, and luxury beard oil finish.
+            Sculpting, length reduction, straight razor edging on cheekbones and neckline with hot towel treatment and hydrating finish.
           </p>
           <ul class="text-xs text-gray-300 space-y-1.5 mb-6">
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Freehand shape & symmetry balance</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Straight razor razor-sharp lines</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Invigorating hot towel treatment</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Freehand clipper shape-up</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Razor cheek & neck outline</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Tea tree conditioning balm</li>
           </ul>
         </div>
         <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
@@ -485,7 +484,7 @@
         </div>
       </div>
 
-      <!-- 4. Kid's Haircut -->
+      <!-- 4. Kid's Cut (12 & Under) -->
       <div class="card-luxury p-7 flex flex-col justify-between relative group">
         <div class="absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700">
           <i class="fa-regular fa-clock text-amber-400 mr-1"></i> 35 min
@@ -496,12 +495,12 @@
           </div>
           <h3 class="text-xl font-bold text-white mb-2">Kid's Precision Cut</h3>
           <p class="text-gray-400 text-xs leading-relaxed mb-4">
-            Ages 12 & under. Patient, skilled, and stylish haircut tailored for youngsters. Back-to-school fresh fades, tapers, or classic scissor cuts with a welcoming touch.
+            Patient, gentle master styling for kids 12 and under. High skin fades, classic gentleman taper, or scissor crops in a comfortable setting.
           </p>
           <ul class="text-xs text-gray-300 space-y-1.5 mb-6">
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Patient, kid-friendly environment</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Sharp hairline & clean blend</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Styling gel & lollipop finish</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Ages 12 and under</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Clean shear & clipper fade</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Fun & patient barber approach</li>
           </ul>
         </div>
         <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
@@ -812,7 +811,7 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      
+      <!-- BEGIN BARBERS_LIST -->
       <!-- Barber 1: Daniel (Co-Owner & Master Barber) -->
       <div class="card-luxury overflow-hidden flex flex-col justify-between group">
         <div class="relative h-64 overflow-hidden bg-dark-950">
@@ -944,7 +943,7 @@
           </button>
         </div>
       </div>
-
+      <!-- END BARBERS_LIST -->
     </div>
   </section>
 

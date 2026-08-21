@@ -126,14 +126,19 @@ function generateVariation(configPath, outputDir) {
     let barbersHtml = '\n';
     const allBarbers = [...(cfg.team.owners || []), ...(cfg.team.barbers || [])];
     allBarbers.forEach(b => {
+      const role = b.role || b.title || 'Master Barber';
+      const bio = b.bio || b.highlight || b.specialty || 'Master barber providing precision haircuts and grooming.';
+      const badge = b.badge || `👑 ${role.toUpperCase()}`;
+      const specialties = b.specialties || (b.specialty ? b.specialty.split(', ') : []);
+
       barbersHtml += `      <!-- Barber: ${b.name} -->
       <div class="card-luxury overflow-hidden flex flex-col justify-between group">
         <div class="relative h-64 overflow-hidden bg-dark-950">
-          <img src="${b.image}" alt="${b.name} - ${b.role}" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+          <img src="${b.image}" alt="${b.name} - ${role}" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
           <div class="absolute top-3 left-3">
             <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-dark-950 font-black text-[9px] uppercase tracking-wider shadow-md">
-              👑 ${b.badge || b.role.toUpperCase()}
+              ${badge}
             </span>
           </div>
           <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
@@ -148,22 +153,53 @@ function generateVariation(configPath, outputDir) {
         <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
           <div>
             <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">${b.name}</h3>
-            <p class="text-xs text-amber-400 font-medium">${b.role}</p>
-            <p class="text-xs text-gray-400 mt-2 leading-relaxed">${b.bio}</p>
+            <p class="text-xs text-amber-400 font-semibold mt-0.5">${role}</p>
+            <p class="text-xs text-gray-400 mt-2 leading-relaxed">${bio}</p>
             <div class="mt-3 flex flex-wrap gap-1.5">
-              ${(b.specialties || []).map(s => `<span class="px-2 py-0.5 rounded bg-dark-800 border border-gray-800 text-[10px] text-gray-300">${s}</span>`).join('\n              ')}
+              ${specialties.map(s => `<span class="px-2 py-0.5 rounded bg-dark-800 border border-gray-800 text-[10px] text-gray-300">${s}</span>`).join('\n              ')}
             </div>
           </div>
           <div class="pt-4 border-t border-gray-800 flex items-center justify-between">
-            <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-dark-950 font-bold text-xs uppercase tracking-wider transition-colors shadow-md" data-barber-name="${b.name}">
-              Book With ${b.name.split(' ')[0]}
-            </button>
+            <a href="${cfg.shop.booksyUrl}" target="_blank" rel="noopener noreferrer" class="open-booking-trigger w-full py-2.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-dark-950 font-bold text-xs uppercase tracking-wider transition-colors shadow-md text-center flex items-center justify-center" data-barber-name="${b.name}">
+              <span>Book With ${b.name.split(' ')[0]}</span>
+              <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[10px]"></i>
+            </a>
           </div>
         </div>
       </div>\n`;
     });
 
     html = html.replace(/<!-- BEGIN BARBERS_LIST -->[\s\S]*?<!-- END BARBERS_LIST -->/, `<!-- BEGIN BARBERS_LIST -->${barbersHtml}      <!-- END BARBERS_LIST -->`);
+
+    // Dynamic JSON-LD Schema Founders & Employees
+    const schemaFounders = (cfg.team.owners || []).map(b => ({
+      "@type": "Person",
+      "name": b.name,
+      "jobTitle": b.role || b.title || "Owner & Master Barber"
+    }));
+    const schemaEmployees = (cfg.team.barbers || []).map(b => ({
+      "@type": "Person",
+      "name": b.name,
+      "jobTitle": b.role || b.title || "Staff Barber"
+    }));
+    html = html.replace(/"founder":\s*\[[\s\S]*?\],\s*"employee":\s*\[[\s\S]*?\]/, `"founder": ${JSON.stringify(schemaFounders, null, 6)},\n    "employee": ${JSON.stringify(schemaEmployees, null, 6)}`);
+
+    // Replace staff names across Lookbook items, comments & reviews
+    const owner0 = (cfg.team.owners && cfg.team.owners[0]) ? cfg.team.owners[0].name : 'Mir The Barber';
+    const barber0 = (cfg.team.barbers && cfg.team.barbers[0]) ? cfg.team.barbers[0].name : 'Major Fadez';
+    const barber1 = (cfg.team.barbers && cfg.team.barbers[1]) ? cfg.team.barbers[1].name : 'Hairanesa';
+    const barber2 = (cfg.team.barbers && cfg.team.barbers[2]) ? cfg.team.barbers[2].name : 'Donscreationz';
+
+    html = html.replace(/Daniel \(Co-Owner & Master Barber\)/g, `${owner0}`);
+    html = html.replace(/Fidel \(Co-Owner & Master Barber\)/g, `${barber0}`);
+    html = html.replace(/Daniel \(Co-Owner\)/g, `${owner0}`);
+    html = html.replace(/Fidel \(Co-Owner\)/g, `${barber0}`);
+    html = html.replace(/Marco Juarez/g, `${barber1}`);
+    html = html.replace(/Polo Juarez/g, `${barber2}`);
+    html = html.replace(/\bDaniel\b/g, `${owner0.split(' ')[0]}`);
+    html = html.replace(/\bFidel\b/g, `${barber0.split(' ')[0]}`);
+    html = html.replace(/\bMarco\b/g, `${barber1.split(' ')[0]}`);
+    html = html.replace(/\bPolo\b/g, `${barber2.split(' ')[0]}`);
 
     // Compile Booking Modal Step 2 Barber Options
     let bookingBarbersHtml = `\n            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-amber-400 bg-amber-500/15 cursor-pointer text-center transition-all active:scale-95 col-span-2 sm:col-span-1" data-barber="Any Available">
@@ -206,16 +242,17 @@ function generateVariation(configPath, outputDir) {
           </div>
           <h3 class="text-xl font-bold text-white mb-2">${s.name}</h3>
           <p class="text-gray-400 text-xs leading-relaxed mb-4">
-            ${s.description}
+            ${s.description || s.subtitle || ''}
           </p>
         </div>
         <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
           <div>
             <span class="text-2xl font-serif font-black text-amber-400">$${s.price}</span>
           </div>
-          <button class="open-booking-trigger px-4 py-2 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-service-key="${s.key}">
-            Book Now
-          </button>
+          <a href="${cfg.shop.booksyUrl}" target="_blank" rel="noopener noreferrer" class="open-booking-trigger px-4 py-2 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all flex items-center" data-service-key="${s.key}">
+            <span>Book Now</span>
+            <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[10px]"></i>
+          </a>
         </div>
       </div>\n`;
     });
