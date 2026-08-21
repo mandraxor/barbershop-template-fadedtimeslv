@@ -1,0 +1,211 @@
+{
+  "shop": {
+    "name": "Faded Times Barbershop",
+    "shortName": "Faded Times",
+    "monogram": "FT",
+    "badge": "LV",
+    "tagline": "Precision Cuts. Timeless Style.",
+    "subTagline": "Las Vegas Barbershop",
+    "description": "Las Vegas premier grooming destination. Master-level skin fades, sculpted beard lineups, and luxury hot towel straight razor shaves crafted with unyielding attention to detail.",
+    "phone": "(702) 272-2457",
+    "phoneRaw": "7022722457",
+    "email": "contact@fadedtimeslv.com",
+    "website": "https://fadedtimeslv.com",
+    "instagram": "fadedtimeslv",
+    "instagramUrl": "https://www.instagram.com/fadedtimeslv/",
+    "booksyUrl": "https://booksy.com",
+    "promoCode": "FADED10",
+    "promoDiscount": "10% OFF"
+  },
+  "location": {
+    "plaza": "Valley Oaks Plaza",
+    "address": "3868 W Sahara Ave",
+    "crossStreet": "Sahara Ave & Valley View Blvd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89102",
+    "country": "US",
+    "neighborhood": "5 Min from the Las Vegas Strip",
+    "googleMapsUrl": "https://maps.google.com/?q=3868+W+Sahara+Ave+Las+Vegas+NV+89102",
+    "appleMapsUrl": "https://maps.apple.com/?address=3868+W+Sahara+Ave,Las+Vegas,NV+89102",
+    "coordinates": {
+      "lat": 36.1444,
+      "lng": -115.1912
+    }
+  },
+  "hours": {
+    "timezone": "America/Los_Angeles",
+    "schedule": {
+      "tuesday_friday": {
+        "days": "Tuesday – Friday",
+        "open": "9:00 AM",
+        "close": "6:00 PM",
+        "open24h": "09:00",
+        "close24h": "18:00"
+      },
+      "saturday": {
+        "days": "Saturday",
+        "open": "9:00 AM",
+        "close": "4:00 PM",
+        "open24h": "09:00",
+        "close24h": "16:00"
+      },
+      "sunday_monday": {
+        "days": "Sunday & Monday",
+        "status": "Closed"
+      }
+    },
+    "walkinPolicy": "Walk-ins Welcome Daily • Priority To Bookings"
+  },
+  "theme": {
+    "accentColor": "gold",
+    "primaryHex": "#d4af37",
+    "primaryGradient": "linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa820a 100%)",
+    "bgPrimary": "#0a0c10",
+    "bgCard": "#171b24"
+  },
+  "team": {
+    "owners": [
+      {
+        "name": "Daniel",
+        "initials": "D",
+        "title": "Co-Owner & Master Barber",
+        "badge": "👑 Co-Owner / Top Cut",
+        "specialty": "Signature Skin Fades, Scissor Craft & Master Detailing",
+        "experience": "10+ Years Craftsmanship",
+        "highlight": "Frequently highlighted by regulars in reviews as the shop's top cut.",
+        "image": "assets/images/barber-master.jpg",
+        "instagram": "fadedtimeslv"
+      },
+      {
+        "name": "Fidel",
+        "initials": "F",
+        "title": "Co-Owner & Master Barber",
+        "badge": "👑 Co-Owner / Shaves",
+        "specialty": "Hot Lather Straight Razor Rituals, Luxury Beard Sculpting & VIP Grooming",
+        "experience": "10+ Years Craftsmanship",
+        "highlight": "Master straight razor specialist delivering skin therapy and clean symmetry.",
+        "image": "assets/images/beard-shave.jpg",
+        "instagram": "fadedtimeslv"
+      }
+    ],
+    "barbers": [
+      {
+        "name": "Marco Juarez",
+        "initials": "MJ",
+        "title": "Staff Barber",
+        "badge": "Staff Barber • Appts",
+        "specialty": "Crisp Tapers, Modern Textures, Sharp Razor Edge Work & Active Client Appointments",
+        "experience": "Master Craftsman",
+        "highlight": "Actively taking client appointments and precision haircuts on chair.",
+        "image": "assets/images/crew-lasvegas.jpg",
+        "instagram": "fadedtimeslv"
+      },
+      {
+        "name": "Polo Juarez",
+        "initials": "PJ",
+        "title": "Staff Barber",
+        "badge": "Staff Barber • Fades",
+        "specialty": "Specialty Fades, Razor Beard Lineups, Custom Hair Art & Youth Precision Cuts",
+        "experience": "Master Craftsman",
+        "highlight": "Actively taking appointments for specialty fades and beard lineups.",
+        "image": "assets/images/fade-textured.jpg",
+        "instagram": "fadedtimeslv"
+      }
+    ]
+  },
+  "services": [
+    {
+      "key": "haircut",
+      "name": "Signature Haircut",
+      "subtitle": "Tailored precision skin fade, drop fade, low taper, textured crop, or classic gentleman cut. Includes hot lather neck shave and styling.",
+      "price": 40,
+      "duration": 40,
+      "icon": "fa-scissors",
+      "popular": false
+    },
+    {
+      "key": "haircut-beard",
+      "name": "Haircut & Beard Sculpting",
+      "subtitle": "The full gentleman's transformation. Precision fade with seamless beard taper, length debulking, razor cheek/neckline shaping, and beard butter.",
+      "price": 50,
+      "duration": 55,
+      "icon": "fa-user-tie",
+      "popular": true
+    },
+    {
+      "key": "beard-trim",
+      "name": "Beard Trim & Hot Towel",
+      "subtitle": "Sculpted beard grooming with hot steaming essential towel, straight razor outline, cheek line definition, and nourishing tonic balm.",
+      "price": 20,
+      "duration": 25,
+      "icon": "fa-feather-pointed",
+      "popular": false
+    },
+    {
+      "key": "kids-cut",
+      "name": "Kid's Precision Cut",
+      "subtitle": "Patient, comfortable master styling for ages 12 & under. Clean skin fade, taper, comb over, or scissor crop with neck feathering.",
+      "price": 40,
+      "duration": 35,
+      "icon": "fa-child",
+      "popular": false
+    },
+    {
+      "key": "lineup",
+      "name": "Razor Edge Lineup",
+      "subtitle": "Fast refresh between haircuts. Surgical straight razor hairline edging, temples, sideburns, and clean tapered neckline finish.",
+      "price": 20,
+      "duration": 20,
+      "icon": "fa-wand-magic-sparkles",
+      "popular": false
+    },
+    {
+      "key": "vip-treatment",
+      "name": "VIP Total Experience",
+      "subtitle": "The ultimate ritual. Signature haircut, full beard architecture, organic charcoal exfoliating facial scrub, cooling eye mask, and straight razor finish.",
+      "price": 65,
+      "duration": 75,
+      "icon": "fa-crown",
+      "popular": false
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Marcus Rodriguez",
+      "role": "Regular Client • Cut by Daniel (Co-Owner)",
+      "initials": "MR",
+      "rating": 5,
+      "source": "Booksy Verified",
+      "category": "locals",
+      "text": "Hands down the cleanest skin fade in Vegas. I’ve tried at least 5 different shops in town and nobody blends like Daniel. There's a reason everyone recommends him as the top cut. You walk out feeling like a million bucks."
+    },
+    {
+      "author": "Andre Lewis",
+      "role": "Beard Client • Groomed by Fidel (Co-Owner)",
+      "initials": "AL",
+      "rating": 5,
+      "source": "Booksy Verified",
+      "category": "beards",
+      "text": "The hot towel straight razor beard treatment with Fidel is pure luxury. He lines up the cheeks and neckline with zero irritation. Co-owners who truly care about the craft."
+    },
+    {
+      "author": "David Thompson",
+      "role": "Visitor from Chicago • Cut by Marco Juarez",
+      "initials": "DT",
+      "rating": 5,
+      "source": "Google Review",
+      "category": "tourists",
+      "text": "Flew into Vegas for a conference and needed a tight haircut. Booked an appointment with Marco Juarez online. 5 minutes from the Strip, super easy parking, and Marco gave me one of the sharpest tapers ever."
+    },
+    {
+      "author": "Jason Torres",
+      "role": "Las Vegas Local • Cut by Polo Juarez",
+      "initials": "JT",
+      "rating": 5,
+      "source": "Google Review",
+      "category": "locals",
+      "text": "Brought my son in for a fade and got my beard lined up with Polo Juarez. Patient, professional, and razor work was on point. Great vibe in the shop, definitely our new family spot!"
+    }
+  ]
+}

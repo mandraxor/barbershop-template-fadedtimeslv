@@ -84,6 +84,33 @@
       "latitude": 36.1447,
       "longitude": -115.1915
     },
+<<<<<<< HEAD
+=======
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Daniel",
+        "jobTitle": "Co-Owner & Master Barber"
+      },
+      {
+        "@type": "Person",
+        "name": "Fidel",
+        "jobTitle": "Co-Owner & Master Barber"
+      }
+    ],
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Marco Juarez",
+        "jobTitle": "Staff Barber"
+      },
+      {
+        "@type": "Person",
+        "name": "Polo Juarez",
+        "jobTitle": "Staff Barber"
+      }
+    ],
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -106,6 +133,7 @@
   }
   </script>
 </head>
+<<<<<<< HEAD
 <body class="bg-dark-900 text-gray-100 antialiased selection:bg-amber-400 selection:text-black">
 
   <!-- 1. TOP ANNOUNCEMENT & REAL-TIME STATUS BAR -->
@@ -116,10 +144,24 @@
         <span id="shop-status-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-green mr-2"></span>
         <span id="shop-status-text" class="text-gray-300 font-medium">
           <span class="text-emerald-400 font-semibold">OPEN NOW</span> • Closes at 6:00 PM • Walk-ins & Bookings Welcome
+=======
+<body class="bg-dark-900 text-gray-100 antialiased selection:bg-amber-400 selection:text-black pb-24 md:pb-0">
+
+  <!-- 1. TOP ANNOUNCEMENT & REAL-TIME STATUS BAR -->
+  <aside aria-label="Announcement & Status Bar" class="bg-dark-950/95 backdrop-blur-md border-b border-amber-400/15 py-2 px-4 sm:px-6 lg:px-8 pr-6 sm:pr-10 lg:pr-16 z-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 text-xs">
+      
+      <!-- Live Status Dynamic Check -->
+      <div id="shop-status-badge" class="flex items-center justify-center md:justify-start text-center md:text-left">
+        <span id="shop-status-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-green mr-2 shrink-0"></span>
+        <span id="shop-status-text" class="text-gray-300 font-medium text-xs sm:text-xs">
+          <span class="text-emerald-400 font-bold">OPEN NOW</span> • Closes at 6:00 PM • Walk-ins & Bookings Welcome
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
         </span>
       </div>
 
       <!-- Quick Info Links -->
+<<<<<<< HEAD
       <div class="flex items-center space-x-4 text-gray-400">
         <a href="tel:7022722457" class="hover:text-amber-400 transition-colors flex items-center">
           <i class="fa-solid fa-phone text-amber-400 mr-1.5 text-[10px]"></i> (702) 272-2457
@@ -176,17 +218,82 @@
         </a>
         <button class="open-booking-trigger px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 hover:scale-[1.02] transition-all flex items-center">
           <i class="fa-solid fa-calendar-check mr-2"></i> Book Chair
+=======
+      <div class="flex items-center justify-center space-x-3 sm:space-x-4 text-gray-400 text-xs font-medium">
+        <a href="tel:7022722457" class="hover:text-amber-300 transition-colors flex items-center">
+          <i class="fa-solid fa-phone text-amber-400 mr-1.5 text-[11px]"></i> (702) 272-2457
+        </a>
+        <span class="text-gray-700">•</span>
+        <a href="#location" class="hover:text-amber-300 transition-colors hidden sm:flex items-center">
+          <i class="fa-solid fa-location-dot text-amber-400 mr-1.5 text-[11px]"></i> 3868 W Sahara Ave
+        </a>
+        <span class="text-gray-700 hidden sm:inline">•</span>
+        <a href="https://www.instagram.com/fadedtimeslv/" target="_blank" rel="noopener noreferrer" class="hover:text-amber-300 transition-colors flex items-center text-amber-300 font-semibold">
+          <i class="fa-brands fa-instagram text-amber-400 mr-1.5 text-xs"></i> @fadedtimeslv
+        </a>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- 2. MAIN NAVIGATION (Shifted Left with Right-Side Buffer) -->
+  <header class="glass-nav sticky top-0 z-40 transition-all duration-300 w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pr-6 sm:pr-10 lg:pr-16 xl:pr-20 h-20 flex items-center justify-between gap-3 lg:gap-6">
+      
+      <!-- Brand Logo & Monogram -->
+      <a href="#" class="flex items-center space-x-2.5 sm:space-x-3 group shrink-0">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 p-[1.5px] shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform shrink-0">
+          <div class="w-full h-full bg-dark-950 rounded-[10px] flex items-center justify-center">
+            <span class="font-serif font-black text-base sm:text-lg text-gold-shimmer tracking-tighter">FT</span>
+          </div>
+        </div>
+        <div class="text-left">
+          <div class="font-serif font-black text-sm sm:text-lg tracking-wider text-white flex items-center leading-none">
+            FADED TIMES
+            <span class="ml-1.5 px-1.5 py-0.5 text-[9px] font-sans font-black bg-amber-400/20 text-amber-300 rounded border border-amber-400/40 uppercase tracking-normal">LV</span>
+          </div>
+          <p class="text-[8px] sm:text-[9px] tracking-[0.2em] text-gray-400 uppercase font-semibold mt-0.5">Las Vegas Barbershop</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Compact, Evenly Spaced & Shifted Left) -->
+      <nav class="hidden lg:flex items-center space-x-3 xl:space-x-5 text-xs font-semibold tracking-wider uppercase text-gray-300">
+        <a href="#services" class="hover:text-amber-400 transition-colors py-2 px-1">Services</a>
+        <a href="#lookbook" class="hover:text-amber-400 transition-colors py-2 px-1 flex items-center">
+          Lookbook <span class="ml-1 px-1.5 py-0.5 text-[8px] bg-gradient-to-r from-pink-500 to-amber-500 text-white rounded font-bold">IG</span>
+        </a>
+        <a href="#barbers" class="hover:text-amber-400 transition-colors py-2 px-1">Barbers</a>
+        <a href="#experience" class="hover:text-amber-400 transition-colors py-2 px-1">Experience</a>
+        <a href="#reviews" class="hover:text-amber-400 transition-colors py-2 px-1">Reviews</a>
+        <a href="#location" class="hover:text-amber-400 transition-colors py-2 px-1">Location</a>
+        <a href="#faq" class="hover:text-amber-400 transition-colors py-2 px-1">FAQ</a>
+      </nav>
+
+      <!-- Desktop CTA Buttons (Safely Positioned with Room on Right) -->
+      <div class="hidden sm:flex items-center space-x-2.5 shrink-0">
+        <a href="tel:7022722457" class="h-9 sm:h-10 px-3 sm:px-3.5 rounded-xl border border-gray-700 bg-dark-800 text-gray-200 hover:text-white hover:border-amber-400/60 text-xs font-semibold tracking-wide transition-all flex items-center justify-center whitespace-nowrap">
+          <i class="fa-solid fa-phone mr-1.5 text-amber-400 text-xs"></i> (702) 272-2457
+        </a>
+        <button class="open-booking-trigger h-9 sm:h-10 px-4 sm:px-5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-500/25 hover:brightness-110 active:scale-95 transition-all flex items-center justify-center whitespace-nowrap">
+          <i class="fa-solid fa-calendar-check mr-1.5 text-xs sm:text-sm"></i> Book Chair
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
         </button>
       </div>
 
       <!-- Mobile Hamburger Button -->
+<<<<<<< HEAD
       <button id="mobile-menu-toggle" aria-label="Open Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-dark-800 border border-gray-800 text-gray-300 hover:text-amber-400">
         <i class="fa-solid fa-bars text-xl"></i>
+=======
+      <button id="mobile-menu-toggle" aria-label="Open Navigation Menu" class="lg:hidden p-2 rounded-xl bg-dark-800 border border-gray-800 text-gray-300 hover:text-amber-400 active:scale-95 transition-all flex items-center justify-center w-10 h-10">
+        <i class="fa-solid fa-bars text-lg"></i>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
       </button>
     </div>
   </header>
 
   <!-- Mobile Drawer Menu -->
+<<<<<<< HEAD
   <div id="mobile-drawer" class="hidden lg:hidden fixed inset-0 z-50 bg-dark-950/95 backdrop-blur-xl p-6 flex flex-col justify-between">
     <div>
       <div class="flex items-center justify-between pb-6 border-b border-gray-800">
@@ -197,10 +304,26 @@
           <span class="font-serif font-bold text-lg text-white">FADED TIMES LV</span>
         </div>
         <button id="close-mobile-drawer" class="p-2 text-gray-400 hover:text-white text-2xl">
+=======
+  <div id="mobile-drawer" class="hidden lg:hidden fixed inset-0 z-50 bg-dark-950/98 backdrop-blur-2xl p-6 flex flex-col justify-between max-w-md w-full ml-auto border-l border-amber-400/20 shadow-2xl overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-gray-800">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 p-[1px]">
+            <div class="w-full h-full bg-dark-950 rounded-[10px] flex items-center justify-center font-serif font-black text-amber-400">FT</div>
+          </div>
+          <div>
+            <span class="font-serif font-bold text-base text-white">FADED TIMES LV</span>
+            <p class="text-[10px] text-gray-400">3868 W Sahara Ave</p>
+          </div>
+        </div>
+        <button id="close-mobile-drawer" aria-label="Close Navigation Menu" class="w-10 h-10 rounded-xl bg-dark-800 border border-gray-800 text-gray-400 hover:text-white flex items-center justify-center text-lg active:scale-95">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
+<<<<<<< HEAD
       <nav class="mt-8 flex flex-col space-y-5 text-lg font-semibold">
         <a href="#services" class="mobile-nav-link text-gray-300 hover:text-amber-400 flex items-center justify-between">
           <span><i class="fa-solid fa-scissors text-amber-400 mr-3 text-sm"></i> Services & Pricing</span>
@@ -228,11 +351,41 @@
         </a>
         <a href="#faq" class="mobile-nav-link text-gray-300 hover:text-amber-400 flex items-center justify-between">
           <span><i class="fa-solid fa-circle-question text-amber-400 mr-3 text-sm"></i> FAQ</span>
+=======
+      <nav class="mt-6 flex flex-col space-y-3 font-semibold text-base">
+        <a href="#services" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+          <span class="flex items-center"><i class="fa-solid fa-scissors text-amber-400 mr-3 text-sm w-5"></i> Services & Pricing</span>
+          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
+        </a>
+        <a href="#lookbook" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+          <span class="flex items-center"><i class="fa-brands fa-instagram text-pink-400 mr-3 text-sm w-5"></i> Instagram Lookbook</span>
+          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
+        </a>
+        <a href="#barbers" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+          <span class="flex items-center"><i class="fa-solid fa-user-group text-amber-400 mr-3 text-sm w-5"></i> Master Barbers & Owners</span>
+          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
+        </a>
+        <a href="#experience" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+          <span class="flex items-center"><i class="fa-solid fa-crown text-amber-400 mr-3 text-sm w-5"></i> The Experience</span>
+          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
+        </a>
+        <a href="#reviews" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+          <span class="flex items-center"><i class="fa-solid fa-star text-amber-400 mr-3 text-sm w-5"></i> Verified Reviews</span>
+          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
+        </a>
+        <a href="#location" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+          <span class="flex items-center"><i class="fa-solid fa-location-dot text-amber-400 mr-3 text-sm w-5"></i> Location & Hours</span>
+          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
+        </a>
+        <a href="#faq" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+          <span class="flex items-center"><i class="fa-solid fa-circle-question text-amber-400 mr-3 text-sm w-5"></i> FAQ</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
         </a>
       </nav>
     </div>
 
+<<<<<<< HEAD
     <div class="pt-6 border-t border-gray-800 space-y-3">
       <button class="open-booking-trigger w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-600 text-dark-950 font-bold uppercase tracking-wider text-sm shadow-lg shadow-amber-500/25">
         <i class="fa-solid fa-calendar-check mr-2"></i> Book Appointment Now
@@ -300,6 +453,86 @@
         <div class="p-3 rounded-xl bg-dark-800/50 border border-gray-800 backdrop-blur-sm">
           <div class="text-amber-400 text-xl sm:text-2xl font-serif font-black">Walk-ins</div>
           <div class="text-xs text-gray-400 mt-0.5">& Bookings Welcome</div>
+=======
+    <div class="pt-6 border-t border-gray-800 space-y-3 mt-6">
+      <button class="open-booking-trigger w-full py-4 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-black uppercase tracking-wider text-xs shadow-lg shadow-amber-500/25 active:scale-98 transition-all flex items-center justify-center">
+        <i class="fa-solid fa-calendar-check mr-2 text-sm"></i> Book Chair Online
+      </button>
+      <a href="tel:7022722457" class="w-full py-3 rounded-xl border border-gray-700 bg-dark-850 text-white font-semibold text-xs flex items-center justify-center active:scale-98">
+        <i class="fa-solid fa-phone text-amber-400 mr-2"></i> Call (702) 272-2457
+      </a>
+      <a href="https://maps.google.com/?q=3868+W+Sahara+Ave+Las+Vegas+NV+89102" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl border border-gray-800 bg-dark-900 text-gray-300 font-medium text-xs flex items-center justify-center">
+        <i class="fa-solid fa-diamond-turn-right text-amber-400 mr-2"></i> Directions (Sahara & Valley View)
+      </a>
+    </div>
+  </div>
+
+  <!-- 3. HERO SECTION (Evenly Centered, Symmetrical, & Spacious) -->
+  <section class="relative min-h-[85vh] sm:min-h-[92vh] flex items-center justify-center overflow-hidden py-16 sm:py-24 text-center">
+    <!-- Background Hero Interior Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="assets/images/hero-interior.jpg" alt="Faded Times Barbershop Interior Las Vegas" class="w-full h-full object-cover object-center transform scale-105 filter brightness-70">
+      <div class="absolute inset-0 hero-gradient-overlay"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
+      
+      <!-- Location Pill Badge -->
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-dark-900/90 border border-amber-400/35 text-amber-300 text-xs font-semibold mb-6 sm:mb-8 backdrop-blur-md shadow-lg shadow-amber-500/5">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-green shrink-0"></span>
+        <span class="tracking-wide">Valley Oaks Plaza • 3868 W Sahara Ave • Las Vegas, NV</span>
+      </div>
+
+      <!-- Main Headline (Razor-Sharp Centered Symmetry) -->
+      <h1 class="font-serif font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight sm:tracking-normal leading-[1.08] sm:leading-[1.12] mb-5 sm:mb-7 text-center">
+        PRECISION CUTS.<br>
+        <span class="text-gold-shimmer font-serif-luxury block mt-1 sm:mt-2">TIMELESS STYLE.</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-8 sm:mb-10 text-center px-4">
+        Las Vegas' premier grooming destination. Master-level skin fades, sculpted beard lineups, and luxury hot towel straight razor shaves crafted with unyielding attention to detail.
+      </p>
+
+      <!-- CTA Action Group (Balanced 2-Button Symmetrical Layout) -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-5 sm:mb-6 w-full max-w-lg mx-auto">
+        <button class="open-booking-trigger w-full sm:w-auto flex-1 h-12 sm:h-14 px-8 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-xl shadow-amber-500/30 hover:brightness-110 active:scale-95 transition-all flex items-center justify-center whitespace-nowrap">
+          <i class="fa-solid fa-calendar-check mr-2.5 text-base"></i> Book Your Chair
+        </button>
+        <a href="#lookbook" class="w-full sm:w-auto flex-1 h-12 sm:h-14 px-8 rounded-xl bg-dark-800/90 hover:bg-dark-750 border border-amber-400/40 text-gray-200 hover:text-white font-bold text-xs sm:text-sm tracking-wide transition-all flex items-center justify-center active:scale-95 whitespace-nowrap">
+          <i class="fa-brands fa-instagram text-amber-400 mr-2.5 text-base"></i> Instagram Lookbook
+        </a>
+      </div>
+
+      <!-- Quick Sub-Row Details -->
+      <div class="flex items-center justify-center flex-wrap gap-x-4 gap-y-1 text-xs text-gray-400 mb-8 sm:mb-12">
+        <span class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-1.5"></i> Walk-ins Welcome</span>
+        <span class="text-gray-700 hidden sm:inline">•</span>
+        <span class="flex items-center"><i class="fa-solid fa-shield-check text-amber-400 text-[10px] mr-1.5"></i> 100% Satisfaction</span>
+        <span class="text-gray-700 hidden sm:inline">•</span>
+        <a href="tel:7022722457" class="hover:text-amber-300 transition-colors flex items-center font-semibold text-gray-300">
+          <i class="fa-solid fa-phone text-amber-400 text-[10px] mr-1.5"></i> (702) 272-2457
+        </a>
+      </div>
+
+      <!-- Trust Metrics Bar (Symmetric 4-Column Layout) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-4xl mx-auto pt-8 sm:pt-10 border-t border-gray-800/80">
+        <div class="p-3.5 sm:p-4 rounded-xl bg-dark-800/70 border border-gray-800 backdrop-blur-sm flex flex-col items-center justify-center text-center">
+          <div class="text-amber-400 text-xl sm:text-2xl font-serif font-black">4.9 ★★★★★</div>
+          <div class="text-xs text-gray-400 mt-1">500+ Verified Reviews</div>
+        </div>
+        <div class="p-3.5 sm:p-4 rounded-xl bg-dark-800/70 border border-gray-800 backdrop-blur-sm flex flex-col items-center justify-center text-center">
+          <div class="text-amber-400 text-xl sm:text-2xl font-serif font-black">10,000+</div>
+          <div class="text-xs text-gray-400 mt-1">Precision Cuts Delivered</div>
+        </div>
+        <div class="p-3.5 sm:p-4 rounded-xl bg-dark-800/70 border border-gray-800 backdrop-blur-sm flex flex-col items-center justify-center text-center">
+          <div class="text-amber-400 text-xl sm:text-2xl font-serif font-black">Master Barbers</div>
+          <div class="text-xs text-gray-400 mt-1">Co-Owners & Craftsmen</div>
+        </div>
+        <div class="p-3.5 sm:p-4 rounded-xl bg-dark-800/70 border border-gray-800 backdrop-blur-sm flex flex-col items-center justify-center text-center">
+          <div class="text-amber-400 text-xl sm:text-2xl font-serif font-black">Walk-Ins</div>
+          <div class="text-xs text-gray-400 mt-1">& Appointments Welcome</div>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
         </div>
       </div>
 
@@ -307,7 +540,11 @@
   </section>
 
   <!-- 4. LIVE SHOP STATUS & WALK-IN ESTIMATOR BANNER -->
+<<<<<<< HEAD
   <section class="bg-gradient-to-r from-dark-850 via-dark-800 to-dark-850 border-y border-amber-400/20 py-4 px-4">
+=======
+  <section class="bg-gradient-to-r from-dark-850 via-dark-800 to-dark-850 border-y border-amber-400/20 py-4 px-4 sm:px-6">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center space-x-3 text-center md:text-left">
         <div class="w-10 h-10 rounded-full bg-amber-400/10 border border-amber-400/30 flex items-center justify-center shrink-0">
@@ -317,7 +554,11 @@
           <div id="hero-status-text" class="text-sm text-white font-medium">
             <span class="text-emerald-400 font-semibold">● Open Today Until 6:00 PM</span> — Walk-ins Welcome
           </div>
+<<<<<<< HEAD
           <div id="walkin-wait-text" class="text-xs text-gray-400">
+=======
+          <div id="walkin-wait-text" class="text-xs text-gray-400 mt-0.5">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
             Est. Walk-in Wait: <span class="text-amber-300 font-bold">~15–20 Mins</span> (3 Barbers on Chair)
           </div>
         </div>
@@ -583,6 +824,7 @@
         </div>
       </div>
 
+<<<<<<< HEAD
       <!-- Filter Buttons -->
       <div class="flex items-center justify-center flex-wrap gap-2 my-10">
         <button class="lookbook-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-400 text-black shadow-lg shadow-amber-400/20 transition-all" data-filter="all">
@@ -598,6 +840,23 @@
           Hair Art & Designs
         </button>
         <button class="lookbook-filter-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-gray-800/80 text-gray-300 hover:bg-gray-700 hover:text-white transition-all" data-filter="kids">
+=======
+      <!-- Filter Buttons (Horizontal Scroll on Mobile, Wrapped on Tablet/Desktop) -->
+      <div class="flex items-center overflow-x-auto no-scrollbar pb-2 sm:pb-0 sm:flex-wrap sm:justify-center gap-2 -mx-4 px-4 sm:mx-0 sm:px-0 my-6 sm:my-10">
+        <button class="lookbook-filter-btn whitespace-nowrap shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-400 text-black shadow-lg shadow-amber-400/20 transition-all active:scale-95" data-filter="all">
+          All Work
+        </button>
+        <button class="lookbook-filter-btn whitespace-nowrap shrink-0 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-gray-800/80 text-gray-300 hover:bg-gray-700 hover:text-white transition-all active:scale-95" data-filter="fades">
+          Skin Fades & Tapers
+        </button>
+        <button class="lookbook-filter-btn whitespace-nowrap shrink-0 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-gray-800/80 text-gray-300 hover:bg-gray-700 hover:text-white transition-all active:scale-95" data-filter="beards">
+          Beards & Shaves
+        </button>
+        <button class="lookbook-filter-btn whitespace-nowrap shrink-0 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-gray-800/80 text-gray-300 hover:bg-gray-700 hover:text-white transition-all active:scale-95" data-filter="designs">
+          Hair Art & Designs
+        </button>
+        <button class="lookbook-filter-btn whitespace-nowrap shrink-0 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-gray-800/80 text-gray-300 hover:bg-gray-700 hover:text-white transition-all active:scale-95" data-filter="kids">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           Kids Cuts
         </button>
       </div>
@@ -605,8 +864,13 @@
       <!-- Lookbook Gallery Grid -->
       <div id="lookbook-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         
+<<<<<<< HEAD
         <!-- Post 1: Low Taper Beard -->
         <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="fades beards" data-caption="Low taper fade blend paired with sharp waves & razor beard lineup 🔥 #FadedTimesLV #LasVegasBarber" data-barber="Chris">
+=======
+        <!-- Post 1: Low Taper Beard - Daniel -->
+        <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="fades beards" data-caption="Low taper fade blend paired with sharp waves & razor beard lineup 🔥 #FadedTimesLV #LasVegasBarber" data-barber="Daniel (Co-Owner)">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           <img src="assets/images/low-taper-beard.jpg" alt="Low Taper Fade with Beard Lineup" class="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-500">
           <div class="ig-card-overlay absolute inset-0 p-4 flex flex-col justify-between text-white">
             <div class="flex justify-end">
@@ -616,14 +880,23 @@
               <p class="text-xs font-semibold line-clamp-2 mb-2">Low taper fade blend & razor beard lineup 🔥</p>
               <div class="flex items-center justify-between text-xs text-gray-300">
                 <span class="flex items-center"><i class="fa-solid fa-heart text-red-500 mr-1.5"></i> 382</span>
+<<<<<<< HEAD
                 <span class="text-[10px] text-amber-300">Barber: Chris</span>
+=======
+                <span class="text-[10px] text-amber-300">Barber: Daniel (Co-Owner)</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <!-- Post 2: Mid Drop Fade Curly -->
         <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="fades" data-caption="Crisp mid drop fade with natural curly texture on top. Clean symmetry 💈 #VegasHaircuts #DropFade" data-barber="Sam">
+=======
+        <!-- Post 2: Mid Drop Fade Curly - Marco Juarez -->
+        <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="fades" data-caption="Crisp mid drop fade with natural curly texture on top. Clean symmetry 💈 #VegasHaircuts #DropFade" data-barber="Marco Juarez">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           <img src="assets/images/mid-drop-fade.jpg" alt="Mid Drop Fade Curly Hair" class="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-500">
           <div class="ig-card-overlay absolute inset-0 p-4 flex flex-col justify-between text-white">
             <div class="flex justify-end">
@@ -633,14 +906,23 @@
               <p class="text-xs font-semibold line-clamp-2 mb-2">Mid drop fade with natural curls & sharp forehead edge</p>
               <div class="flex items-center justify-between text-xs text-gray-300">
                 <span class="flex items-center"><i class="fa-solid fa-heart text-red-500 mr-1.5"></i> 419</span>
+<<<<<<< HEAD
                 <span class="text-[10px] text-amber-300">Barber: Sam</span>
+=======
+                <span class="text-[10px] text-amber-300">Barber: Marco Juarez</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <!-- Post 3: Beard Shave Hot Towel -->
         <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="beards" data-caption="Straight razor beard line sculpting and hot towel rejuvenation. Pure relaxation 🧖‍♂️ #HotTowelShave #FadedTimesLV" data-barber="Leo">
+=======
+        <!-- Post 3: Beard Shave Hot Towel - Fidel -->
+        <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="beards" data-caption="Straight razor beard line sculpting and hot towel rejuvenation. Pure relaxation 🧖‍♂️ #HotTowelShave #FadedTimesLV" data-barber="Fidel (Co-Owner)">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           <img src="assets/images/beard-shave.jpg" alt="Hot Towel Beard Shave" class="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-500">
           <div class="ig-card-overlay absolute inset-0 p-4 flex flex-col justify-between text-white">
             <div class="flex justify-end">
@@ -650,14 +932,23 @@
               <p class="text-xs font-semibold line-clamp-2 mb-2">Hot towel straight razor beard therapy & detailing</p>
               <div class="flex items-center justify-between text-xs text-gray-300">
                 <span class="flex items-center"><i class="fa-solid fa-heart text-red-500 mr-1.5"></i> 512</span>
+<<<<<<< HEAD
                 <span class="text-[10px] text-amber-300">Barber: Leo</span>
+=======
+                <span class="text-[10px] text-amber-300">Barber: Fidel (Co-Owner)</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <!-- Post 4: Hair Design Fade -->
         <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="designs fades" data-caption="Geometric lightning razor art design etched into a skin fade ⚡ #HairArt #VegasBarberArt" data-barber="Chris">
+=======
+        <!-- Post 4: Hair Design Fade - Polo Juarez -->
+        <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="designs fades" data-caption="Geometric lightning razor art design etched into a skin fade ⚡ #HairArt #VegasBarberArt" data-barber="Polo Juarez">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           <img src="assets/images/hair-design.jpg" alt="Hair Design Fade" class="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-500">
           <div class="ig-card-overlay absolute inset-0 p-4 flex flex-col justify-between text-white">
             <div class="flex justify-end">
@@ -667,14 +958,23 @@
               <p class="text-xs font-semibold line-clamp-2 mb-2">Precision geometric lightning razor design ⚡</p>
               <div class="flex items-center justify-between text-xs text-gray-300">
                 <span class="flex items-center"><i class="fa-solid fa-heart text-red-500 mr-1.5"></i> 640</span>
+<<<<<<< HEAD
                 <span class="text-[10px] text-amber-300">Barber: Chris</span>
+=======
+                <span class="text-[10px] text-amber-300">Barber: Polo Juarez</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <!-- Post 5: Textured Skin Fade -->
         <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="fades" data-caption="Textured crop with seamless high skin blend. Ready for the weekend ✂️ #HighFade #CleanHaircut" data-barber="Sam">
+=======
+        <!-- Post 5: Textured Skin Fade - Daniel -->
+        <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="fades" data-caption="Textured crop with seamless high skin blend. Ready for the weekend ✂️ #HighFade #CleanHaircut" data-barber="Daniel (Co-Owner)">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           <img src="assets/images/fade-textured.jpg" alt="Textured High Skin Fade" class="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-500">
           <div class="ig-card-overlay absolute inset-0 p-4 flex flex-col justify-between text-white">
             <div class="flex justify-end">
@@ -684,14 +984,23 @@
               <p class="text-xs font-semibold line-clamp-2 mb-2">Textured crop with seamless high skin blend ✂️</p>
               <div class="flex items-center justify-between text-xs text-gray-300">
                 <span class="flex items-center"><i class="fa-solid fa-heart text-red-500 mr-1.5"></i> 347</span>
+<<<<<<< HEAD
                 <span class="text-[10px] text-amber-300">Barber: Sam</span>
+=======
+                <span class="text-[10px] text-amber-300">Barber: Daniel (Co-Owner)</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <!-- Post 6: Kids Fresh Fade -->
         <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="kids fades" data-caption="Our little man feeling brand new with his clean back-to-school fade! Proud community cuts 💈 #KidsHaircuts #CommunityLove" data-barber="Leo">
+=======
+        <!-- Post 6: Kids Fresh Fade - Polo Juarez -->
+        <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="kids fades" data-caption="Our little man feeling brand new with his clean back-to-school fade! Proud community cuts 💈 #KidsHaircuts #CommunityLove" data-barber="Polo Juarez">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           <img src="assets/images/kids-cut.jpg" alt="Kids Fresh Fade" class="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-500">
           <div class="ig-card-overlay absolute inset-0 p-4 flex flex-col justify-between text-white">
             <div class="flex justify-end">
@@ -701,14 +1010,22 @@
               <p class="text-xs font-semibold line-clamp-2 mb-2">Fresh cut and feeling brand new! Proud community cuts</p>
               <div class="flex items-center justify-between text-xs text-gray-300">
                 <span class="flex items-center"><i class="fa-solid fa-heart text-red-500 mr-1.5"></i> 598</span>
+<<<<<<< HEAD
                 <span class="text-[10px] text-amber-300">Barber: Leo</span>
+=======
+                <span class="text-[10px] text-amber-300">Barber: Polo Juarez</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               </div>
             </div>
           </div>
         </div>
 
         <!-- Post 7: Barbershop Crew Vibe -->
+<<<<<<< HEAD
         <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="all" data-caption="The Faded Times crew ready to elevate your look today at 3868 W Sahara Ave. Walk-ins welcome! 🏆 #BarbershopCrew #VegasBarbers" data-barber="The Crew">
+=======
+        <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="all" data-caption="The Faded Times crew ready to elevate your look today at 3868 W Sahara Ave. Walk-ins welcome! 🏆 #BarbershopCrew #VegasBarbers" data-barber="Daniel, Fidel, Marco & Polo">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           <img src="assets/images/crew-lasvegas.jpg" alt="Faded Times Barbershop Crew" class="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-500">
           <div class="ig-card-overlay absolute inset-0 p-4 flex flex-col justify-between text-white">
             <div class="flex justify-end">
@@ -718,14 +1035,23 @@
               <p class="text-xs font-semibold line-clamp-2 mb-2">The Faded Times squad holding down Sahara Ave 🏆</p>
               <div class="flex items-center justify-between text-xs text-gray-300">
                 <span class="flex items-center"><i class="fa-solid fa-heart text-red-500 mr-1.5"></i> 720</span>
+<<<<<<< HEAD
                 <span class="text-[10px] text-amber-300">All Barbers</span>
+=======
+                <span class="text-[10px] text-amber-300">Team Faded Times</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <!-- Post 8: Master Barber Craftsmanship -->
         <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="all beards" data-caption="Master craftsman precision. We take time to get every single detail sharp. 💈 #MasterBarber #FadedTimesLV" data-barber="Master Barber">
+=======
+        <!-- Post 8: Master Barber Craftsmanship - Fidel -->
+        <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="all beards" data-caption="Master craftsman precision. We take time to get every single detail sharp. 💈 #MasterBarber #FadedTimesLV" data-barber="Fidel (Co-Owner)">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           <img src="assets/images/barber-master.jpg" alt="Master Barber Craftsmanship" class="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-500">
           <div class="ig-card-overlay absolute inset-0 p-4 flex flex-col justify-between text-white">
             <div class="flex justify-end">
@@ -735,7 +1061,11 @@
               <p class="text-xs font-semibold line-clamp-2 mb-2">Dedicated craftsmanship and attention to detail</p>
               <div class="flex items-center justify-between text-xs text-gray-300">
                 <span class="flex items-center"><i class="fa-solid fa-heart text-red-500 mr-1.5"></i> 488</span>
+<<<<<<< HEAD
                 <span class="text-[10px] text-amber-300">Master Barber</span>
+=======
+                <span class="text-[10px] text-amber-300">Barber: Fidel (Co-Owner)</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               </div>
             </div>
           </div>
@@ -753,7 +1083,11 @@
     </div>
   </section>
 
+<<<<<<< HEAD
   <!-- 7. MEET THE MASTER BARBERS -->
+=======
+  <!-- 7. MEET THE MASTER BARBERS & OWNERS -->
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
   <section id="barbers" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
@@ -763,6 +1097,7 @@
         MEET YOUR <span class="text-gold-gradient">BARBERS</span>
       </h2>
       <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+<<<<<<< HEAD
         Our seasoned master barbers bring decades of combined razor expertise, artistic styling vision, and genuine Las Vegas hospitality.
       </p>
     </div>
@@ -791,10 +1126,48 @@
           </p>
           <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Sam">
             Book Chair With Sam
+=======
+        Our seasoned co-owners and master staff barbers bring decades of razor expertise, artistic styling vision, and genuine Las Vegas hospitality.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Barber 1: Daniel (Co-Owner & Master Barber) -->
+      <div class="card-luxury overflow-hidden flex flex-col justify-between group">
+        <div class="relative h-64 overflow-hidden bg-dark-950">
+          <img src="assets/images/barber-master.jpg" alt="Daniel - Co-Owner & Master Barber" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+          <div class="absolute top-3 left-3">
+            <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-dark-950 font-black text-[9px] uppercase tracking-wider shadow-md">
+              👑 CO-OWNER
+            </span>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded bg-dark-950/80 text-amber-300 text-[10px] font-bold border border-amber-400/30">
+              Shop Top Cut
+            </span>
+            <span class="text-[10px] text-gray-300 bg-dark-950/80 px-2 py-0.5 rounded border border-gray-700">
+              Master Barber
+            </span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1 justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-0.5">Daniel</h3>
+            <p class="text-[11px] text-amber-400 font-semibold mb-2">Co-Owner & Master Barber</p>
+            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+              Frequently highlighted by regulars in reviews as the shop's top cut. Brings surgical precision to skin fades, texture work, and custom detailing.
+            </p>
+          </div>
+          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Daniel">
+            Book With Daniel
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           </button>
         </div>
       </div>
 
+<<<<<<< HEAD
       <!-- Barber 2: Chris -->
       <div class="card-luxury overflow-hidden flex flex-col justify-between group">
         <div class="relative h-72 overflow-hidden bg-dark-950">
@@ -817,10 +1190,42 @@
           </p>
           <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Chris">
             Book Chair With Chris
+=======
+      <!-- Barber 2: Fidel (Co-Owner & Master Barber) -->
+      <div class="card-luxury overflow-hidden flex flex-col justify-between group">
+        <div class="relative h-64 overflow-hidden bg-dark-950">
+          <img src="assets/images/beard-shave.jpg" alt="Fidel - Co-Owner & Master Barber" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+          <div class="absolute top-3 left-3">
+            <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-dark-950 font-black text-[9px] uppercase tracking-wider shadow-md">
+              👑 CO-OWNER
+            </span>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded bg-dark-950/80 text-amber-300 text-[10px] font-bold border border-amber-400/30">
+              Razor Specialist
+            </span>
+            <span class="text-[10px] text-gray-300 bg-dark-950/80 px-2 py-0.5 rounded border border-gray-700">
+              Master Barber
+            </span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1 justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-0.5">Fidel</h3>
+            <p class="text-[11px] text-amber-400 font-semibold mb-2">Co-Owner & Master Barber</p>
+            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+              Co-owner and Master Barber known for traditional hot lather straight razor rituals, luxury beard sculpting, and executive royal grooming treatments.
+            </p>
+          </div>
+          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Fidel">
+            Book With Fidel
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           </button>
         </div>
       </div>
 
+<<<<<<< HEAD
       <!-- Barber 3: Leo -->
       <div class="card-luxury overflow-hidden flex flex-col justify-between group">
         <div class="relative h-72 overflow-hidden bg-dark-950">
@@ -843,6 +1248,70 @@
           </p>
           <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Leo">
             Book Chair With Leo
+=======
+      <!-- Barber 3: Marco Juarez (Staff Barber) -->
+      <div class="card-luxury overflow-hidden flex flex-col justify-between group">
+        <div class="relative h-64 overflow-hidden bg-dark-950">
+          <img src="assets/images/crew-lasvegas.jpg" alt="Marco Juarez - Staff Barber" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+          <div class="absolute top-3 left-3">
+            <span class="px-2.5 py-1 rounded-full bg-dark-800 text-gray-200 border border-gray-700 font-bold text-[9px] uppercase tracking-wider">
+              STAFF BARBER
+            </span>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-semibold border border-emerald-500/30">
+              ● Active Chair
+            </span>
+            <span class="text-[10px] text-gray-300 bg-dark-950/80 px-2 py-0.5 rounded border border-gray-700">
+              Appointments
+            </span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1 justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-0.5">Marco Juarez</h3>
+            <p class="text-[11px] text-amber-400 font-semibold mb-2">Staff Barber</p>
+            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+              Actively taking client appointments and haircuts on our booking system. Specialist in clean tapers, modern textures, and sharp razor edge finishes.
+            </p>
+          </div>
+          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Marco Juarez">
+            Book With Marco
+          </button>
+        </div>
+      </div>
+
+      <!-- Barber 4: Polo Juarez (Staff Barber) -->
+      <div class="card-luxury overflow-hidden flex flex-col justify-between group">
+        <div class="relative h-64 overflow-hidden bg-dark-950">
+          <img src="assets/images/fade-textured.jpg" alt="Polo Juarez - Staff Barber" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+          <div class="absolute top-3 left-3">
+            <span class="px-2.5 py-1 rounded-full bg-dark-800 text-gray-200 border border-gray-700 font-bold text-[9px] uppercase tracking-wider">
+              STAFF BARBER
+            </span>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-semibold border border-emerald-500/30">
+              ● Active Chair
+            </span>
+            <span class="text-[10px] text-gray-300 bg-dark-950/80 px-2 py-0.5 rounded border border-gray-700">
+              Fades & Beards
+            </span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1 justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-0.5">Polo Juarez</h3>
+            <p class="text-[11px] text-amber-400 font-semibold mb-2">Staff Barber</p>
+            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+              Actively taking appointments for specialty fades, razor-sharp beard lineups, custom part art, and patient youth precision cuts.
+            </p>
+          </div>
+          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Polo Juarez">
+            Book With Polo
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           </button>
         </div>
       </div>
@@ -929,6 +1398,7 @@
       </p>
     </div>
 
+<<<<<<< HEAD
     <!-- Review Filter Pills -->
     <div class="flex items-center justify-center flex-wrap gap-2 mb-10">
       <button class="review-filter-pill px-4 py-1.5 rounded-full text-xs font-bold bg-amber-400 text-black transition-all" data-review-filter="all">
@@ -941,14 +1411,34 @@
         Strip Visitors
       </button>
       <button class="review-filter-pill px-4 py-1.5 rounded-full text-xs font-semibold bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all" data-review-filter="beards">
+=======
+    <!-- Review Filter Pills (Horizontal Scroll on Mobile, Wrapped on Tablet/Desktop) -->
+    <div class="flex items-center overflow-x-auto no-scrollbar pb-2 sm:pb-0 sm:flex-wrap sm:justify-center gap-2 -mx-4 px-4 sm:mx-0 sm:px-0 mb-8 sm:mb-10">
+      <button class="review-filter-pill whitespace-nowrap shrink-0 px-4 py-2 rounded-full text-xs font-bold bg-amber-400 text-black transition-all active:scale-95 shadow-md shadow-amber-400/20" data-review-filter="all">
+        All Reviews (5.0 ★)
+      </button>
+      <button class="review-filter-pill whitespace-nowrap shrink-0 px-4 py-2 rounded-full text-xs font-semibold bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all active:scale-95" data-review-filter="locals">
+        Vegas Locals
+      </button>
+      <button class="review-filter-pill whitespace-nowrap shrink-0 px-4 py-2 rounded-full text-xs font-semibold bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all active:scale-95" data-review-filter="tourists">
+        Strip Visitors
+      </button>
+      <button class="review-filter-pill whitespace-nowrap shrink-0 px-4 py-2 rounded-full text-xs font-semibold bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all active:scale-95" data-review-filter="beards">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
         Beard Gang
       </button>
     </div>
 
     <!-- Reviews Grid -->
+<<<<<<< HEAD
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       
       <!-- Review 1 -->
+=======
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+      
+      <!-- Review 1: Daniel (Co-Owner) -->
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
       <div class="review-card card-luxury p-6 flex flex-col justify-between" data-category="locals">
         <div>
           <div class="flex items-center justify-between mb-4">
@@ -962,7 +1452,11 @@
             <span class="text-[10px] text-gray-500 uppercase font-mono">Booksy Verified</span>
           </div>
           <p class="text-xs text-gray-300 leading-relaxed italic mb-6">
+<<<<<<< HEAD
             "Hands down the cleanest skin fade in Vegas. I’ve tried at least 5 different shops in town and nobody blends like Sam. The shop has great energy, clean stations, and you walk out looking like a million bucks."
+=======
+            "Hands down the cleanest skin fade in Vegas. I’ve tried at least 5 different shops in town and nobody blends like Daniel. There's a reason everyone recommends him as the top cut. You walk out feeling like a million bucks."
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           </p>
         </div>
         <div class="flex items-center space-x-3 pt-4 border-t border-gray-800">
@@ -971,11 +1465,16 @@
           </div>
           <div>
             <h4 class="text-xs font-bold text-white">Marcus Rodriguez</h4>
+<<<<<<< HEAD
             <p class="text-[10px] text-gray-400">Las Vegas Local • Regular Client</p>
+=======
+            <p class="text-[10px] text-gray-400">Regular Client • Cut by Daniel (Co-Owner)</p>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       <!-- Review 2 -->
       <div class="review-card card-luxury p-6 flex flex-col justify-between" data-category="tourists">
         <div>
@@ -1005,6 +1504,9 @@
       </div>
 
       <!-- Review 3 -->
+=======
+      <!-- Review 2: Fidel (Co-Owner) -->
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
       <div class="review-card card-luxury p-6 flex flex-col justify-between" data-category="beards">
         <div>
           <div class="flex items-center justify-between mb-4">
@@ -1018,7 +1520,11 @@
             <span class="text-[10px] text-gray-500 uppercase font-mono">Booksy Verified</span>
           </div>
           <p class="text-xs text-gray-300 leading-relaxed italic mb-6">
+<<<<<<< HEAD
             "The hot towel beard treatment with Leo is top tier. He lines up the cheeks and neck with a straight razor that doesn’t irritate my sensitive skin at all. Worth every single dollar."
+=======
+            "The hot towel straight razor beard treatment with Fidel is pure luxury. He lines up the cheeks and neckline with zero irritation. Co-owners who truly care about the craft."
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           </p>
         </div>
         <div class="flex items-center space-x-3 pt-4 border-t border-gray-800">
@@ -1027,7 +1533,67 @@
           </div>
           <div>
             <h4 class="text-xs font-bold text-white">Andre Lewis</h4>
+<<<<<<< HEAD
             <p class="text-[10px] text-gray-400">Beard & Haircut Client</p>
+=======
+            <p class="text-[10px] text-gray-400">Beard Client • Groomed by Fidel (Co-Owner)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3: Marco Juarez (Staff Barber) -->
+      <div class="review-card card-luxury p-6 flex flex-col justify-between" data-category="tourists">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex text-amber-400 text-sm space-x-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span class="text-[10px] text-gray-500 uppercase font-mono">Google Review</span>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed italic mb-6">
+            "Flew into Vegas for a conference and needed a tight haircut. Booked an appointment with Marco Juarez online. 5 minutes from the Strip, super easy parking, and Marco gave me one of the sharpest tapers ever."
+          </p>
+        </div>
+        <div class="flex items-center space-x-3 pt-4 border-t border-gray-800">
+          <div class="w-9 h-9 rounded-full bg-amber-400/20 text-amber-300 font-bold flex items-center justify-center text-xs">
+            DT
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white">David Thompson</h4>
+            <p class="text-[10px] text-gray-400">Visitor from Chicago • Cut by Marco Juarez</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 4: Polo Juarez (Staff Barber) -->
+      <div class="review-card card-luxury p-6 flex flex-col justify-between" data-category="locals">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex text-amber-400 text-sm space-x-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span class="text-[10px] text-gray-500 uppercase font-mono">Google Review</span>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed italic mb-6">
+            "Brought my son in for a fade and got my beard lined up with Polo Juarez. Patient, professional, and razor work was on point. Great vibe in the shop, definitely our new family spot!"
+          </p>
+        </div>
+        <div class="flex items-center space-x-3 pt-4 border-t border-gray-800">
+          <div class="w-9 h-9 rounded-full bg-amber-400/20 text-amber-300 font-bold flex items-center justify-center text-xs">
+            JT
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Jason Torres</h4>
+            <p class="text-[10px] text-gray-400">Las Vegas Local • Cut by Polo Juarez</p>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           </div>
         </div>
       </div>
@@ -1366,6 +1932,7 @@
     </div>
   </footer>
 
+<<<<<<< HEAD
   <!-- 14. MULTI-STEP INTERACTIVE BOOKING MODAL -->
   <div id="booking-modal" class="modal-backdrop fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
     <div class="modal-content-box w-full max-w-xl bg-dark-900 border border-amber-400/40 rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
@@ -1382,11 +1949,35 @@
           </div>
         </div>
         <button id="close-booking-modal" class="p-2 text-gray-400 hover:text-white text-lg">
+=======
+  <!-- 14. MULTI-STEP INTERACTIVE BOOKING MODAL (Mobile Bottom Sheet & Desktop Dialog) -->
+  <div id="booking-modal" class="modal-backdrop fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="modal-content-box w-full max-w-xl bg-dark-900 border-t sm:border border-amber-400/40 rounded-t-3xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] sm:max-h-[88vh]">
+      
+      <!-- Mobile Pull Bar Indicator -->
+      <div class="sm:hidden w-full pt-3 pb-1 flex justify-center bg-dark-950">
+        <div class="w-12 h-1.5 rounded-full bg-gray-700"></div>
+      </div>
+
+      <!-- Modal Header -->
+      <div class="px-5 py-4 sm:p-6 bg-dark-950 border-b border-gray-800 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-dark-950 font-black flex items-center justify-center text-xs sm:text-sm font-serif">
+            FT
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-white">Book Your Chair</h3>
+            <p class="text-[10px] sm:text-[11px] text-gray-400">Faded Times • 3868 W Sahara Ave</p>
+          </div>
+        </div>
+        <button id="close-booking-modal" aria-label="Close Booking Modal" class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-dark-800 hover:bg-dark-750 text-gray-400 hover:text-white flex items-center justify-center text-base sm:text-lg active:scale-95 transition-all">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
       <!-- Step Progress Bar -->
+<<<<<<< HEAD
       <div class="bg-dark-850 px-6 py-3 border-b border-gray-800/80 flex items-center justify-between">
         <div class="flex items-center space-x-2">
           <div class="step-indicator flex items-center justify-center w-7 h-7 rounded-full bg-amber-400 text-black font-bold text-xs">1</div>
@@ -1406,15 +1997,41 @@
         <div class="flex items-center space-x-2">
           <div class="step-indicator flex items-center justify-center w-7 h-7 rounded-full bg-gray-800 text-gray-400 font-semibold text-xs">4</div>
           <span class="text-xs font-semibold text-gray-400 hidden sm:inline">Confirm</span>
+=======
+      <div class="bg-dark-850 px-4 sm:px-6 py-2.5 sm:py-3 border-b border-gray-800/80 flex items-center justify-between">
+        <div class="flex items-center space-x-1.5 sm:space-x-2">
+          <div class="step-indicator flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-amber-400 text-black font-bold text-[11px] sm:text-xs">1</div>
+          <span class="text-[11px] sm:text-xs font-semibold text-gray-300 hidden sm:inline">Services</span>
+        </div>
+        <div class="w-5 sm:w-8 h-0.5 bg-gray-700"></div>
+        <div class="flex items-center space-x-1.5 sm:space-x-2">
+          <div class="step-indicator flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gray-800 text-gray-400 font-semibold text-[11px] sm:text-xs">2</div>
+          <span class="text-[11px] sm:text-xs font-semibold text-gray-400 hidden sm:inline">Barber</span>
+        </div>
+        <div class="w-5 sm:w-8 h-0.5 bg-gray-700"></div>
+        <div class="flex items-center space-x-1.5 sm:space-x-2">
+          <div class="step-indicator flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gray-800 text-gray-400 font-semibold text-[11px] sm:text-xs">3</div>
+          <span class="text-[11px] sm:text-xs font-semibold text-gray-400 hidden sm:inline">Time</span>
+        </div>
+        <div class="w-5 sm:w-8 h-0.5 bg-gray-700"></div>
+        <div class="flex items-center space-x-1.5 sm:space-x-2">
+          <div class="step-indicator flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gray-800 text-gray-400 font-semibold text-[11px] sm:text-xs">4</div>
+          <span class="text-[11px] sm:text-xs font-semibold text-gray-400 hidden sm:inline">Confirm</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
         </div>
       </div>
 
       <!-- Modal Body (Scrollable) -->
+<<<<<<< HEAD
       <div class="p-6 overflow-y-auto flex-1 space-y-6">
+=======
+      <div class="p-4 sm:p-6 overflow-y-auto flex-1 space-y-5">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
         
         <!-- Step 1: Services Selection -->
         <div id="booking-step-1" class="space-y-4">
           <div class="text-left">
+<<<<<<< HEAD
             <h4 class="text-white font-bold text-sm">Select Service(s)</h4>
             <p class="text-xs text-gray-400">Choose one or more grooming services.</p>
           </div>
@@ -1485,19 +2102,100 @@
                 </div>
               </div>
               <span class="font-serif font-bold text-amber-400 text-sm">$65</span>
+=======
+            <h4 class="text-white font-bold text-sm sm:text-base">Select Service(s)</h4>
+            <p class="text-xs text-gray-400">Choose one or more grooming services.</p>
+          </div>
+
+          <div class="space-y-2 sm:space-y-2.5">
+            <!-- Service item -->
+            <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
+              <div class="flex items-center space-x-3">
+                <input type="checkbox" value="haircut" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700" checked>
+                <div>
+                  <span class="text-xs sm:text-sm font-bold text-white block">Signature Haircut</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">Skin Fade, Taper, or Scissor cut (40 min)</span>
+                </div>
+              </div>
+              <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$40</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
+              <div class="flex items-center space-x-3">
+                <input type="checkbox" value="haircut-beard" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700">
+                <div>
+                  <span class="text-xs sm:text-sm font-bold text-white block">Haircut & Beard Combo</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">Fade + Beard Shaping & Hot Towel (55 min)</span>
+                </div>
+              </div>
+              <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$50</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
+              <div class="flex items-center space-x-3">
+                <input type="checkbox" value="beard-trim" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700">
+                <div>
+                  <span class="text-xs sm:text-sm font-bold text-white block">Beard Trim & Shape</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">Hot towel + straight razor line (25 min)</span>
+                </div>
+              </div>
+              <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$20</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
+              <div class="flex items-center space-x-3">
+                <input type="checkbox" value="kids-cut" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700">
+                <div>
+                  <span class="text-xs sm:text-sm font-bold text-white block">Kid's Precision Cut</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">Ages 12 & under (35 min)</span>
+                </div>
+              </div>
+              <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$40</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
+              <div class="flex items-center space-x-3">
+                <input type="checkbox" value="lineup" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700">
+                <div>
+                  <span class="text-xs sm:text-sm font-bold text-white block">Razor Edge Lineup</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">Hairline & Neck Taper Clean (20 min)</span>
+                </div>
+              </div>
+              <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$20</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
+              <div class="flex items-center space-x-3">
+                <input type="checkbox" value="vip-treatment" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700">
+                <div>
+                  <span class="text-xs sm:text-sm font-bold text-white block">VIP Total Experience</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">Cut, Beard, Facial, Scalp Massage (75 min)</span>
+                </div>
+              </div>
+              <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$65</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
             </label>
           </div>
 
           <div id="booking-total-summary"></div>
 
+<<<<<<< HEAD
           <button id="btn-next-step-2" type="button" class="w-full py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-dark-950 font-bold text-xs uppercase tracking-wider transition-all">
             Continue to Choose Barber <i class="fa-solid fa-arrow-right ml-1"></i>
           </button>
+=======
+          <div class="pt-2 sticky bottom-0 bg-dark-900/95 backdrop-blur-md pb-1">
+            <button id="btn-next-step-2" type="button" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:brightness-110 text-dark-950 font-black text-xs sm:text-sm uppercase tracking-wider transition-all active:scale-98 shadow-lg shadow-amber-500/25">
+              Continue to Choose Barber <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+          </div>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
         </div>
 
         <!-- Step 2: Barber Selection -->
         <div id="booking-step-2" class="hidden space-y-4">
           <div class="text-left">
+<<<<<<< HEAD
             <h4 class="text-white font-bold text-sm">Choose Your Barber</h4>
             <p class="text-xs text-gray-400">Select your preferred craftsman or choose first available.</p>
           </div>
@@ -1506,12 +2204,23 @@
             
             <div class="barber-select-option p-4 rounded-xl border border-amber-400 bg-amber-500/15 cursor-pointer text-center transition-all" data-barber="Any Master Barber">
               <div class="w-10 h-10 rounded-full bg-amber-400 text-black font-bold flex items-center justify-center mx-auto mb-2 text-sm">
+=======
+            <h4 class="text-white font-bold text-sm sm:text-base">Choose Your Barber</h4>
+            <p class="text-xs text-gray-400">Select your preferred craftsman or choose first available.</p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3">
+            
+            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-amber-400 bg-amber-500/15 cursor-pointer text-center transition-all active:scale-95 col-span-2 sm:col-span-1" data-barber="Any Available">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-amber-400 text-black font-bold flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
                 <i class="fa-solid fa-users"></i>
               </div>
               <span class="text-xs font-bold text-white block">Any Available</span>
               <span class="text-[10px] text-emerald-400">Fastest Availability</span>
             </div>
 
+<<<<<<< HEAD
             <div class="barber-select-option p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all" data-barber="Sam">
               <div class="w-10 h-10 rounded-full bg-dark-750 text-amber-400 border border-gray-700 font-bold flex items-center justify-center mx-auto mb-2 text-sm">
                 S
@@ -1534,15 +2243,55 @@
               </div>
               <span class="text-xs font-bold text-white block">Leo</span>
               <span class="text-[10px] text-gray-400">Beard Sculpt & Kids</span>
+=======
+            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Daniel">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-dark-950 font-black flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
+                D
+              </div>
+              <span class="text-xs font-bold text-white block">Daniel</span>
+              <span class="text-[10px] text-amber-300">👑 Co-Owner / Top Cut</span>
+            </div>
+
+            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Fidel">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-dark-950 font-black flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
+                F
+              </div>
+              <span class="text-xs font-bold text-white block">Fidel</span>
+              <span class="text-[10px] text-amber-300">👑 Co-Owner / Shaves</span>
+            </div>
+
+            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Marco Juarez">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-dark-750 text-amber-400 border border-gray-700 font-bold flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
+                MJ
+              </div>
+              <span class="text-xs font-bold text-white block">Marco Juarez</span>
+              <span class="text-[10px] text-emerald-400">Staff Barber • Appts</span>
+            </div>
+
+            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Polo Juarez">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-dark-750 text-amber-400 border border-gray-700 font-bold flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
+                PJ
+              </div>
+              <span class="text-xs font-bold text-white block">Polo Juarez</span>
+              <span class="text-[10px] text-emerald-400">Staff Barber • Fades</span>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
             </div>
 
           </div>
 
+<<<<<<< HEAD
           <div class="flex space-x-3 pt-2">
             <button id="btn-back-step-1" type="button" class="w-1/3 py-3 rounded-xl bg-dark-800 border border-gray-700 text-gray-300 text-xs font-bold">
               Back
             </button>
             <button id="btn-next-step-3" type="button" class="w-2/3 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-dark-950 font-bold text-xs uppercase tracking-wider transition-all">
+=======
+          <div class="flex space-x-3 pt-2 sticky bottom-0 bg-dark-900/95 backdrop-blur-md pb-1">
+            <button id="btn-back-step-1" type="button" class="w-1/3 py-3.5 rounded-xl bg-dark-800 border border-gray-700 text-gray-300 text-xs font-bold active:scale-95">
+              Back
+            </button>
+            <button id="btn-next-step-3" type="button" class="w-2/3 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-black text-xs sm:text-sm uppercase tracking-wider transition-all active:scale-98 shadow-lg shadow-amber-500/25">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               Choose Date & Time <i class="fa-solid fa-arrow-right ml-1"></i>
             </button>
           </div>
@@ -1551,7 +2300,11 @@
         <!-- Step 3: Date & Time Picker -->
         <div id="booking-step-3" class="hidden space-y-4">
           <div class="text-left">
+<<<<<<< HEAD
             <h4 class="text-white font-bold text-sm">Pick Date & Time</h4>
+=======
+            <h4 class="text-white font-bold text-sm sm:text-base">Pick Date & Time</h4>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
             <p class="text-xs text-gray-400">Select an available appointment time.</p>
           </div>
 
@@ -1569,11 +2322,19 @@
             </div>
           </div>
 
+<<<<<<< HEAD
           <div class="flex space-x-3 pt-2">
             <button id="btn-back-step-2" type="button" class="w-1/3 py-3 rounded-xl bg-dark-800 border border-gray-700 text-gray-300 text-xs font-bold">
               Back
             </button>
             <button id="btn-next-step-4" type="button" class="w-2/3 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-dark-950 font-bold text-xs uppercase tracking-wider transition-all">
+=======
+          <div class="flex space-x-3 pt-2 sticky bottom-0 bg-dark-900/95 backdrop-blur-md pb-1">
+            <button id="btn-back-step-2" type="button" class="w-1/3 py-3.5 rounded-xl bg-dark-800 border border-gray-700 text-gray-300 text-xs font-bold active:scale-95">
+              Back
+            </button>
+            <button id="btn-next-step-4" type="button" class="w-2/3 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-black text-xs sm:text-sm uppercase tracking-wider transition-all active:scale-98 shadow-lg shadow-amber-500/25">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               Client Details <i class="fa-solid fa-arrow-right ml-1"></i>
             </button>
           </div>
@@ -1582,7 +2343,11 @@
         <!-- Step 4: Client Info & Summary -->
         <div id="booking-step-4" class="hidden space-y-4">
           <div class="text-left">
+<<<<<<< HEAD
             <h4 class="text-white font-bold text-sm">Client Information</h4>
+=======
+            <h4 class="text-white font-bold text-sm sm:text-base">Client Information</h4>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
             <p class="text-xs text-gray-400">Where should we send your appointment confirmation?</p>
           </div>
 
@@ -1591,21 +2356,34 @@
           <div class="space-y-3">
             <div>
               <label class="text-xs text-gray-300 font-semibold block mb-1">Full Name *</label>
+<<<<<<< HEAD
               <input id="client-name" type="text" placeholder="e.g. Marcus Johnson" required class="w-full px-4 py-2.5 rounded-xl bg-dark-950 border border-gray-700 text-white text-xs focus:border-amber-400 focus:outline-none">
+=======
+              <input id="client-name" type="text" placeholder="e.g. Marcus Johnson" required class="w-full px-4 py-3 rounded-xl bg-dark-950 border border-gray-700 text-white text-xs sm:text-sm focus:border-amber-400 focus:outline-none">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
             </div>
 
             <div>
               <label class="text-xs text-gray-300 font-semibold block mb-1">Phone Number (For SMS reminder) *</label>
+<<<<<<< HEAD
               <input id="client-phone" type="tel" placeholder="e.g. (702) 555-0192" required class="w-full px-4 py-2.5 rounded-xl bg-dark-950 border border-gray-700 text-white text-xs focus:border-amber-400 focus:outline-none">
+=======
+              <input id="client-phone" type="tel" placeholder="e.g. (702) 555-0192" required class="w-full px-4 py-3 rounded-xl bg-dark-950 border border-gray-700 text-white text-xs sm:text-sm focus:border-amber-400 focus:outline-none">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
             </div>
 
             <div>
               <label class="text-xs text-gray-300 font-semibold block mb-1">Email (Optional)</label>
+<<<<<<< HEAD
               <input id="client-email" type="email" placeholder="e.g. marcus@gmail.com" class="w-full px-4 py-2.5 rounded-xl bg-dark-950 border border-gray-700 text-white text-xs focus:border-amber-400 focus:outline-none">
+=======
+              <input id="client-email" type="email" placeholder="e.g. marcus@gmail.com" class="w-full px-4 py-3 rounded-xl bg-dark-950 border border-gray-700 text-white text-xs sm:text-sm focus:border-amber-400 focus:outline-none">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
             </div>
 
             <div>
               <label class="text-xs text-gray-300 font-semibold block mb-1">Special Notes / Haircut Style Request</label>
+<<<<<<< HEAD
               <input id="client-notes" type="text" placeholder="e.g. Low drop fade with 1.5 on top, razor part" class="w-full px-4 py-2.5 rounded-xl bg-dark-950 border border-gray-700 text-white text-xs focus:border-amber-400 focus:outline-none">
             </div>
           </div>
@@ -1615,6 +2393,17 @@
               Back
             </button>
             <button id="btn-confirm-booking" type="button" class="w-2/3 py-3 rounded-xl bg-gradient-to-r from-emerald-400 to-emerald-500 text-dark-950 font-black text-xs uppercase tracking-wider transition-all shadow-lg shadow-emerald-500/25">
+=======
+              <input id="client-notes" type="text" placeholder="e.g. Low drop fade with 1.5 on top, razor part" class="w-full px-4 py-3 rounded-xl bg-dark-950 border border-gray-700 text-white text-xs sm:text-sm focus:border-amber-400 focus:outline-none">
+            </div>
+          </div>
+
+          <div class="flex space-x-3 pt-2 sticky bottom-0 bg-dark-900/95 backdrop-blur-md pb-1">
+            <button id="btn-back-step-3" type="button" class="w-1/3 py-3.5 rounded-xl bg-dark-800 border border-gray-700 text-gray-300 text-xs font-bold active:scale-95">
+              Back
+            </button>
+            <button id="btn-confirm-booking" type="button" class="w-2/3 py-3.5 rounded-xl bg-gradient-to-r from-emerald-400 to-emerald-500 text-dark-950 font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-lg shadow-emerald-500/25 active:scale-98">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               Confirm & Book Chair
             </button>
           </div>
@@ -1622,22 +2411,37 @@
 
         <!-- Confirmation Result Screen -->
         <div id="booking-confirmation" class="hidden text-center py-4 space-y-5">
+<<<<<<< HEAD
           <div class="w-16 h-16 rounded-full bg-emerald-500/20 border-2 border-emerald-400 text-emerald-400 flex items-center justify-center mx-auto text-2xl animate-bounce">
+=======
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500/20 border-2 border-emerald-400 text-emerald-400 flex items-center justify-center mx-auto text-xl sm:text-2xl animate-bounce">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
             <i class="fa-solid fa-check"></i>
           </div>
 
           <div>
+<<<<<<< HEAD
             <h4 class="text-xl font-bold text-white">Chair Reserved!</h4>
+=======
+            <h4 class="text-lg sm:text-xl font-bold text-white">Chair Reserved!</h4>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
             <p class="text-xs text-gray-400 mt-1">Your appointment at Faded Times Barbershop is confirmed.</p>
           </div>
 
           <div id="confirmation-details"></div>
 
           <div class="flex flex-col sm:flex-row gap-2 pt-2">
+<<<<<<< HEAD
             <a id="add-to-gcal-btn" href="#" class="flex-1 py-2.5 px-3 rounded-xl bg-dark-800 border border-gray-700 text-gray-200 text-xs font-semibold hover:border-amber-400 transition-colors flex items-center justify-center">
               <i class="fa-brands fa-google text-amber-400 mr-2"></i> Add to Google Cal
             </a>
             <button id="download-ics-btn" type="button" class="flex-1 py-2.5 px-3 rounded-xl bg-dark-800 border border-gray-700 text-gray-200 text-xs font-semibold hover:border-amber-400 transition-colors flex items-center justify-center">
+=======
+            <a id="add-to-gcal-btn" href="#" class="flex-1 py-3 px-3 rounded-xl bg-dark-800 border border-gray-700 text-gray-200 text-xs font-semibold hover:border-amber-400 active:scale-95 transition-all flex items-center justify-center">
+              <i class="fa-brands fa-google text-amber-400 mr-2"></i> Add to Google Cal
+            </a>
+            <button id="download-ics-btn" type="button" class="flex-1 py-3 px-3 rounded-xl bg-dark-800 border border-gray-700 text-gray-200 text-xs font-semibold hover:border-amber-400 active:scale-95 transition-all flex items-center justify-center">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
               <i class="fa-regular fa-calendar-plus text-amber-400 mr-2"></i> Download .ICS
             </button>
           </div>
@@ -1651,6 +2455,7 @@
   </div>
 
   <!-- 15. INSTAGRAM LIGHTBOX MODAL -->
+<<<<<<< HEAD
   <div id="lightbox-modal" class="modal-backdrop fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
     <div class="modal-content-box max-w-2xl w-full bg-dark-900 border border-amber-400/40 rounded-3xl overflow-hidden shadow-2xl relative">
       <button id="close-lightbox-btn" class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-black/70 text-white flex items-center justify-center hover:bg-amber-400 hover:text-black transition-colors">
@@ -1662,6 +2467,19 @@
       </div>
 
       <div class="p-5 bg-dark-900 border-t border-gray-800">
+=======
+  <div id="lightbox-modal" class="modal-backdrop fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-2 sm:p-4">
+    <div class="modal-content-box max-w-2xl w-full bg-dark-900 border border-amber-400/40 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative">
+      <button id="close-lightbox-btn" aria-label="Close Lightbox" class="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-black/80 text-white flex items-center justify-center hover:bg-amber-400 hover:text-black active:scale-95 transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="relative bg-dark-950 flex items-center justify-center max-h-[55vh] sm:max-h-[65vh] overflow-hidden">
+        <img id="lightbox-image" src="" alt="Faded Times Barbershop Cut" class="w-full h-full object-contain max-h-[55vh] sm:max-h-[65vh]">
+      </div>
+
+      <div class="p-4 sm:p-5 bg-dark-900 border-t border-gray-800">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
         <div class="flex items-center justify-between mb-2">
           <div class="flex items-center space-x-2">
             <span class="font-mono text-amber-300 font-bold text-xs">@fadedtimeslv</span>
@@ -1673,7 +2491,11 @@
           </a>
         </div>
         <p id="lightbox-caption" class="text-xs text-gray-300 leading-relaxed mb-4"></p>
+<<<<<<< HEAD
         <button class="open-booking-trigger w-full py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-dark-950 font-bold text-xs uppercase tracking-wider transition-colors">
+=======
+        <button class="open-booking-trigger w-full py-3 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:brightness-110 text-dark-950 font-black text-xs uppercase tracking-wider transition-all active:scale-98">
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
           Book This Style
         </button>
       </div>
@@ -1708,4 +2530,8 @@
   <!-- JavaScript Scripts -->
   <script src="js/app.js"></script>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
