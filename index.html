@@ -133,79 +133,81 @@
 <body class="bg-dark-900 text-gray-100 antialiased selection:bg-amber-400 selection:text-black pb-24 md:pb-0">
 
   <!-- 1. TOP ANNOUNCEMENT & REAL-TIME STATUS BAR -->
-  <aside aria-label="Announcement & Status Bar" class="bg-dark-950 border-b border-gray-800/80 text-xs py-1.5 sm:py-2 px-3 sm:px-4 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-2">
-      <!-- Live Status dynamic check -->
-      <div id="shop-status-badge" class="flex items-center text-center sm:text-left justify-center">
+  <aside aria-label="Announcement & Status Bar" class="bg-dark-950/95 backdrop-blur-md border-b border-amber-400/15 py-2 px-4 sm:px-6 z-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 text-xs">
+      
+      <!-- Live Status Dynamic Check -->
+      <div id="shop-status-badge" class="flex items-center justify-center md:justify-start text-center md:text-left">
         <span id="shop-status-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-green mr-2 shrink-0"></span>
-        <span id="shop-status-text" class="text-gray-300 font-medium text-[11px] sm:text-xs">
-          <span class="text-emerald-400 font-semibold">OPEN NOW</span> • Closes at 6:00 PM • Walk-ins & Bookings Welcome
+        <span id="shop-status-text" class="text-gray-300 font-medium text-xs sm:text-xs">
+          <span class="text-emerald-400 font-bold">OPEN NOW</span> • Closes at 6:00 PM • Walk-ins & Bookings Welcome
         </span>
       </div>
 
       <!-- Quick Info Links -->
-      <div class="flex items-center justify-center space-x-3 sm:space-x-4 text-gray-400 text-[11px] sm:text-xs">
-        <a href="tel:7022722457" class="hover:text-amber-400 transition-colors flex items-center">
-          <i class="fa-solid fa-phone text-amber-400 mr-1.5 text-[10px]"></i> (702) 272-2457
+      <div class="flex items-center justify-center space-x-3 sm:space-x-4 text-gray-400 text-xs font-medium">
+        <a href="tel:7022722457" class="hover:text-amber-300 transition-colors flex items-center">
+          <i class="fa-solid fa-phone text-amber-400 mr-1.5 text-[11px]"></i> (702) 272-2457
         </a>
-        <span class="text-gray-700">|</span>
-        <a href="#location" class="hover:text-amber-400 transition-colors hidden sm:flex items-center">
-          <i class="fa-solid fa-location-dot text-amber-400 mr-1.5 text-[10px]"></i> 3868 W Sahara Ave
+        <span class="text-gray-700">•</span>
+        <a href="#location" class="hover:text-amber-300 transition-colors hidden sm:flex items-center">
+          <i class="fa-solid fa-location-dot text-amber-400 mr-1.5 text-[11px]"></i> 3868 W Sahara Ave
         </a>
-        <span class="text-gray-700 hidden sm:inline">|</span>
-        <a href="https://www.instagram.com/fadedtimeslv/" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors flex items-center font-semibold text-amber-300/90">
+        <span class="text-gray-700 hidden sm:inline">•</span>
+        <a href="https://www.instagram.com/fadedtimeslv/" target="_blank" rel="noopener noreferrer" class="hover:text-amber-300 transition-colors flex items-center text-amber-300 font-semibold">
           <i class="fa-brands fa-instagram text-amber-400 mr-1.5 text-xs"></i> @fadedtimeslv
         </a>
       </div>
+
     </div>
   </aside>
 
   <!-- 2. MAIN NAVIGATION -->
-  <header class="glass-nav sticky top-0 sm:top-8 z-40 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+  <header class="glass-nav sticky top-0 z-40 transition-all duration-300 w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Logo & Monogram -->
-      <a href="#" class="flex items-center space-x-2.5 sm:space-x-3 group">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 p-[1.5px] shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform shrink-0">
+      <a href="#" class="flex items-center space-x-3 group shrink-0">
+        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 p-[1.5px] shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform shrink-0">
           <div class="w-full h-full bg-dark-950 rounded-[10px] flex items-center justify-center">
             <span class="font-serif font-black text-lg sm:text-xl text-gold-shimmer tracking-tighter">FT</span>
           </div>
         </div>
-        <div>
-          <div class="font-serif font-black text-base sm:text-xl tracking-wider text-white flex items-center">
+        <div class="text-left">
+          <div class="font-serif font-black text-base sm:text-xl tracking-wider text-white flex items-center leading-none">
             FADED TIMES
-            <span class="ml-1 sm:ml-1.5 px-1 sm:px-1.5 py-0.2 sm:py-0.5 text-[9px] sm:text-[10px] font-sans font-bold bg-amber-400/20 text-amber-300 rounded border border-amber-400/30 uppercase tracking-normal">LV</span>
+            <span class="ml-1.5 px-1.5 py-0.5 text-[9px] font-sans font-black bg-amber-400/20 text-amber-300 rounded border border-amber-400/40 uppercase tracking-normal">LV</span>
           </div>
-          <p class="text-[9px] sm:text-[10px] tracking-[0.2em] text-gray-400 uppercase font-semibold">Las Vegas Barbershop</p>
+          <p class="text-[9px] sm:text-[10px] tracking-[0.22em] text-gray-400 uppercase font-semibold mt-1">Las Vegas Barbershop</p>
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center space-x-6 xl:space-x-7 text-sm font-medium text-gray-300">
-        <a href="#services" class="hover:text-amber-400 transition-colors">Services & Pricing</a>
-        <a href="#lookbook" class="hover:text-amber-400 transition-colors flex items-center">
-          Lookbook <span class="ml-1.5 px-1.5 py-0.2 text-[9px] bg-gradient-to-r from-pink-500 to-amber-500 text-white rounded-full font-bold">@fadedtimeslv</span>
+      <!-- Desktop Nav Links (Evenly Spaced & Clean) -->
+      <nav class="hidden lg:flex items-center space-x-5 xl:space-x-7 text-xs xl:text-sm font-semibold tracking-wider uppercase text-gray-300">
+        <a href="#services" class="hover:text-amber-400 transition-colors py-2">Services</a>
+        <a href="#lookbook" class="hover:text-amber-400 transition-colors py-2 flex items-center">
+          Lookbook <span class="ml-1 px-1.5 py-0.5 text-[8px] bg-gradient-to-r from-pink-500 to-amber-500 text-white rounded font-bold">IG</span>
         </a>
-        <a href="#barbers" class="hover:text-amber-400 transition-colors">Master Barbers</a>
-        <a href="#experience" class="hover:text-amber-400 transition-colors">The Experience</a>
-        <a href="#reviews" class="hover:text-amber-400 transition-colors">Reviews</a>
-        <a href="#location" class="hover:text-amber-400 transition-colors">Hours & Location</a>
-        <a href="#faq" class="hover:text-amber-400 transition-colors">FAQ</a>
+        <a href="#barbers" class="hover:text-amber-400 transition-colors py-2">Barbers</a>
+        <a href="#experience" class="hover:text-amber-400 transition-colors py-2">The Experience</a>
+        <a href="#reviews" class="hover:text-amber-400 transition-colors py-2">Reviews</a>
+        <a href="#location" class="hover:text-amber-400 transition-colors py-2">Location</a>
+        <a href="#faq" class="hover:text-amber-400 transition-colors py-2">FAQ</a>
       </nav>
 
       <!-- Desktop CTA Buttons -->
-      <div class="hidden sm:flex items-center space-x-2.5 sm:space-x-3">
-        <a href="tel:7022722457" class="px-3.5 py-2.5 rounded-xl border border-gray-700 bg-dark-800 text-gray-300 hover:text-white hover:border-amber-400/60 text-xs font-semibold transition-all">
-          <i class="fa-solid fa-phone mr-1 text-amber-400"></i> (702) 272-2457
+      <div class="hidden sm:flex items-center space-x-3 shrink-0">
+        <a href="tel:7022722457" class="h-10 px-4 rounded-xl border border-gray-700 bg-dark-800 text-gray-200 hover:text-white hover:border-amber-400/60 text-xs font-semibold tracking-wide transition-all flex items-center justify-center">
+          <i class="fa-solid fa-phone mr-2 text-amber-400"></i> (702) 272-2457
         </a>
-        <button class="open-booking-trigger px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 hover:scale-[1.02] transition-all flex items-center">
-          <i class="fa-solid fa-calendar-check mr-1.5 sm:mr-2"></i> Book Chair
+        <button class="open-booking-trigger h-10 px-5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-500/25 hover:brightness-110 active:scale-95 transition-all flex items-center justify-center">
+          <i class="fa-solid fa-calendar-check mr-2 text-sm"></i> Book Chair
         </button>
       </div>
 
       <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-toggle" aria-label="Open Navigation Menu" class="lg:hidden p-2 sm:p-2.5 rounded-xl bg-dark-800 border border-gray-800 text-gray-300 hover:text-amber-400 active:scale-95 transition-all flex items-center justify-center w-10 h-10">
-        <i class="fa-solid fa-bars text-lg sm:text-xl"></i>
+      <button id="mobile-menu-toggle" aria-label="Open Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-dark-800 border border-gray-800 text-gray-300 hover:text-amber-400 active:scale-95 transition-all flex items-center justify-center w-11 h-11">
+        <i class="fa-solid fa-bars text-xl"></i>
       </button>
     </div>
   </header>
@@ -229,31 +231,31 @@
       </div>
 
       <nav class="mt-6 flex flex-col space-y-3 font-semibold text-base">
-        <a href="#services" class="mobile-nav-link p-3 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+        <a href="#services" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
           <span class="flex items-center"><i class="fa-solid fa-scissors text-amber-400 mr-3 text-sm w-5"></i> Services & Pricing</span>
           <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
         </a>
-        <a href="#lookbook" class="mobile-nav-link p-3 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+        <a href="#lookbook" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
           <span class="flex items-center"><i class="fa-brands fa-instagram text-pink-400 mr-3 text-sm w-5"></i> Instagram Lookbook</span>
           <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
         </a>
-        <a href="#barbers" class="mobile-nav-link p-3 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
-          <span class="flex items-center"><i class="fa-solid fa-user-group text-amber-400 mr-3 text-sm w-5"></i> Master Barbers</span>
+        <a href="#barbers" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+          <span class="flex items-center"><i class="fa-solid fa-user-group text-amber-400 mr-3 text-sm w-5"></i> Master Barbers & Owners</span>
           <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
         </a>
-        <a href="#experience" class="mobile-nav-link p-3 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+        <a href="#experience" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
           <span class="flex items-center"><i class="fa-solid fa-crown text-amber-400 mr-3 text-sm w-5"></i> The Experience</span>
           <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
         </a>
-        <a href="#reviews" class="mobile-nav-link p-3 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+        <a href="#reviews" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
           <span class="flex items-center"><i class="fa-solid fa-star text-amber-400 mr-3 text-sm w-5"></i> Verified Reviews</span>
           <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
         </a>
-        <a href="#location" class="mobile-nav-link p-3 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+        <a href="#location" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
           <span class="flex items-center"><i class="fa-solid fa-location-dot text-amber-400 mr-3 text-sm w-5"></i> Location & Hours</span>
           <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
         </a>
-        <a href="#faq" class="mobile-nav-link p-3 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
+        <a href="#faq" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
           <span class="flex items-center"><i class="fa-solid fa-circle-question text-amber-400 mr-3 text-sm w-5"></i> FAQ</span>
           <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
         </a>
@@ -273,69 +275,79 @@
     </div>
   </div>
 
-  <!-- 3. HERO SECTION -->
-  <section class="relative min-h-[85vh] sm:min-h-[92vh] flex items-center justify-center overflow-hidden py-12 sm:py-20">
+  <!-- 3. HERO SECTION (Evenly Centered, Symmetrical, & Spacious) -->
+  <section class="relative min-h-[85vh] sm:min-h-[92vh] flex items-center justify-center overflow-hidden py-16 sm:py-24 text-center">
     <!-- Background Hero Interior Image -->
     <div class="absolute inset-0 z-0">
       <img src="assets/images/hero-interior.jpg" alt="Faded Times Barbershop Interior Las Vegas" class="w-full h-full object-cover object-center transform scale-105 filter brightness-70">
       <div class="absolute inset-0 hero-gradient-overlay"></div>
     </div>
 
-    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
       
-      <!-- Location Tag -->
-      <div class="inline-flex items-center space-x-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-dark-800/90 border border-amber-400/40 text-amber-300 text-[11px] sm:text-xs font-semibold mb-5 sm:mb-6 backdrop-blur-md max-w-full">
-        <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping shrink-0"></span>
-        <span class="truncate">Valley Oaks Plaza • 3868 W Sahara Ave • 5 Min from Strip</span>
+      <!-- Location Pill Badge -->
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-dark-900/90 border border-amber-400/35 text-amber-300 text-xs font-semibold mb-6 sm:mb-8 backdrop-blur-md shadow-lg shadow-amber-500/5">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-green shrink-0"></span>
+        <span class="tracking-wide">Valley Oaks Plaza • 3868 W Sahara Ave • Las Vegas, NV</span>
       </div>
 
-      <!-- Main Headline -->
-      <h1 class="font-serif font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.12] mb-4 sm:mb-6">
+      <!-- Main Headline (Razor-Sharp Centered Symmetry) -->
+      <h1 class="font-serif font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight sm:tracking-normal leading-[1.08] sm:leading-[1.12] mb-5 sm:mb-7 text-center">
         PRECISION CUTS.<br>
-        <span class="text-gold-shimmer font-serif-luxury">TIMELESS STYLE.</span>
+        <span class="text-gold-shimmer font-serif-luxury block mt-1 sm:mt-2">TIMELESS STYLE.</span>
       </h1>
 
       <!-- Subtitle -->
-      <p class="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-6 sm:mb-8 px-2">
+      <p class="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-8 sm:mb-10 text-center px-4">
         Las Vegas' premier grooming destination. Master-level skin fades, sculpted beard lineups, and luxury hot towel straight razor shaves crafted with unyielding attention to detail.
       </p>
 
-      <!-- CTA Action Group -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full max-w-md sm:max-w-none mx-auto">
-        <button class="open-booking-trigger w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-xl shadow-amber-500/30 hover:shadow-amber-500/50 active:scale-95 transition-all flex items-center justify-center">
-          <i class="fa-solid fa-calendar-plus mr-2 text-sm sm:text-base"></i> Book Chair Online
+      <!-- CTA Action Group (Balanced 2-Button Symmetrical Layout) -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-5 sm:mb-6 w-full max-w-lg mx-auto">
+        <button class="open-booking-trigger w-full sm:w-auto flex-1 h-12 sm:h-14 px-8 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-xl shadow-amber-500/30 hover:brightness-110 active:scale-95 transition-all flex items-center justify-center whitespace-nowrap">
+          <i class="fa-solid fa-calendar-check mr-2.5 text-base"></i> Book Your Chair
         </button>
-        <a href="#lookbook" class="w-full sm:w-auto px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-dark-800/90 hover:bg-dark-750 border border-amber-400/40 text-gray-200 hover:text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center active:scale-95">
-          <i class="fa-brands fa-instagram text-amber-400 mr-2 text-sm sm:text-base"></i> View Instagram Cuts
-        </a>
-        <a href="tel:7022722457" class="w-full sm:w-auto px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl border border-gray-800 bg-dark-900/70 hover:bg-dark-800 text-gray-300 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center active:scale-95">
-          <i class="fa-solid fa-phone text-amber-400 mr-1.5"></i> (702) 272-2457
+        <a href="#lookbook" class="w-full sm:w-auto flex-1 h-12 sm:h-14 px-8 rounded-xl bg-dark-800/90 hover:bg-dark-750 border border-amber-400/40 text-gray-200 hover:text-white font-bold text-xs sm:text-sm tracking-wide transition-all flex items-center justify-center active:scale-95 whitespace-nowrap">
+          <i class="fa-brands fa-instagram text-amber-400 mr-2.5 text-base"></i> Instagram Lookbook
         </a>
       </div>
 
-      <!-- Trust Metrics Bar -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 max-w-4xl mx-auto pt-4 sm:pt-6 border-t border-gray-800/80">
-        <div class="p-2.5 sm:p-3 rounded-xl bg-dark-800/60 border border-gray-800 backdrop-blur-sm">
-          <div class="text-amber-400 text-lg sm:text-2xl font-serif font-black">4.9 ★★★★★</div>
-          <div class="text-[11px] sm:text-xs text-gray-400 mt-0.5">500+ Verified Reviews</div>
+      <!-- Quick Sub-Row Details -->
+      <div class="flex items-center justify-center flex-wrap gap-x-4 gap-y-1 text-xs text-gray-400 mb-8 sm:mb-12">
+        <span class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-1.5"></i> Walk-ins Welcome</span>
+        <span class="text-gray-700 hidden sm:inline">•</span>
+        <span class="flex items-center"><i class="fa-solid fa-shield-check text-amber-400 text-[10px] mr-1.5"></i> 100% Satisfaction</span>
+        <span class="text-gray-700 hidden sm:inline">•</span>
+        <a href="tel:7022722457" class="hover:text-amber-300 transition-colors flex items-center font-semibold text-gray-300">
+          <i class="fa-solid fa-phone text-amber-400 text-[10px] mr-1.5"></i> (702) 272-2457
+        </a>
+      </div>
+
+      <!-- Trust Metrics Bar (Symmetric 4-Column Layout) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-4xl mx-auto pt-8 sm:pt-10 border-t border-gray-800/80">
+        <div class="p-3.5 sm:p-4 rounded-xl bg-dark-800/70 border border-gray-800 backdrop-blur-sm flex flex-col items-center justify-center text-center">
+          <div class="text-amber-400 text-xl sm:text-2xl font-serif font-black">4.9 ★★★★★</div>
+          <div class="text-xs text-gray-400 mt-1">500+ Verified Reviews</div>
         </div>
-        <div class="p-2.5 sm:p-3 rounded-xl bg-dark-800/60 border border-gray-800 backdrop-blur-sm">
-          <div class="text-amber-400 text-lg sm:text-2xl font-serif font-black">10,000+</div>
-          <div class="text-[11px] sm:text-xs text-gray-400 mt-0.5">Precision Cuts Delivered</div>
+        <div class="p-3.5 sm:p-4 rounded-xl bg-dark-800/70 border border-gray-800 backdrop-blur-sm flex flex-col items-center justify-center text-center">
+          <div class="text-amber-400 text-xl sm:text-2xl font-serif font-black">10,000+</div>
+          <div class="text-xs text-gray-400 mt-1">Precision Cuts Delivered</div>
         </div>
-        <div class="p-2.5 sm:p-3 rounded-xl bg-dark-800/60 border border-gray-800 backdrop-blur-sm">
-          <div class="text-amber-400 text-lg sm:text-2xl font-serif font-black">Master Barbers</div>
-          <div class="text-[11px] sm:text-xs text-gray-400 mt-0.5">Expert Craftsmen</div>
+        <div class="p-3.5 sm:p-4 rounded-xl bg-dark-800/70 border border-gray-800 backdrop-blur-sm flex flex-col items-center justify-center text-center">
+          <div class="text-amber-400 text-xl sm:text-2xl font-serif font-black">Master Barbers</div>
+          <div class="text-xs text-gray-400 mt-1">Co-Owners & Craftsmen</div>
         </div>
-        <div class="p-2.5 sm:p-3 rounded-xl bg-dark-800/60 border border-gray-800 backdrop-blur-sm">
-          <div class="text-amber-400 text-lg sm:text-2xl font-serif font-black">Walk-ins</div>
-          <div class="text-[11px] sm:text-xs text-gray-400 mt-0.5">& Bookings Welcome</div>
+        <div class="p-3.5 sm:p-4 rounded-xl bg-dark-800/70 border border-gray-800 backdrop-blur-sm flex flex-col items-center justify-center text-center">
+          <div class="text-amber-400 text-xl sm:text-2xl font-serif font-black">Walk-Ins</div>
+          <div class="text-xs text-gray-400 mt-1">& Appointments Welcome</div>
         </div>
+      </div>
+
     </div>
   </section>
 
   <!-- 4. LIVE SHOP STATUS & WALK-IN ESTIMATOR BANNER -->
-  <section class="bg-gradient-to-r from-dark-850 via-dark-800 to-dark-850 border-y border-amber-400/20 py-4 px-4">
+  <section class="bg-gradient-to-r from-dark-850 via-dark-800 to-dark-850 border-y border-amber-400/20 py-4 px-4 sm:px-6">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center space-x-3 text-center md:text-left">
         <div class="w-10 h-10 rounded-full bg-amber-400/10 border border-amber-400/30 flex items-center justify-center shrink-0">
@@ -345,7 +357,7 @@
           <div id="hero-status-text" class="text-sm text-white font-medium">
             <span class="text-emerald-400 font-semibold">● Open Today Until 6:00 PM</span> — Walk-ins Welcome
           </div>
-          <div id="walkin-wait-text" class="text-xs text-gray-400">
+          <div id="walkin-wait-text" class="text-xs text-gray-400 mt-0.5">
             Est. Walk-in Wait: <span class="text-amber-300 font-bold">~15–20 Mins</span> (3 Barbers on Chair)
           </div>
         </div>
