@@ -1,53 +1,54 @@
-# Faded Times Barbershop (@fadedtimeslv) - Website & Booking Template
+# Master Barbershop Website & Booking Template Engine
 
-A modern, mobile-first, high-converting website and interactive booking template built for **Faded Times Barbershop** (@fadedtimeslv), located in Las Vegas, NV at **3868 W Sahara Ave** (Valley Oaks Plaza).
+A high-converting, mobile-first, luxury barbershop website template and interactive booking engine. This repository serves as the **Master Template** for quickly spinning up customized websites for barbershops across any city or style.
+
+Current Master Reference Instance: **Faded Times Barbershop** (@fadedtimeslv), Las Vegas, NV.
 
 ![Faded Times Hero Preview](assets/images/hero-interior.jpg)
 
-## 💈 About The Business
+---
 
-- **Shop Name**: Faded Times Barbershop (Faded Times Vegas)
-- **Instagram**: [@fadedtimeslv](https://www.instagram.com/fadedtimeslv/)
-- **Location**: 3868 West Sahara Avenue, Las Vegas, NV 89102 (Valley Oaks Plaza, Sahara Ave & Valley View Blvd)
-- **Phone**: (702) 272-2457
-- **Hours**:
-  - Tuesday – Friday: 9:00 AM – 6:00 PM
-  - Saturday: 9:00 AM – 4:00 PM
-  - Sunday & Monday: Closed
+## 💈 Quick Variation Generator
 
-- **Owners & Lead Barbers**:
-  - **Daniel** – Co-Owner and Master Barber (frequently highlighted by regulars in reviews as the shop's top cut)
-  - **Fidel** – Co-Owner and Master Barber (hot lather straight razor rituals & luxury beard sculpting)
-- **Active Staff & Barbers**:
-  - **Marco Juarez** – Staff Barber (actively taking client appointments and precision haircuts)
-  - **Polo Juarez** – Staff Barber (actively taking appointments for specialty fades and beard lineups)
+You can instantly create a brand new custom website for any other barbershop:
+
+### 1. Define the Shop Profile
+Edit `template.config.json` (or create a new `my-shop.json`) with the new shop details:
+- Shop name, handles, coordinates, and phone number
+- Operating schedule and time zone
+- Color palette & theme (Gold, Emerald, Crimson, Royal, Obsidian)
+- Owners, Master Barbers, and active staff
+- Services menu, durations, and pricing
+- Client testimonials & Instagram feed photos
+
+### 2. Run the Variation Generator
+```bash
+node scripts/generate-variation.js --config path/to/my-shop.json --out ../barbershop-myshop
+```
 
 ---
 
 ## 🌟 Key Features
 
-- **Real-Time Shop Status Indicator**: Dynamically calculates whether the shop is open or closed based on actual Las Vegas (PST/PDT) time and displays walk-in wait estimates.
+- **Real-Time Shop Status Indicator**: Dynamically calculates whether the shop is open or closed based on local shop time and displays live walk-in wait estimates.
 - **Interactive Multi-Step Booking Modal**:
-  - Step 1: Service selection (Signature Haircut $40, Haircut & Beard $50, Beard Trim $20, Kid's Cut $40, Royal VIP $65, etc.)
-  - Step 2: Barber selection (Any Available, Daniel, Fidel, Marco Juarez, Polo Juarez)
+  - Step 1: Service selection (Signature Haircut, Haircut & Beard, Beard Trim, Kid's Cut, VIP Experience, etc.)
+  - Step 2: Barber selection (Any Available, Owners, Master Barbers, Staff)
   - Step 3: Date & time slot picker
   - Step 4: Instant booking confirmation with **Add to Google Calendar** and **.ICS download**
-- **Instagram Lookbook Feed (`@fadedtimeslv`)**: Filterable gallery of skin fades, tapers, beard sculpts, and custom hair art designs with high-res Lightbox viewer.
-- **Meet The Master Barbers & Owners**: Spotlight on Daniel, Fidel, Marco Juarez, and Polo Juarez with specialties, roles, and 1-click booking.
-- **Client Testimonials & Reviews**: Verified 5-star reviews filterable by Locals, Strip Tourists, and Beard Care.
+- **Instagram Lookbook Feed**: Filterable gallery of skin fades, tapers, beard sculpts, and custom hair art designs with high-res Lightbox viewer.
+- **Meet The Master Barbers & Owners**: Team spotlights with specialties, badges, experience levels, and direct booking links.
+- **Client Testimonials & Reviews**: Filterable 5-star reviews (Locals, Tourists, Beard Care).
 - **Location & Directions**: Embedded map with 1-click Google Maps / Apple Maps directions.
-- **VIP Club**: Promo code generator unlocking 10% discount on first visit (`FADED10`).
+- **VIP Club**: Promo code generator unlocking first-visit discounts.
 - **Mobile Persistent Action Bar**: Sticky quick-dial, appointment booking, directions, and Instagram link.
 
 ---
 
-## 🚀 Getting Started
-
-### Local Development
-Clone the repository and open `index.html` in your browser, or run a local web server:
+## 🚀 Local Development
 
 ```bash
-# Clone repository
+# Clone master template
 git clone https://github.com/mandraxor/barbershop-template-fadedtimeslv.git
 
 # Navigate to directory
@@ -65,18 +66,21 @@ Visit `http://localhost:3000` to view the website.
 
 ```
 barbershop-template-fadedtimeslv/
-├── index.html          # Main single-page application
+├── template.config.json       # Master shop data schema & configuration
+├── scripts/
+│   └── generate-variation.js # Rapid variation generator CLI
+├── index.html                # Main single-page application
 ├── css/
-│   └── styles.css      # Dark luxury barbershop styling & animations
+│   └── styles.css            # Dark luxury barbershop styling & animations
 ├── js/
-│   └── app.js          # Booking engine, live clock, gallery & lightbox
+│   └── app.js                # Booking engine, live clock, gallery & lightbox
 ├── assets/
-│   └── images/         # High-resolution photography & haircut assets
-└── README.md           # Documentation
+│   └── images/               # Photography & haircut assets
+└── README.md                 # Documentation
 ```
 
 ---
 
 ## 📄 License
 
-MIT License © 2026 Faded Times Barbershop Template
+MIT License © 2026 Master Barbershop Template Engine
