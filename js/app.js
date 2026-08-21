@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. REAL-TIME SHOP STATUS (LAS VEGAS TIMEZONE: PST / PDT)
+   1. REAL-TIME SHOP STATUS (LOCAL TIMEZONE: PST / PDT)
    ========================================================================== */
 function initShopStatus() {
   const statusBadge = document.getElementById('shop-status-badge');
@@ -26,13 +26,14 @@ function initShopStatus() {
   const todayHoursRow = document.getElementById('today-hours-highlight');
 
   function updateStatus() {
-    // Get current time in America/Los_Angeles (Las Vegas)
+    // Get current time in shop timezone (America/Los_Angeles)
+    const timezone = window.SHOP_CONFIG?.hours?.timezone || 'America/Los_Angeles';
     const now = new Date();
-    const lvString = now.toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
-    const lvDate = new Date(lvString);
-    const day = lvDate.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue, ..., 6 = Sat
-    const hour = lvDate.getHours();
-    const minute = lvDate.getMinutes();
+    const localString = now.toLocaleString("en-US", { timeZone: timezone });
+    const localDate = new Date(localString);
+    const day = localDate.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue, ..., 6 = Sat
+    const hour = localDate.getHours();
+    const minute = localDate.getMinutes();
     const timeDecimal = hour + minute / 60;
 
     let isOpen = false;
@@ -161,6 +162,13 @@ function initBookingSystem() {
   document.querySelectorAll('.direct-booksy-link').forEach(link => {
     link.href = getBooksyUrl();
   });
+
+  // Dynamically set shop monogram across all monogram badges
+  if (window.SHOP_CONFIG?.shop?.monogram) {
+    document.querySelectorAll('.shop-monogram').forEach(el => {
+      el.textContent = window.SHOP_CONFIG.shop.monogram;
+    });
+  }
 }
 
 function openBookingModal(preselectedServiceKey = null, preselectedBarber = null) {

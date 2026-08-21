@@ -74,7 +74,7 @@
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "123 Main Street, Suite 100",
-      "addressLocality": "Las Vegas",
+      "addressLocality": "Metropolis",
       "addressRegion": "NV",
       "postalCode": "89000",
       "addressCountry": "US"
@@ -138,158 +138,6 @@
       
       <!-- Live Status Dynamic Check -->
       <div id="shop-status-badge" class="flex items-center justify-center md:justify-start text-center md:text-left">
-        <span id="shop-status-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-green mr-2 shrink-0"></span>
-        <span id="shop-status-text" class="text-gray-300 font-medium text-xs sm:text-xs">
-          <span class="text-emerald-400 font-bold">OPEN NOW</span> • Closes at 6:00 PM • Walk-ins & Bookings Welcome
-        </span>
-      </div>
-
-      <!-- Quick Info Links -->
-      <div class="flex items-center justify-center space-x-3 sm:space-x-4 text-gray-400 text-xs font-medium">
-        <a href="tel:5550000000" class="hover:text-amber-300 transition-colors flex items-center">
-          <i class="fa-solid fa-phone text-amber-400 mr-1.5 text-[11px]"></i> (555) 000-0000
-        </a>
-        <span class="text-gray-700">•</span>
-        <a href="#location" class="hover:text-amber-300 transition-colors hidden sm:flex items-center">
-          <i class="fa-solid fa-location-dot text-amber-400 mr-1.5 text-[11px]"></i> 123 Main Street, Suite 100
-        </a>
-        <span class="text-gray-700 hidden sm:inline">•</span>
-        <a href="https://www.instagram.com/apexbarberlounge/" target="_blank" rel="noopener noreferrer" class="hover:text-amber-300 transition-colors flex items-center text-amber-300 font-semibold">
-          <i class="fa-brands fa-instagram text-amber-400 mr-1.5 text-xs"></i> @apexbarberlounge
-        </a>
-        <span class="text-gray-700 hidden sm:inline">•</span>
-        <a href="https://booksy.com" target="_blank" rel="noopener noreferrer" class="direct-booksy-link hover:text-amber-300 transition-colors hidden sm:flex items-center text-gray-300 hover:text-white font-medium">
-          <i class="fa-solid fa-arrow-up-right-from-square text-amber-400 mr-1.5 text-[10px]"></i> Book on Booksy
-        </a>
-      </div>
-
-    </div>
-  </aside>
-
-  <!-- 2. MAIN NAVIGATION (Shifted Left with Right-Side Buffer) -->
-  <header class="glass-nav sticky top-0 z-40 transition-all duration-300 w-full">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pr-6 sm:pr-10 lg:pr-16 xl:pr-20 h-20 flex items-center justify-between gap-3 lg:gap-6">
-      
-      <!-- Brand Logo & Monogram -->
-      <a href="#" class="flex items-center space-x-2.5 sm:space-x-3 group shrink-0">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 p-[1.5px] shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform shrink-0">
-          <div class="w-full h-full bg-dark-950 rounded-[10px] flex items-center justify-center">
-            <span class="font-serif font-black text-base sm:text-lg text-gold-shimmer tracking-tighter">AB</span>
-          </div>
-        </div>
-        <div class="text-left">
-          <div class="font-serif font-black text-sm sm:text-lg tracking-wider text-white flex items-center leading-none">
-            APEX BARBERSHOP
-            <span class="ml-1.5 px-1.5 py-0.5 text-[9px] font-sans font-black bg-amber-400/20 text-amber-300 rounded border border-amber-400/40 uppercase tracking-normal">HQ</span>
-          </div>
-          <p class="text-[8px] sm:text-[9px] tracking-[0.2em] text-gray-400 uppercase font-semibold mt-0.5">Las Vegas Barbershop</p>
-        </div>
-      </a>
-
-      <!-- Desktop Nav Links (Compact, Evenly Spaced & Shifted Left) -->
-      <nav class="hidden lg:flex items-center space-x-3 xl:space-x-5 text-xs font-semibold tracking-wider uppercase text-gray-300">
-        <a href="#services" class="hover:text-amber-400 transition-colors py-2 px-1">Services</a>
-        <a href="#lookbook" class="hover:text-amber-400 transition-colors py-2 px-1 flex items-center">
-          Lookbook <span class="ml-1 px-1.5 py-0.5 text-[8px] bg-gradient-to-r from-pink-500 to-amber-500 text-white rounded font-bold">IG</span>
-        </a>
-        <a href="#barbers" class="hover:text-amber-400 transition-colors py-2 px-1">Barbers</a>
-        <a href="#experience" class="hover:text-amber-400 transition-colors py-2 px-1">Experience</a>
-        <a href="#reviews" class="hover:text-amber-400 transition-colors py-2 px-1">Reviews</a>
-        <a href="#location" class="hover:text-amber-400 transition-colors py-2 px-1">Location</a>
-        <a href="#faq" class="hover:text-amber-400 transition-colors py-2 px-1">FAQ</a>
-      </nav>
-
-      <!-- Desktop CTA Buttons (Safely Positioned with Room on Right) -->
-      <div class="hidden sm:flex items-center space-x-2.5 shrink-0">
-        <a href="tel:5550000000" class="h-9 sm:h-10 px-3 sm:px-3.5 rounded-xl border border-gray-700 bg-dark-800 text-gray-200 hover:text-white hover:border-amber-400/60 text-xs font-semibold tracking-wide transition-all flex items-center justify-center whitespace-nowrap">
-          <i class="fa-solid fa-phone mr-1.5 text-amber-400 text-xs"></i> (555) 000-0000
-        </a>
-        <button class="open-booking-trigger h-9 sm:h-10 px-4 sm:px-5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-500/25 hover:brightness-110 active:scale-95 transition-all flex items-center justify-center whitespace-nowrap">
-          <i class="fa-solid fa-calendar-check mr-1.5 text-xs sm:text-sm"></i> Book Chair
-        </button>
-      </div>
-
-      <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-toggle" aria-label="Open Navigation Menu" class="lg:hidden p-2 rounded-xl bg-dark-800 border border-gray-800 text-gray-300 hover:text-amber-400 active:scale-95 transition-all flex items-center justify-center w-10 h-10">
-        <i class="fa-solid fa-bars text-lg"></i>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer Menu -->
-  <div id="mobile-drawer" class="hidden lg:hidden fixed inset-0 z-50 bg-dark-950/98 backdrop-blur-2xl p-6 flex flex-col justify-between max-w-md w-full ml-auto border-l border-amber-400/20 shadow-2xl overflow-y-auto">
-    <div>
-      <div class="flex items-center justify-between pb-5 border-b border-gray-800">
-        <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 p-[1px]">
-            <div class="w-full h-full bg-dark-950 rounded-[10px] flex items-center justify-center font-serif font-black text-amber-400">AB</div>
-          </div>
-          <div>
-            <span class="font-serif font-bold text-base text-white">APEX BARBERSHOP LV</span>
-            <p class="text-[10px] text-gray-400">123 Main Street, Suite 100</p>
-          </div>
-        </div>
-        <button id="close-mobile-drawer" aria-label="Close Navigation Menu" class="w-10 h-10 rounded-xl bg-dark-800 border border-gray-800 text-gray-400 hover:text-white flex items-center justify-center text-lg active:scale-95">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <nav class="mt-6 flex flex-col space-y-3 font-semibold text-base">
-        <a href="#services" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
-          <span class="flex items-center"><i class="fa-solid fa-scissors text-amber-400 mr-3 text-sm w-5"></i> Services & Pricing</span>
-          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
-        </a>
-        <a href="#lookbook" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
-          <span class="flex items-center"><i class="fa-brands fa-instagram text-pink-400 mr-3 text-sm w-5"></i> Instagram Lookbook</span>
-          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
-        </a>
-        <a href="#barbers" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
-          <span class="flex items-center"><i class="fa-solid fa-user-group text-amber-400 mr-3 text-sm w-5"></i> Master Barbers & Owners</span>
-          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
-        </a>
-        <a href="#experience" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
-          <span class="flex items-center"><i class="fa-solid fa-crown text-amber-400 mr-3 text-sm w-5"></i> The Experience</span>
-          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
-        </a>
-        <a href="#reviews" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
-          <span class="flex items-center"><i class="fa-solid fa-star text-amber-400 mr-3 text-sm w-5"></i> Verified Reviews</span>
-          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
-        </a>
-        <a href="#location" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
-          <span class="flex items-center"><i class="fa-solid fa-location-dot text-amber-400 mr-3 text-sm w-5"></i> Location & Hours</span>
-          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
-        </a>
-        <a href="#faq" class="mobile-nav-link p-3.5 rounded-xl bg-dark-850 hover:bg-dark-800 text-gray-200 hover:text-amber-400 flex items-center justify-between transition-colors">
-          <span class="flex items-center"><i class="fa-solid fa-circle-question text-amber-400 mr-3 text-sm w-5"></i> FAQ</span>
-          <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
-        </a>
-      </nav>
-    </div>
-
-    <div class="pt-6 border-t border-gray-800 space-y-3 mt-6">
-      <button class="open-booking-trigger w-full py-4 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-dark-950 font-black uppercase tracking-wider text-xs shadow-lg shadow-amber-500/25 active:scale-98 transition-all flex items-center justify-center">
-        <i class="fa-solid fa-calendar-check mr-2 text-sm"></i> Book Chair Online
-      </button>
-      <a href="tel:5550000000" class="w-full py-3 rounded-xl border border-gray-700 bg-dark-850 text-white font-semibold text-xs flex items-center justify-center active:scale-98">
-        <i class="fa-solid fa-phone text-amber-400 mr-2"></i> Call (555) 000-0000
-      </a>
-      <a href="https://maps.google.com/?q=123+Main+Street,+Suite+100+Metropolis+NV+89000" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl border border-gray-800 bg-dark-900 text-gray-300 font-medium text-xs flex items-center justify-center">
-        <i class="fa-solid fa-diamond-turn-right text-amber-400 mr-2"></i> Directions (Main St & 1st Ave)
-      </a>
-    </div>
-  </div>
-
-  <!-- 3. HERO SECTION (Evenly Centered, Symmetrical, & Spacious) -->
-  <section class="relative min-h-[85vh] sm:min-h-[92vh] flex items-center justify-center overflow-hidden py-16 sm:py-24 text-center">
-    <!-- Background Hero Interior Image -->
-    <div class="absolute inset-0 z-0">
-      <img src="assets/images/hero-interior.jpg" alt="Apex Barber Lounge Interior Las Vegas" class="w-full h-full object-cover object-center transform scale-105 filter brightness-70">
-      <div class="absolute inset-0 hero-gradient-overlay"></div>
-    </div>
-
-    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
-      
-      <!-- Location Pill Badge -->
       <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-dark-900/90 border border-amber-400/35 text-amber-300 text-xs font-semibold mb-6 sm:mb-8 backdrop-blur-md shadow-lg shadow-amber-500/5">
         <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-green shrink-0"></span>
         <span class="tracking-wide">Apex Plaza • 123 Main Street, Suite 100 • Metropolis, NV</span>
@@ -303,7 +151,7 @@
 
       <!-- Subtitle -->
       <p class="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-8 sm:mb-10 text-center px-4">
-        Las Vegas' premier grooming destination. Master-level skin fades, sculpted beard lineups, and luxury hot towel straight razor shaves crafted with unyielding attention to detail.
+        Metropolis' premier grooming destination. Master-level skin fades, sculpted beard lineups, and luxury hot towel straight razor shaves crafted with unyielding attention to detail.
       </p>
 
       <!-- CTA Action Group (Balanced 2-Button Symmetrical Layout) -->
@@ -606,10 +454,10 @@
           <div>
             <div class="flex items-center space-x-2">
               <h2 class="text-xl font-bold text-white font-mono tracking-tight">apexbarberlounge</h2>
-              <i class="fa-solid fa-circle-check text-blue-400 text-sm" title="Verified Las Vegas Barbershop"></i>
+              <i class="fa-solid fa-circle-check text-blue-400 text-sm" title="Verified Premier Barbershop"></i>
             </div>
             <p class="text-xs text-gray-400 mt-0.5 font-sans">
-              <span class="text-amber-400 font-semibold">Apex Barber Lounge</span> • 123 Main Street, Suite 100, Las Vegas NV
+              <span class="text-amber-400 font-semibold">Apex Barber Lounge</span> • 123 Main Street, Suite 100, Metropolis NV
             </p>
             <p class="text-[11px] text-gray-500 mt-0.5">Precision Fades • Beard Care • Vegas Vibe • Walk-ins & Bookings</p>
           </div>
@@ -752,7 +600,7 @@
 
         <!-- Post 7: Barbershop Crew Vibe -->
         <div class="lookbook-item group relative aspect-square rounded-2xl overflow-hidden cursor-pointer bg-dark-850 border border-gray-800/80 shadow-md" data-category="all" data-caption="The Apex Barbershop crew ready to elevate your look today at 123 Main Street, Suite 100. Walk-ins welcome! 🏆 #BarbershopCrew #VegasBarbers" data-barber="Lead, Fade, Stylist & Creative">
-          <img src="assets/images/crew-lasvegas.jpg" alt="Apex Barber Lounge Crew" class="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-500">
+          <img src="assets/images/hair-design.jpg" alt="Apex Barber Lounge Crew" class="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-500">
           <div class="ig-card-overlay absolute inset-0 p-4 flex flex-col justify-between text-white">
             <div class="flex justify-end">
               <span class="text-[11px] bg-black/60 backdrop-blur-md px-2 py-0.5 rounded-md font-mono text-amber-300">@apexbarberlounge</span>
@@ -806,7 +654,7 @@
         MEET YOUR <span class="text-gold-gradient">BARBERS</span>
       </h2>
       <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
-        Our seasoned co-owners and master staff barbers bring decades of razor expertise, artistic styling vision, and genuine Las Vegas hospitality.
+        Our seasoned co-owners and master staff barbers bring decades of razor expertise, artistic styling vision, and genuine local hospitality.
       </p>
     </div>
 
@@ -929,7 +777,7 @@
       <!-- Barber: Creative Artist -->
       <div class="card-luxury overflow-hidden flex flex-col justify-between group">
         <div class="relative h-64 overflow-hidden bg-dark-950">
-          <img src="assets/images/crew-lasvegas.jpg" alt="Creative Artist - Master Barber & Hair Artist" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+          <img src="assets/images/hair-design.jpg" alt="Creative Artist - Master Barber & Hair Artist" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
           <div class="absolute top-3 left-3">
             <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-dark-950 font-black text-[9px] uppercase tracking-wider shadow-md">
@@ -976,7 +824,7 @@
           The Standard
         </span>
         <h2 class="font-serif font-black text-3xl sm:text-5xl text-white mt-3 mb-4">
-          THE <span class="text-gold-gradient">APEX BARBERSHOP</span> EXPERIENCE
+          THE <span class="text-gold-gradient">APEX BARBERSHOP BARBERSHOP</span> EXPERIENCE
         </h2>
         <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
           More than just a haircut—it’s an upscale grooming sanctuary where craftsmanship, community, and relaxation converge.
@@ -1043,7 +891,7 @@
         5-STAR <span class="text-gold-gradient">REVIEWS</span>
       </h2>
       <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
-        See why Las Vegas locals, Strip travelers, and regulars trust Apex Barbershop for their signature cuts.
+        See why local clients, travelers, and regulars trust Apex Barbershop for their signature cuts.
       </p>
     </div>
 
@@ -1173,7 +1021,7 @@
           </div>
           <div>
             <h4 class="text-xs font-bold text-white">Jason Torres</h4>
-            <p class="text-[10px] text-gray-400">Las Vegas Local • Cut by Creative Artist</p>
+            <p class="text-[10px] text-gray-400">Metropolis Local • Cut by Creative Artist</p>
           </div>
         </div>
       </div>
@@ -1305,7 +1153,7 @@
           <div class="absolute bottom-4 left-4 right-4 bg-dark-900/90 backdrop-blur-md p-4 rounded-xl border border-amber-400/30 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div class="text-xs text-left">
               <span class="text-white font-bold block">Apex Plaza</span>
-              <span class="text-gray-400">5 Min Drive from Las Vegas Blvd & The Strip • Ample Free Parking</span>
+              <span class="text-gray-400">Convenient Downtown Location • Ample Free Parking</span>
             </div>
             <a href="https://maps.google.com/?q=123+Main+Street,+Suite+100+Metropolis+NV+89000" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs uppercase tracking-wider whitespace-nowrap transition-colors">
               Open Navigation
@@ -1359,7 +1207,7 @@
           <i class="faq-icon fa-solid fa-chevron-down text-amber-400 text-xs transition-transform"></i>
         </button>
         <div class="faq-content px-5 pb-5 text-xs sm:text-sm text-gray-400 leading-relaxed">
-          We are located at <strong>123 Main Street, Suite 100, Metropolis, NV 89000</strong> inside Apex Plaza (near the intersection of Main St & 1st Ave). We have a huge, free dedicated parking lot right in front of the shop. We are only 5 minutes from the Las Vegas Strip.
+          We are located at <strong>123 Main Street, Suite 100, Metropolis, NV 89000</strong> inside Apex Plaza (near the intersection of Main St & 1st Ave). We have a huge, free dedicated parking lot right in front of the shop. We are centrally located in the downtown district.
         </div>
       </div>
 
@@ -1396,7 +1244,7 @@
           Exclusive VIP Offer
         </span>
         <h2 class="font-serif font-black text-2xl sm:text-4xl text-white mt-4 mb-3">
-          JOIN THE APEX BARBERSHOP VIP CLUB
+          JOIN THE APEX BARBERSHOP BARBERSHOP VIP CLUB
         </h2>
         <p class="text-xs sm:text-sm text-gray-300 mb-8 leading-relaxed">
           Get <strong>10% OFF your next haircut</strong>, priority slot notifications for peak Vegas weekends, and grooming product discounts.
@@ -1438,12 +1286,12 @@
               <div class="w-full h-full bg-dark-950 rounded-[7px] flex items-center justify-center font-serif font-black text-amber-400">AB</div>
             </div>
             <div>
-              <span class="font-serif font-bold text-base text-white">APEX BARBERSHOP LV</span>
-              <p class="text-[10px] text-gray-500 uppercase tracking-wider">Las Vegas Barbershop</p>
+              <span class="font-serif font-bold text-base text-white">APEX BARBERSHOP BARBERSHOP LV</span>
+              <p class="text-[10px] text-gray-500 uppercase tracking-wider">Premier Barbershop</p>
             </div>
           </div>
           <p class="text-xs text-gray-400 leading-relaxed">
-            Las Vegas' premier cuts, razor fades, tapers, beard sculpting, and hot towel straight razor shaves.
+            Premier cuts, razor fades, tapers, beard sculpting, and hot towel straight razor shaves.
           </p>
           <div class="flex space-x-3 pt-2">
             <a href="https://www.instagram.com/apexbarberlounge/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-gray-700 flex items-center justify-center text-sm transition-all text-gray-300">
@@ -1508,9 +1356,9 @@
 
       <!-- Bottom Bar -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 gap-3">
-        <p>© 2026 Apex Barber Lounge Las Vegas. All Rights Reserved. Instagram: @apexbarberlounge</p>
+        <p>© 2026 Apex Barber Lounge. All Rights Reserved. Instagram: @apexbarberlounge</p>
         <p class="flex items-center space-x-2">
-          <span>Crafted for Las Vegas' Premier Grooming</span>
+          <span>Crafted for Metropolis' Premier Grooming</span>
         </p>
       </div>
     </div>
@@ -1529,7 +1377,7 @@
       <div class="px-5 py-4 sm:p-6 bg-dark-950 border-b border-gray-800 flex items-center justify-between">
         <div class="flex items-center space-x-3">
           <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-dark-950 font-black flex items-center justify-center text-xs sm:text-sm font-serif">
-            FT
+            <span class="shop-monogram">AB</span>
           </div>
           <div>
             <h3 class="text-sm sm:text-base font-bold text-white">Book Your Chair</h3>
@@ -1575,68 +1423,62 @@
           </div>
 
           <div class="space-y-2 sm:space-y-2.5">
-            <!-- Service item -->
             <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
               <div class="flex items-center space-x-3">
                 <input type="checkbox" value="haircut" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700" checked>
                 <div>
                   <span class="text-xs sm:text-sm font-bold text-white block">Signature Haircut</span>
-                  <span class="text-[10px] sm:text-[11px] text-gray-400">Skin Fade, Taper, or Scissor cut (40 min)</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">Tailored precision skin fade, drop fade, low taper, textured crop, or classic gentleman cut. Includes hot lather neck shave and premium matte styling product finish. (40 min)</span>
                 </div>
               </div>
               <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$40</span>
             </label>
-
             <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
               <div class="flex items-center space-x-3">
                 <input type="checkbox" value="haircut-beard" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700">
                 <div>
-                  <span class="text-xs sm:text-sm font-bold text-white block">Haircut & Beard Combo</span>
-                  <span class="text-[10px] sm:text-[11px] text-gray-400">Fade + Beard Shaping & Hot Towel (55 min)</span>
+                  <span class="text-xs sm:text-sm font-bold text-white block">Haircut & Beard Sculpting</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">Full bespoke haircut of your choice combined with precision beard trim, straight razor cheek and neck lining, hot steam towel, and natural beard oil massage. (55 min)</span>
                 </div>
               </div>
               <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$50</span>
             </label>
-
             <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
               <div class="flex items-center space-x-3">
                 <input type="checkbox" value="beard-trim" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700">
                 <div>
                   <span class="text-xs sm:text-sm font-bold text-white block">Beard Trim & Shape</span>
-                  <span class="text-[10px] sm:text-[11px] text-gray-400">Hot towel + straight razor line (25 min)</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">Sculpting, length reduction, straight razor edging on cheekbones and neckline with hot towel treatment and hydrating finish. (25 min)</span>
                 </div>
               </div>
               <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$20</span>
             </label>
-
             <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
               <div class="flex items-center space-x-3">
                 <input type="checkbox" value="kids-cut" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700">
                 <div>
                   <span class="text-xs sm:text-sm font-bold text-white block">Kid's Precision Cut</span>
-                  <span class="text-[10px] sm:text-[11px] text-gray-400">Ages 12 & under (35 min)</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">Patient, gentle master styling for kids 12 and under. High skin fades, classic gentleman taper, or scissor crops in a comfortable setting. (35 min)</span>
                 </div>
               </div>
               <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$40</span>
             </label>
-
             <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
               <div class="flex items-center space-x-3">
                 <input type="checkbox" value="lineup" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700">
                 <div>
                   <span class="text-xs sm:text-sm font-bold text-white block">Razor Edge Lineup</span>
-                  <span class="text-[10px] sm:text-[11px] text-gray-400">Hairline & Neck Taper Clean (20 min)</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">Quick hairline, temple, and nape clean up between full haircuts. Includes sharp straight razor detailing and cooling astringent. (20 min)</span>
                 </div>
               </div>
               <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$20</span>
             </label>
-
             <label class="flex items-center justify-between p-3 sm:p-3.5 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 active:bg-dark-800 cursor-pointer transition-all">
               <div class="flex items-center space-x-3">
                 <input type="checkbox" value="vip-treatment" class="service-checkbox w-4 h-4 rounded text-amber-400 focus:ring-0 bg-dark-900 border-gray-700">
                 <div>
-                  <span class="text-xs sm:text-sm font-bold text-white block">VIP Total Experience</span>
-                  <span class="text-[10px] sm:text-[11px] text-gray-400">Cut, Beard, Facial, Scalp Massage (75 min)</span>
+                  <span class="text-xs sm:text-sm font-bold text-white block">Royal VIP Total Experience</span>
+                  <span class="text-[10px] sm:text-[11px] text-gray-400">The executive grooming package: Precision haircut, full beard sculpt & shave, charcoal facial cleanse mask, double hot towel steam, and scalp massage. (75 min)</span>
                 </div>
               </div>
               <span class="font-serif font-bold text-amber-400 text-sm sm:text-base">$65</span>
@@ -1660,7 +1502,6 @@
           </div>
 
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3">
-            
             <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-amber-400 bg-amber-500/15 cursor-pointer text-center transition-all active:scale-95 col-span-2 sm:col-span-1" data-barber="Any Available">
               <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-amber-400 text-black font-bold flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
                 <i class="fa-solid fa-users"></i>
@@ -1669,41 +1510,41 @@
               <span class="text-[10px] text-emerald-400">Fastest Availability</span>
             </div>
 
-            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Lead">
+            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Lead Barber">
               <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-dark-950 font-black flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
-                D
+                LB
               </div>
-              <span class="text-xs font-bold text-white block">Lead</span>
-              <span class="text-[10px] text-amber-300">👑 Co-Owner / Top Cut</span>
+              <span class="text-xs font-bold text-white block">Lead Barber</span>
+              <span class="text-[10px] text-amber-300 truncate block">undefined</span>
             </div>
 
-            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Fade">
+            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Fade Specialist">
               <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-dark-950 font-black flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
-                F
+                FS
               </div>
-              <span class="text-xs font-bold text-white block">Fade</span>
-              <span class="text-[10px] text-amber-300">👑 Co-Owner / Shaves</span>
+              <span class="text-xs font-bold text-white block">Fade Specialist</span>
+              <span class="text-[10px] text-amber-300 truncate block">undefined</span>
             </div>
 
             <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Stylist & Braider">
-              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-dark-750 text-amber-400 border border-gray-700 font-bold flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
-                MJ
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-dark-950 font-black flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
+                SB
               </div>
               <span class="text-xs font-bold text-white block">Stylist & Braider</span>
-              <span class="text-[10px] text-emerald-400">Staff Barber • Appts</span>
+              <span class="text-[10px] text-amber-300 truncate block">undefined</span>
             </div>
 
             <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Creative Artist">
-              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-dark-750 text-amber-400 border border-gray-700 font-bold flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
-                PJ
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-dark-950 font-black flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
+                CA
               </div>
               <span class="text-xs font-bold text-white block">Creative Artist</span>
-              <span class="text-[10px] text-emerald-400">Staff Barber • Fades</span>
+              <span class="text-[10px] text-amber-300 truncate block">undefined</span>
             </div>
-
           </div>
+        </div>
 
-          <div class="flex space-x-3 pt-2 sticky bottom-0 bg-dark-900/95 backdrop-blur-md pb-1">
+        <div class="flex space-x-3 pt-2 sticky bottom-0 bg-dark-900/95 backdrop-blur-md pb-1">
             <button id="btn-back-step-1" type="button" class="w-1/3 py-3.5 rounded-xl bg-dark-800 border border-gray-700 text-gray-300 text-xs font-bold active:scale-95">
               Back
             </button>
@@ -1862,6 +1703,283 @@
     "instagram": "apexbarberlounge",
     "instagramUrl": "https://www.instagram.com/apexbarberlounge/",
     "booksyUrl": "https://booksy.com",
+    "promoCode": "APEX BARBERSHOP10",
+    "promoDiscount": "10% OFF"
+  },
+  "location": {
+    "plaza": "Apex Plaza",
+    "address": "123 Main Street, Suite 100",
+    "crossStreet": "Main St & 1st Ave",
+    "city": "Metropolis",
+    "state": "NV",
+    "zip": "89000",
+    "country": "US",
+    "neighborhood": "Downtown Arts District",
+    "googleMapsUrl": "https://maps.google.com/?q=123+Main+Street,+Suite+100+Metropolis+NV+89000",
+    "appleMapsUrl": "https://maps.apple.com/?address=123+Main+Street+Suite+100,Metropolis,NV+89000",
+    "coordinates": {
+      "lat": 36.1699,
+      "lng": -115.1398
+    }
+  },
+  "hours": {
+    "timezone": "America/Los_Angeles",
+    "schedule": {
+      "tuesday_friday": {
+        "days": "Tuesday – Friday",
+        "open": "9:00 AM",
+        "close": "6:00 PM",
+        "open24h": "09:00",
+        "close24h": "18:00"
+      },
+      "saturday": {
+        "days": "Saturday",
+        "open": "9:00 AM",
+        "close": "4:00 PM",
+        "open24h": "09:00",
+        "close24h": "16:00"
+      },
+      "sunday_monday": {
+        "days": "Sunday & Monday",
+        "status": "Closed"
+      }
+    },
+    "walkinPolicy": "Walk-ins Welcome Daily • Priority To Bookings"
+  },
+  "theme": {
+    "accentColor": "gold",
+    "primaryHex": "#d4af37",
+    "primaryGradient": "linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa820a 100%)",
+    "bgPrimary": "#0a0c10",
+    "bgCard": "#171b24"
+  },
+  "team": {
+    "owners": [
+      {
+        "name": "Lead Barber",
+        "initials": "LB",
+        "title": "Master Barber & Lead Craftsman",
+        "badge": "👑 Master Barber / Top Rated",
+        "specialty": "Precision Skin Fades, High Tapers, Beard Sculpting & Razor Finishes",
+        "experience": "10+ Years Craftsmanship",
+        "highlight": "Master craftsman delivering surgical skin fades and signature tailored cuts.",
+        "image": "assets/images/barber-master.jpg",
+        "instagram": "apexbarberlounge"
+      }
+    ],
+    "barbers": [
+      {
+        "name": "Fade Specialist",
+        "initials": "FS",
+        "title": "Senior Barber & Taper Specialist",
+        "badge": "Fade Specialist",
+        "specialty": "Skin Fades, Modern Tapers, Texture Crops & Beard Details",
+        "experience": "Master Craftsman",
+        "highlight": "Specialist in high-contrast tapers, drop fades, and modern scissor textures.",
+        "image": "assets/images/fade-textured.jpg",
+        "instagram": "apexbarberlounge"
+      },
+      {
+        "name": "Stylist & Braider",
+        "initials": "SB",
+        "title": "Master Barber & Braider",
+        "badge": "Braiding Expert",
+        "specialty": "Men's & Women's Braids, Precision Haircuts, Cornrows & Loc Maintenance",
+        "experience": "Master Stylist",
+        "highlight": "Dual-specialist providing clean scissor tapers and protective braiding styles.",
+        "image": "assets/images/kids-cut.jpg",
+        "instagram": "apexbarberlounge"
+      },
+      {
+        "name": "Creative Artist",
+        "initials": "CA",
+        "title": "Master Barber & Hair Artist",
+        "badge": "Creative Hair Artist",
+        "specialty": "Freestyle Parts, Geometric Razor Art, Kids Styling & Custom Fades",
+        "experience": "Creative Stylist",
+        "highlight": "Turns haircutting into artwork with sharp geometric lines and custom freestyle parts.",
+        "image": "assets/images/hair-design.jpg",
+        "instagram": "apexbarberlounge"
+      }
+    ]
+  },
+  "services": [
+    {
+      "key": "haircut",
+      "name": "Signature Haircut",
+      "subtitle": "Custom Tailored Cut & Razor Finish",
+      "price": 40,
+      "duration": 40,
+      "popular": false,
+      "description": "Tailored precision skin fade, drop fade, low taper, textured crop, or classic gentleman cut. Includes hot lather neck shave and premium matte styling product finish.",
+      "includes": [
+        "Custom fade & shear work",
+        "Straight razor hairline lineup",
+        "Hot towel & cooling tonic"
+      ],
+      "icon": "fa-scissors"
+    },
+    {
+      "key": "haircut-beard",
+      "name": "Haircut & Beard Sculpting",
+      "subtitle": "Full Gentleman Transformation",
+      "price": 50,
+      "duration": 55,
+      "popular": true,
+      "description": "Full bespoke haircut of your choice combined with precision beard trim, straight razor cheek and neck lining, hot steam towel, and natural beard oil massage.",
+      "includes": [
+        "Fade of choice + razor finish",
+        "Beard length debulking & fade",
+        "Hot towel essential oil steam"
+      ],
+      "icon": "fa-user-tie"
+    },
+    {
+      "key": "beard-trim",
+      "name": "Beard Trim & Shape",
+      "subtitle": "Precision Facial Hair Grooming",
+      "price": 20,
+      "duration": 25,
+      "popular": false,
+      "description": "Sculpting, length reduction, straight razor edging on cheekbones and neckline with hot towel treatment and hydrating finish.",
+      "includes": [
+        "Freehand clipper shape-up",
+        "Razor cheek & neck outline",
+        "Tea tree conditioning balm"
+      ],
+      "icon": "fa-spa"
+    },
+    {
+      "key": "kids-cut",
+      "name": "Kid's Precision Cut",
+      "subtitle": "Gentle & Stylish (12 & Under)",
+      "price": 40,
+      "duration": 35,
+      "popular": false,
+      "description": "Patient, gentle master styling for kids 12 and under. High skin fades, classic gentleman taper, or scissor crops in a comfortable setting.",
+      "includes": [
+        "Ages 12 and under",
+        "Clean shear & clipper fade",
+        "Fun & patient barber approach"
+      ],
+      "icon": "fa-child"
+    },
+    {
+      "key": "lineup",
+      "name": "Razor Edge Lineup",
+      "subtitle": "Shape-Up & Neck Clean",
+      "price": 20,
+      "duration": 20,
+      "popular": false,
+      "description": "Quick hairline, temple, and nape clean up between full haircuts. Includes sharp straight razor detailing and cooling astringent.",
+      "includes": [
+        "Forehead & C-cup precision edge",
+        "Clean neck taper cleanup",
+        "Razor lineup with hot lather"
+      ],
+      "icon": "fa-wand-magic-sparkles"
+    },
+    {
+      "key": "vip-treatment",
+      "name": "Royal VIP Total Experience",
+      "subtitle": "The Ultimate Luxury Grooming",
+      "price": 65,
+      "duration": 75,
+      "popular": false,
+      "description": "The executive grooming package: Precision haircut, full beard sculpt & shave, charcoal facial cleanse mask, double hot towel steam, and scalp massage.",
+      "includes": [
+        "Full master haircut & fade",
+        "Beard treatment & straight razor",
+        "Facial mask & invigorating wash"
+      ],
+      "icon": "fa-crown"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Marcus R.",
+      "initials": "MR",
+      "rating": 5,
+      "text": "Hands down the cleanest skin fade in town. I've tried multiple shops and nobody blends with this level of precision. The atmosphere is top notch and you walk out feeling like a million bucks.",
+      "service": "Signature Haircut",
+      "clientType": "Regular Client",
+      "barber": "Lead Barber",
+      "source": "Booksy Verified",
+      "category": "locals"
+    },
+    {
+      "author": "Andre L.",
+      "initials": "AL",
+      "rating": 5,
+      "text": "The hot towel straight razor beard treatment is pure luxury. Clean lines, zero irritation, and great attention to detail. True masters who take pride in their craft.",
+      "service": "Haircut & Beard Combo",
+      "clientType": "Beard Client",
+      "barber": "Fade Specialist",
+      "source": "Booksy Verified",
+      "category": "beards"
+    },
+    {
+      "author": "David T.",
+      "initials": "DT",
+      "rating": 5,
+      "text": "Needed a tight haircut on short notice and booked online easily. Convenient location, easy parking, and top-tier service from start to finish.",
+      "service": "Signature Haircut",
+      "clientType": "Visiting Client",
+      "barber": "Stylist & Braider",
+      "source": "Google Review",
+      "category": "tourists"
+    },
+    {
+      "author": "Jason T.",
+      "initials": "JT",
+      "rating": 5,
+      "text": "Brought my son in for a fade and got my beard lined up. Patient, professional, and razor work was on point. Great vibe in the lounge, definitely our go-to spot!",
+      "service": "Kid's Cut & Lineup",
+      "clientType": "Local Family",
+      "barber": "Creative Artist",
+      "source": "Google Review",
+      "category": "locals"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Do I need an appointment or do you accept walk-ins?",
+      "answer": "Walk-ins are always welcome! However, to avoid waiting during peak hours, we recommend booking your chair online in advance."
+    },
+    {
+      "question": "How do I book an appointment?",
+      "answer": "You can book directly 24/7 through our Booksy booking page with instant confirmation and real-time barber availability."
+    },
+    {
+      "question": "Where is the barbershop located and is there parking?",
+      "answer": "We are conveniently located at 123 Main Street, Suite 100 in Apex Plaza near Main St & 1st Ave. Plenty of free parking is available in the plaza lot."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept Cash, Apple Pay, Google Pay, major Credit/Debit cards (Visa, Mastercard, AMEX), and contactless payments."
+    },
+    {
+      "question": "What is your cancellation or late arrival policy?",
+      "answer": "We appreciate at least 2 hours advance notice for cancellations. If you are running more than 10 minutes late, please give us a call at (555) 000-0000 so we can adjust your chair time."
+    }
+  ]
+};</script>
+  <script>window.SHOP_CONFIG = {
+  "shop": {
+    "name": "Apex Barber Lounge",
+    "shortName": "Apex Barbershop",
+    "monogram": "AB",
+    "badge": "HQ",
+    "tagline": "Precision Cuts. Modern Style.",
+    "subTagline": "Premier Barbershop & Grooming Lounge",
+    "description": "Premier modern barbershop and grooming lounge. Specializing in precision skin fades, beard sculpting, razor edge lineups, and executive hot towel treatments.",
+    "phone": "(555) 000-0000",
+    "phoneRaw": "5550000000",
+    "email": "contact@apexbarberlounge.com",
+    "website": "https://apexbarberlounge.com",
+    "instagram": "apexbarberlounge",
+    "instagramUrl": "https://www.instagram.com/apexbarberlounge/",
+    "booksyUrl": "https://booksy.com",
     "promoCode": "APEX10",
     "promoDiscount": "10% OFF"
   },
@@ -1957,7 +2075,7 @@
         "specialty": "Freestyle Parts, Geometric Razor Art, Kids Styling & Custom Fades",
         "experience": "Creative Stylist",
         "highlight": "Turns haircutting into artwork with sharp geometric lines and custom freestyle parts.",
-        "image": "assets/images/crew-lasvegas.jpg",
+        "image": "assets/images/hair-design.jpg",
         "instagram": "apexbarberlounge"
       }
     ]
