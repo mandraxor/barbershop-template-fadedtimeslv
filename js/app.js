@@ -145,112 +145,21 @@ const serviceCatalogue = {
 };
 
 function initBookingSystem() {
-  const modalBackdrop = document.getElementById('booking-modal');
-  const closeBtn = document.getElementById('close-booking-modal');
-  const step1 = document.getElementById('booking-step-1');
-  const step2 = document.getElementById('booking-step-2');
-  const step3 = document.getElementById('booking-step-3');
-  const step4 = document.getElementById('booking-step-4');
-  const confirmationScreen = document.getElementById('booking-confirmation');
+  const getBooksyUrl = () => window.SHOP_CONFIG?.shop?.booksyUrl || 'https://booksy.com';
 
-  // Trigger Open Booking Buttons
+  // Make ALL booking buttons directly navigate to Booksy
   const openButtons = document.querySelectorAll('.open-booking-trigger');
   openButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const preselectedService = btn.getAttribute('data-service-key');
-      const preselectedBarber = btn.getAttribute('data-barber-name');
-      openBookingModal(preselectedService, preselectedBarber);
+      const url = getBooksyUrl();
+      window.open(url, '_blank', 'noopener,noreferrer');
     });
   });
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeBookingModal);
-  }
-
-  if (modalBackdrop) {
-    modalBackdrop.addEventListener('click', (e) => {
-      if (e.target === modalBackdrop) {
-        closeBookingModal();
-      }
-    });
-  }
-
-  // Setup Service Checkboxes
-  const serviceCheckboxes = document.querySelectorAll('.service-checkbox');
-  serviceCheckboxes.forEach(cb => {
-    cb.addEventListener('change', () => {
-      updateSelectedServices();
-    });
-  });
-
-  // Setup Barber Cards Selection
-  const barberOptions = document.querySelectorAll('.barber-select-option');
-  barberOptions.forEach(opt => {
-    opt.addEventListener('click', () => {
-      barberOptions.forEach(b => b.classList.remove('border-amber-400', 'bg-amber-500/15', 'shadow-md'));
-      opt.classList.add('border-amber-400', 'bg-amber-500/15', 'shadow-md');
-      bookingState.selectedBarber = opt.getAttribute('data-barber') || 'Any Master Barber';
-    });
-  });
-
-  // Step Navigation Buttons
-  const nextToStep2 = document.getElementById('btn-next-step-2');
-  const backToStep1 = document.getElementById('btn-back-step-1');
-  const nextToStep3 = document.getElementById('btn-next-step-3');
-  const backToStep2 = document.getElementById('btn-back-step-2');
-  const nextToStep4 = document.getElementById('btn-next-step-4');
-  const backToStep3 = document.getElementById('btn-back-step-3');
-  const confirmBookingBtn = document.getElementById('btn-confirm-booking');
-
-  if (nextToStep2) {
-    nextToStep2.addEventListener('click', () => {
-      if (bookingState.selectedServices.length === 0) {
-        showToast('Please select at least one service to proceed.', 'warning');
-        return;
-      }
-      goToStep(2);
-    });
-  }
-
-  if (backToStep1) backToStep1.addEventListener('click', () => goToStep(1));
-
-  if (nextToStep3) {
-    nextToStep3.addEventListener('click', () => {
-      generateDateOptions();
-      goToStep(3);
-    });
-  }
-
-  if (backToStep2) backToStep2.addEventListener('click', () => goToStep(2));
-
-  if (nextToStep4) {
-    nextToStep4.addEventListener('click', () => {
-      if (!bookingState.selectedDate || !bookingState.selectedTime) {
-        showToast('Please select an appointment date and time slot.', 'warning');
-        return;
-      }
-      updateSummaryStep4();
-      goToStep(4);
-    });
-  }
-
-  if (backToStep3) backToStep3.addEventListener('click', () => goToStep(3));
-
-  // Booksy Handoff Button
-  const booksyHandoffBtn = document.getElementById('btn-booksy-handoff');
-  if (booksyHandoffBtn) {
-    const booksyUrl = window.SHOP_CONFIG?.shop?.booksyUrl || 'https://booksy.com';
-    booksyHandoffBtn.href = booksyUrl;
-    booksyHandoffBtn.addEventListener('click', () => {
-      showToast(`Redirecting to Booksy for ${bookingState.selectedBarber}...`, 'info');
-    });
-  }
 
   // Bind all direct Booksy profile links across the page to the config URL
-  const booksyProfileUrl = window.SHOP_CONFIG?.shop?.booksyUrl || 'https://booksy.com';
   document.querySelectorAll('.direct-booksy-link').forEach(link => {
-    link.href = booksyProfileUrl;
+    link.href = getBooksyUrl();
   });
 }
 

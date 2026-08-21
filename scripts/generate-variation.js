@@ -73,6 +73,12 @@ function generateVariation(configPath, outputDir) {
   html = html.replace(/\(702\) 272-2457/g, cfg.shop.phone);
   html = html.replace(/7022722457/g, cfg.shop.phoneRaw);
 
+  // Booksy URLs
+  if (cfg.shop.booksyUrl) {
+    html = html.replace(/https:\/\/booksy\.com\/en-us\/[^"'\s]*/g, cfg.shop.booksyUrl);
+    html = html.replace(/https:\/\/booksy\.com/g, cfg.shop.booksyUrl);
+  }
+
   // 1. Full URL-encoded Map addresses
   const newMapAddr = [cfg.location.address, cfg.location.city, cfg.location.state, cfg.location.zip].join(' ').replace(/ /g, '+');
   const oldMapShort = '3868+W+Sahara+Ave+Las+Vegas+NV+89102';
