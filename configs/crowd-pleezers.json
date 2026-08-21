@@ -1,0 +1,195 @@
+{
+  "shop": {
+    "name": "Crowd Pleezers Barbershop",
+    "shortName": "Crowd Pleezers",
+    "monogram": "CP",
+    "badge": "LV",
+    "tagline": "Multi-Cultural Cuts. Precision Grooming.",
+    "subTagline": "Las Vegas Barbershop & Braiding",
+    "description": "Las Vegas premier multi-cultural barbershop. Professional skin fades, beard sculpting, precision tapers, custom designs, and professional braiding & locs services.",
+    "phone": "(702) 329-1212",
+    "phoneRaw": "7023291212",
+    "email": "info@crowdpleezerslv.com",
+    "website": "https://crowdpleezerslv.com",
+    "instagram": "crowdpleezers",
+    "instagramUrl": "https://www.instagram.com/crowdpleezers/",
+    "booksyUrl": "https://booksy.com/en-us/581467_crowd-pleezers-barbershop_barber-shop_29251_las-vegas",
+    "promoCode": "PLEEZER10",
+    "promoDiscount": "10% OFF"
+  },
+  "location": {
+    "plaza": "Charleston Decatur Center",
+    "address": "4960 W Charleston Blvd",
+    "crossStreet": "Charleston Blvd & Decatur Blvd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89146",
+    "country": "US",
+    "neighborhood": "Decatur Corridor",
+    "googleMapsUrl": "https://maps.google.com/?q=4960+W+Charleston+Blvd+Las+Vegas+NV+89146",
+    "appleMapsUrl": "https://maps.apple.com/?address=4960+W+Charleston+Blvd,Las+Vegas,NV+89146",
+    "coordinates": {
+      "lat": 36.15946,
+      "lng": -115.2084
+    }
+  },
+  "hours": {
+    "timezone": "America/Los_Angeles",
+    "schedule": {
+      "tuesday_saturday": {
+        "days": "Tuesday – Saturday",
+        "open": "10:00 AM",
+        "close": "7:00 PM",
+        "open24h": "10:00",
+        "close24h": "19:00"
+      },
+      "sunday_monday": {
+        "days": "Sunday & Monday",
+        "status": "Closed"
+      }
+    },
+    "walkinPolicy": "Walk-ins Welcomed • Appointments Recommended"
+  },
+  "theme": {
+    "accentColor": "crimson",
+    "primaryHex": "#ef4444",
+    "primaryGradient": "linear-gradient(135deg, #f87171 0%, #ef4444 50%, #b91c1c 100%)",
+    "bgPrimary": "#080a0f",
+    "bgCard": "#131722"
+  },
+  "team": {
+    "owners": [
+      {
+        "name": "Mir The Barber",
+        "initials": "M",
+        "title": "Master Barber & Shop Lead",
+        "badge": "👑 Master Barber / Top Rated",
+        "specialty": "Precision Skin Fades, High Tapers, Beard Sculpting & Razor Finishes",
+        "experience": "8+ Years Craftsmanship",
+        "highlight": "Known for surgical precision and flawless blending on all hair textures.",
+        "image": "assets/images/barber-master.jpg",
+        "instagram": "crowdpleezers"
+      }
+    ],
+    "barbers": [
+      {
+        "name": "Major Fadez",
+        "initials": "MF",
+        "title": "Fade Specialist & Stylist",
+        "badge": "Fade Specialist",
+        "specialty": "Buzz Cuts, Texture Crop, Drop Fades & Luxury Beard Combos",
+        "experience": "Master Craftsman",
+        "highlight": "Specializes in high contrast tapers and styling modern trends.",
+        "image": "assets/images/fade-textured.jpg",
+        "instagram": "crowdpleezers"
+      },
+      {
+        "name": "Hairanesa",
+        "initials": "H",
+        "title": "Barber & Braider",
+        "badge": "Braiding Expert",
+        "specialty": "Precision Haircuts, Men's & Women's Braids, Cornrows & Loc Maintenance",
+        "experience": "Master Stylist",
+        "highlight": "Dual threat stylist providing fresh tapers and neat protective braids.",
+        "image": "assets/images/kids-cut.jpg",
+        "instagram": "crowdpleezers"
+      },
+      {
+        "name": "Donscreationz",
+        "initials": "DC",
+        "title": "Master Barber",
+        "badge": "Creative Hair Artist",
+        "specialty": "Freestyle Parts, Geometric Razor Art, Kids Styling & Fades",
+        "experience": "Creative Stylist",
+        "highlight": "Turns haircuts into canvas art with sharp lines and unique freestyle designs.",
+        "image": "assets/images/crew-lasvegas.jpg",
+        "instagram": "crowdpleezers"
+      }
+    ]
+  },
+  "services": [
+    {
+      "key": "haircut",
+      "name": "Signature Haircut",
+      "description": "Tailored precision skin fade, drop fade, low taper, scissor crop, or classic cut. Includes hot lather neck lineup and styling.",
+      "price": 40,
+      "duration": 40,
+      "icon": "fa-scissors",
+      "popular": false
+    },
+    {
+      "key": "haircut-beard",
+      "name": "Haircut & Beard Sculpting",
+      "description": "The crowd pleezer combo. Precision cut with beard trim, straight razor line shaping, hot towel, and nourishing beard oil.",
+      "price": 45,
+      "duration": 55,
+      "icon": "fa-user-tie",
+      "popular": true
+    },
+    {
+      "key": "lineup",
+      "name": "Razor Edge Lineup",
+      "description": "Quick neckline and hairline cleaning. Sharp edging on temples and sideburns with a hot lather razor touchup.",
+      "price": 20,
+      "duration": 20,
+      "icon": "fa-wand-magic-sparkles",
+      "popular": false
+    },
+    {
+      "key": "kids-cut",
+      "name": "Kid's Precision Cut",
+      "description": "Patient, friendly styling for children ages 12 & under. Cool tapers, skin fades, or scissor crops.",
+      "price": 30,
+      "duration": 30,
+      "icon": "fa-child",
+      "popular": false
+    },
+    {
+      "key": "senior-cut",
+      "name": "Senior Gentleman Cut",
+      "description": "Classic scissor cut, trim, and clean neckline feathering for seniors 65 & over.",
+      "price": 30,
+      "duration": 30,
+      "icon": "fa-user-clock",
+      "popular": false
+    },
+    {
+      "key": "braids-locs",
+      "name": "Braids & Locs Styling",
+      "description": "Professional braiding, cornrows, box braids, or starter locs/retwists. Handled by our specialist stylists.",
+      "price": 65,
+      "duration": 90,
+      "icon": "fa-crown",
+      "popular": false
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Marcus Rodriguez",
+      "role": "Regular • Cut by Mir The Barber",
+      "initials": "MR",
+      "rating": 5,
+      "source": "Booksy Verified",
+      "category": "locals",
+      "text": "Cleanest taper in Las Vegas. Mir takes his time and gets the lineup surgically straight. The shop vibe is friendly and energetic."
+    },
+    {
+      "author": "Andre Lewis",
+      "role": "Regular • Braids by Hairanesa",
+      "initials": "AL",
+      "rating": 5,
+      "source": "Booksy Verified",
+      "category": "beards",
+      "text": "Hairanesa is the truth. Got my cornrows done super neat, and got a fresh taper right after in the same chair. Saves so much time."
+    },
+    {
+      "author": "David Thompson",
+      "role": "Tourist • Cut by Major Fadez",
+      "initials": "DT",
+      "rating": 5,
+      "source": "Google Review",
+      "category": "tourists",
+      "text": "Major Fadez gave me the best drop fade I've had. Super fast, professional, and took me in right away. Worth every dollar."
+    }
+  ]
+}

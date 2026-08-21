@@ -1,6 +1,5 @@
 /**
- * FADED TIMES BARBERSHOP (@fadedtimeslv)
- * 3868 W Sahara Ave, Las Vegas, NV 89102
+ * BARBERSHOP ENGINE
  * Interactive Website JavaScript
  */
 
@@ -238,12 +237,21 @@ function initBookingSystem() {
 
   if (backToStep3) backToStep3.addEventListener('click', () => goToStep(3));
 
-  if (confirmBookingBtn) {
-    confirmBookingBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      submitBooking();
+  // Booksy Handoff Button
+  const booksyHandoffBtn = document.getElementById('btn-booksy-handoff');
+  if (booksyHandoffBtn) {
+    const booksyUrl = window.SHOP_CONFIG?.shop?.booksyUrl || 'https://booksy.com';
+    booksyHandoffBtn.href = booksyUrl;
+    booksyHandoffBtn.addEventListener('click', () => {
+      showToast(`Redirecting to Booksy for ${bookingState.selectedBarber}...`, 'info');
     });
   }
+
+  // Bind all direct Booksy profile links across the page to the config URL
+  const booksyProfileUrl = window.SHOP_CONFIG?.shop?.booksyUrl || 'https://booksy.com';
+  document.querySelectorAll('.direct-booksy-link').forEach(link => {
+    link.href = booksyProfileUrl;
+  });
 }
 
 function openBookingModal(preselectedServiceKey = null, preselectedBarber = null) {
@@ -278,22 +286,14 @@ function openBookingModal(preselectedServiceKey = null, preselectedBarber = null
   updateSelectedServices();
   goToStep(1);
   modal.classList.add('active');
-<<<<<<< HEAD
-  document.body.style.overflow = 'hidden';
-=======
   document.body.classList.add('overflow-hidden');
->>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
 }
 
 function closeBookingModal() {
   const modal = document.getElementById('booking-modal');
   if (modal) {
     modal.classList.remove('active');
-<<<<<<< HEAD
-    document.body.style.overflow = 'auto';
-=======
     document.body.classList.remove('overflow-hidden');
->>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
   }
 }
 
@@ -308,28 +308,16 @@ function goToStep(stepNumber) {
   const confirmationScreen = document.getElementById('booking-confirmation');
   if (confirmationScreen) confirmationScreen.classList.add('hidden');
 
-<<<<<<< HEAD
-=======
   // Scroll modal body to top smoothly on mobile
   const modalScrollBody = document.querySelector('.modal-content-box .overflow-y-auto');
   if (modalScrollBody) {
     modalScrollBody.scrollTop = 0;
   }
 
->>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
   // Update progress indicators
   const stepIndicators = document.querySelectorAll('.step-indicator');
   stepIndicators.forEach((ind, idx) => {
     if (idx + 1 < stepNumber) {
-<<<<<<< HEAD
-      ind.className = 'step-indicator flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500 text-white font-bold text-sm';
-      ind.innerHTML = '<i class="fa-solid fa-check"></i>';
-    } else if (idx + 1 === stepNumber) {
-      ind.className = 'step-indicator flex items-center justify-center w-8 h-8 rounded-full bg-amber-400 text-black font-bold text-sm shadow-lg shadow-amber-400/30';
-      ind.innerHTML = `${idx + 1}`;
-    } else {
-      ind.className = 'step-indicator flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 text-gray-400 font-semibold text-sm';
-=======
       ind.className = 'step-indicator flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-emerald-500 text-white font-bold text-xs sm:text-sm';
       ind.innerHTML = '<i class="fa-solid fa-check"></i>';
     } else if (idx + 1 === stepNumber) {
@@ -337,7 +325,6 @@ function goToStep(stepNumber) {
       ind.innerHTML = `${idx + 1}`;
     } else {
       ind.className = 'step-indicator flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gray-800 text-gray-400 font-semibold text-xs sm:text-sm';
->>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
       ind.innerHTML = `${idx + 1}`;
     }
   });
@@ -495,28 +482,58 @@ function updateSummaryStep4() {
   const summaryBox = document.getElementById('step-4-summary');
   if (!summaryBox) return;
 
-  const serviceNames = bookingState.selectedServices.map(k => serviceCatalogue[k]?.name || k).join(', ');
+  const serviceItems = bookingState.selectedServices.map(k => {
+    const s = serviceCatalogue[k];
+    if (!s) return `<div class="flex justify-between text-xs py-1 text-gray-200"><span>${k}</span></div>`;
+    return `
+      <div class="flex justify-between items-center text-xs py-1 border-b border-gray-800/60 last:border-0">
+        <span class="text-gray-200 font-medium">${s.name} <span class="text-gray-500 font-normal">(${s.duration} min)</span></span>
+        <span class="text-amber-400 font-bold">$${s.price}</span>
+      </div>
+    `;
+  }).join('');
 
   summaryBox.innerHTML = `
-    <div class="bg-gray-900/90 border border-amber-500/30 rounded-xl p-4 space-y-2 text-sm">
-      <div class="flex justify-between items-center pb-2 border-b border-gray-800">
-        <span class="text-gray-400 font-medium">Selected Services:</span>
-        <span class="text-white font-semibold text-right max-w-[220px] truncate">${serviceNames}</span>
+    <div class="bg-gray-900/95 border border-amber-500/30 rounded-2xl p-4 sm:p-5 space-y-3 text-sm shadow-inner">
+      <div class="pb-2 border-b border-gray-800">
+        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider block mb-1">Selected Grooming:</span>
+        <div class="space-y-0.5">
+          ${serviceItems}
+        </div>
       </div>
-      <div class="flex justify-between items-center pb-2 border-b border-gray-800">
-        <span class="text-gray-400 font-medium">Master Barber:</span>
-        <span class="text-amber-300 font-semibold">${bookingState.selectedBarber}</span>
+      <div class="grid grid-cols-2 gap-3 pb-2 border-b border-gray-800 text-xs">
+        <div>
+          <span class="text-gray-400 font-medium block">Barber:</span>
+          <span class="text-amber-300 font-bold text-xs sm:text-sm flex items-center mt-0.5 truncate">
+            <i class="fa-solid fa-scissors text-amber-400 mr-1.5 text-xs shrink-0"></i>
+            ${bookingState.selectedBarber}
+          </span>
+        </div>
+        <div>
+          <span class="text-gray-400 font-medium block">Date & Time:</span>
+          <span class="text-emerald-400 font-bold text-xs sm:text-sm flex items-center mt-0.5">
+            <i class="fa-regular fa-calendar-check mr-1.5 text-xs shrink-0"></i>
+            ${bookingState.selectedDateFormatted || bookingState.selectedDate} @ ${bookingState.selectedTime}
+          </span>
+        </div>
       </div>
-      <div class="flex justify-between items-center pb-2 border-b border-gray-800">
-        <span class="text-gray-400 font-medium">Appointment:</span>
-        <span class="text-white font-semibold">${bookingState.selectedDateFormatted || bookingState.selectedDate} @ ${bookingState.selectedTime}</span>
-      </div>
-      <div class="flex justify-between items-center pt-1 text-base">
-        <span class="text-gray-300 font-bold">Estimated Total:</span>
-        <span class="text-amber-400 font-serif-luxury font-bold text-lg">$${bookingState.totalPrice} <span class="text-xs text-gray-400 font-normal">(${bookingState.totalDuration} min)</span></span>
+      <div class="flex justify-between items-center pt-1 text-sm sm:text-base">
+        <div>
+          <span class="text-gray-300 font-bold block">Estimated Chair Total:</span>
+          <span class="text-[11px] text-gray-400"><i class="fa-regular fa-clock text-amber-400 mr-1"></i> ${bookingState.totalDuration} Minutes</span>
+        </div>
+        <div class="text-right">
+          <span class="text-amber-400 font-serif font-black text-2xl">$${bookingState.totalPrice}</span>
+        </div>
       </div>
     </div>
   `;
+
+  // Update dynamic Booksy button link
+  const booksyBtn = document.getElementById('btn-booksy-handoff');
+  if (booksyBtn) {
+    booksyBtn.href = window.SHOP_CONFIG?.shop?.booksyUrl || 'https://booksy.com';
+  }
 }
 
 function submitBooking() {
@@ -569,7 +586,7 @@ function submitBooking() {
         </div>
         <div class="flex justify-between items-center pt-1">
           <span class="text-gray-400 text-xs uppercase tracking-wider">Location</span>
-          <span class="text-gray-300 text-xs text-right">3868 W Sahara Ave, Las Vegas, NV 89102</span>
+          <span class="text-gray-300 text-xs text-right">${window.SHOP_CONFIG?.location ? `${window.SHOP_CONFIG.location.address}, ${window.SHOP_CONFIG.location.city}, ${window.SHOP_CONFIG.location.state} ${window.SHOP_CONFIG.location.zip}` : '4960 W Charleston Blvd, Las Vegas, NV 89146'}</span>
         </div>
       </div>
     `;
@@ -585,9 +602,13 @@ function setupCalendarDownloads() {
   const gcalBtn = document.getElementById('add-to-gcal-btn');
   const icsBtn = document.getElementById('download-ics-btn');
 
-  const title = encodeURIComponent("Haircut Appointment @ Faded Times Barbershop");
-  const details = encodeURIComponent(`Appointment with ${bookingState.selectedBarber} for ${bookingState.selectedServices.join(', ')}.\nLocation: 3868 W Sahara Ave, Las Vegas, NV 89102.\nPhone: (702) 272-2457`);
-  const location = encodeURIComponent("3868 W Sahara Ave, Las Vegas, NV 89102");
+  const shopName = window.SHOP_CONFIG?.shop?.name || 'Barbershop';
+  const shopAddr = window.SHOP_CONFIG?.location ? `${window.SHOP_CONFIG.location.address}, ${window.SHOP_CONFIG.location.city}, ${window.SHOP_CONFIG.location.state} ${window.SHOP_CONFIG.location.zip}` : '';
+  const shopPhone = window.SHOP_CONFIG?.shop?.phone || '';
+
+  const title = encodeURIComponent(`Haircut Appointment @ ${shopName}`);
+  const details = encodeURIComponent(`Appointment with ${bookingState.selectedBarber} for ${bookingState.selectedServices.join(', ')}.\nLocation: ${shopAddr}.\nPhone: ${shopPhone}`);
+  const location = encodeURIComponent(shopAddr);
 
   if (gcalBtn) {
     gcalBtn.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}`;
@@ -600,11 +621,11 @@ function setupCalendarDownloads() {
       const icsContent = [
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
-        'PRODID:-//Faded Times Barbershop//EN',
+        `PRODID:-//${shopName}//EN`,
         'BEGIN:VEVENT',
-        `SUMMARY:Faded Times Barbershop Cut`,
-        `DESCRIPTION:Appointment with ${bookingState.selectedBarber} at 3868 W Sahara Ave, Las Vegas, NV`,
-        `LOCATION:3868 W Sahara Ave, Las Vegas, NV 89102`,
+        `SUMMARY:${shopName} Cut`,
+        `DESCRIPTION:Appointment with ${bookingState.selectedBarber} at ${shopAddr}`,
+        `LOCATION:${shopAddr}`,
         'STATUS:CONFIRMED',
         'END:VEVENT',
         'END:VCALENDAR'
@@ -613,7 +634,7 @@ function setupCalendarDownloads() {
       const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
       const link = document.createElement('a');
       link.href = window.URL.createObjectURL(blob);
-      link.setAttribute('download', 'faded-times-appointment.ics');
+      link.setAttribute('download', 'appointment.ics');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -660,13 +681,15 @@ function initLookbook() {
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
       const img = item.querySelector('img');
-      const caption = item.getAttribute('data-caption') || 'Clean cut at Faded Times Vegas #FadedTimesLV';
-      const barber = item.getAttribute('data-barber') || 'Faded Times Master Barber';
+      const shopName = window.SHOP_CONFIG?.shop?.name || 'Barbershop';
+      const shopIg = window.SHOP_CONFIG?.shop?.instagram || 'barbershop';
+      const caption = item.getAttribute('data-caption') || `Clean cut at ${shopName} #${shopIg}LV`;
+      const barber = item.getAttribute('data-barber') || `${shopName} Master Barber`;
 
       if (lightboxImg && img) {
         lightboxImg.src = img.src;
         lightboxCaption.innerText = caption;
-        lightboxBarber.innerText = `@fadedtimeslv • Barber: ${barber}`;
+        lightboxBarber.innerText = `@${shopIg} • Barber: ${barber}`;
         lightboxModal.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
@@ -740,25 +763,6 @@ function initMobileMenu() {
   const mobileDrawer = document.getElementById('mobile-drawer');
   const closeDrawer = document.getElementById('close-mobile-drawer');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-<<<<<<< HEAD
-
-  if (menuToggle && mobileDrawer) {
-    menuToggle.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('hidden');
-    });
-  }
-
-  if (closeDrawer && mobileDrawer) {
-    closeDrawer.addEventListener('click', () => {
-      mobileDrawer.classList.add('hidden');
-    });
-  }
-
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (mobileDrawer) mobileDrawer.classList.add('hidden');
-    });
-=======
   const mobileBookingTriggers = mobileDrawer ? mobileDrawer.querySelectorAll('.open-booking-trigger') : [];
 
   function openMobileNav() {
@@ -815,7 +819,6 @@ function initMobileMenu() {
         document.body.classList.remove('overflow-hidden');
       }
     }
->>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
   });
 }
 
@@ -859,11 +862,7 @@ function initSmoothScroll() {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-<<<<<<< HEAD
-        const headerOffset = 80;
-=======
         const headerOffset = window.innerWidth < 768 ? 65 : 85;
->>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
         const elementPosition = target.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -884,27 +883,16 @@ function showToast(message, type = 'info') {
   if (!toastContainer) {
     toastContainer = document.createElement('div');
     toastContainer.id = 'toast-container';
-<<<<<<< HEAD
-    toastContainer.className = 'fixed bottom-20 right-5 z-50 flex flex-col space-y-2 pointer-events-none max-w-sm w-full';
-=======
     toastContainer.className = 'fixed bottom-24 sm:bottom-6 right-4 sm:right-6 left-4 sm:left-auto z-50 flex flex-col space-y-2 pointer-events-none sm:max-w-sm';
->>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
     document.body.appendChild(toastContainer);
   }
 
   const toast = document.createElement('div');
   const bgColors = {
-<<<<<<< HEAD
-    success: 'bg-emerald-950 border-emerald-500/60 text-emerald-200',
-    error: 'bg-red-950 border-red-500/60 text-red-200',
-    warning: 'bg-amber-950 border-amber-500/60 text-amber-200',
-    info: 'bg-gray-900 border-amber-400/40 text-gray-200'
-=======
     success: 'bg-emerald-950/95 border-emerald-500/60 text-emerald-200 backdrop-blur-md',
     error: 'bg-red-950/95 border-red-500/60 text-red-200 backdrop-blur-md',
     warning: 'bg-amber-950/95 border-amber-500/60 text-amber-200 backdrop-blur-md',
     info: 'bg-gray-900/95 border-amber-400/40 text-gray-200 backdrop-blur-md'
->>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
   };
 
   const icons = {
@@ -914,17 +902,10 @@ function showToast(message, type = 'info') {
     info: '<i class="fa-solid fa-circle-info text-amber-400 text-lg mr-3"></i>'
   };
 
-<<<<<<< HEAD
-  toast.className = `p-4 rounded-xl border shadow-2xl flex items-center transition-all duration-300 pointer-events-auto transform translate-y-4 opacity-0 ${bgColors[type] || bgColors.info}`;
-  toast.innerHTML = `
-    ${icons[type] || icons.info}
-    <div class="text-sm font-medium flex-1">${message}</div>
-=======
   toast.className = `p-4 rounded-2xl border shadow-2xl flex items-center transition-all duration-300 pointer-events-auto transform translate-y-4 opacity-0 ${bgColors[type] || bgColors.info}`;
   toast.innerHTML = `
     ${icons[type] || icons.info}
     <div class="text-xs sm:text-sm font-medium flex-1">${message}</div>
->>>>>>> c30e0091569b98c244bbc3583a0fc38c7f78fade
   `;
 
   toastContainer.appendChild(toast);
