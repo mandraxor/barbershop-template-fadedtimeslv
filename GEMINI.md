@@ -83,9 +83,11 @@ Lookbook item `data-caption` attributes are displayed to users in the lightbox m
 
 ```
 barbershop site experiment/    ← Master template (source of truth)
-  index.html                   ← Template HTML with compiler hooks
+  shop-config.json             ← Central source of truth config (Apex Barber Lounge)
+  template.config.json         ← Template schema mirror
+  index.html                   ← Generic template HTML with compiler hooks
   js/app.js                    ← Config-driven JavaScript engine
-  css/styles.css               ← Styles
+  css/styles.css               ← Master styles
   scripts/generate-variation.js ← Compiler script
   configs/                     ← Per-client config JSONs
     crowd-pleezers.json
@@ -98,7 +100,7 @@ barbershop-template-<next>/         ← Future variations go here
 
 ## Active Variations
 
-| Shop | Repo | Config |
+| Shop | Repo / Branch | Config |
 |---|---|---|
+| Apex Barber Lounge (Master Template) | `template-barber-master` | `shop-config.json` |
 | Crowd Pleezers Barbershop | `mandraxor/barbershop-template-crowdpleezers` | `configs/crowd-pleezers.json` |
-| Faded Times (Master) | `mandraxor/barbershop-template-fadedtimeslv` | `template.config.json` |

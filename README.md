@@ -2,9 +2,9 @@
 
 A high-converting, mobile-first, luxury barbershop website template and interactive booking engine. This repository serves as the **Master Template** for quickly spinning up customized websites for barbershops across any city or style.
 
-Current Master Reference Instance: **Faded Times Barbershop** (@fadedtimeslv), Las Vegas, NV.
+Current Master Reference Instance: **Apex Barber Lounge** (@apexbarberlounge), Metropolis, NV.
 
-![Faded Times Hero Preview](assets/images/hero-interior.jpg)
+![Apex Barber Lounge Hero Preview](assets/images/hero-interior.jpg)
 
 ---
 
@@ -13,17 +13,17 @@ Current Master Reference Instance: **Faded Times Barbershop** (@fadedtimeslv), L
 You can instantly create a brand new custom website for any other barbershop:
 
 ### 1. Define the Shop Profile
-Edit `template.config.json` (or create a new `my-shop.json`) with the new shop details:
-- Shop name, handles, coordinates, and phone number
+Edit `shop-config.json` (or create a new `configs/my-shop.json`) with the new shop details:
+- Shop name, monogram, handles, coordinates, and phone number
 - Operating schedule and time zone
 - Color palette & theme (Gold, Emerald, Crimson, Royal, Obsidian)
 - Owners, Master Barbers, and active staff
 - Services menu, durations, and pricing
-- Client testimonials & Instagram feed photos
+- Client testimonials & Booksy booking URL
 
 ### 2. Run the Variation Generator
 ```bash
-node scripts/generate-variation.js --config path/to/my-shop.json --out ../barbershop-myshop
+node scripts/generate-variation.js --config configs/my-shop.json --out ../barbershop-myshop
 ```
 
 ---

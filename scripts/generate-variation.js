@@ -63,7 +63,34 @@ function generateVariation(configPath, outputDir) {
   html = html.replace(/<meta property="og:description" content=".*?">/, `<meta property="og:description" content="${cfg.shop.tagline} ${cfg.shop.description}">`);
   html = html.replace(/<meta property="og:url" content=".*?">/, `<meta property="og:url" content="${cfg.shop.instagramUrl || `https://www.instagram.com/${cfg.shop.instagram}/`}">`);
 
+  // 1. Full URL-encoded Map addresses
+  const newMapAddr = [cfg.location.address, cfg.location.city, cfg.location.state, cfg.location.zip].join(' ').replace(/ /g, '+');
+  const oldMapShort = '3868+W+Sahara+Ave+Las+Vegas+NV+89102';
+  const oldMapLong = '3868+West+Sahara+Avenue+Las+Vegas+NV+89102';
+  const genericMap = '123+Main+Street+Suite+100+Metropolis+NV+89000';
+
   // Text & Brand replacements in order (longest first)
+  // 1. Generic Master Baseline (Apex Barber Lounge)
+  html = html.replace(/Apex Barber Lounge/g, cfg.shop.name);
+  html = html.replace(/Apex Barbershop/g, cfg.shop.shortName || cfg.shop.name);
+  html = html.replace(/APEX BARBERSHOP/g, (cfg.shop.shortName || cfg.shop.name).toUpperCase());
+  html = html.replace(/APEX/g, (cfg.shop.shortName || cfg.shop.name.split(' ')[0]).toUpperCase());
+  html = html.replace(/apexbarberlounge/g, cfg.shop.instagram);
+  html = html.replace(/@apexbarberlounge/g, '@' + cfg.shop.instagram);
+  html = html.replace(/\(555\) 000-0000/g, cfg.shop.phone);
+  html = html.replace(/5550000000/g, cfg.shop.phoneRaw);
+  html = html.replace(/123 Main Street, Suite 100/g, cfg.location.address);
+  html = html.replace(new RegExp(genericMap.replace(/\+/g, '\\+'), 'g'), newMapAddr);
+  html = html.replace(/Apex Plaza/g, cfg.location.plaza);
+  html = html.replace(/Main St & 1st Ave/g, cfg.location.crossStreet);
+  html = html.replace(/Main St &amp; 1st Ave/g, cfg.location.crossStreet);
+  html = html.replace(/Metropolis, NV 89000/g, `${cfg.location.city}, ${cfg.location.state} ${cfg.location.zip}`);
+  html = html.replace(/Metropolis/g, cfg.location.city);
+  html = html.replace(/89000/g, cfg.location.zip);
+  html = html.replace(/>AB</g, `>${cfg.shop.monogram}<`);
+  html = html.replace(/>HQ</g, `>${cfg.shop.badge}<`);
+
+  // 2. Legacy Templates Replacements
   html = html.replace(/Faded Times Barbershop/g, cfg.shop.name);
   html = html.replace(/Faded Times Vegas/g, cfg.shop.name);
   html = html.replace(/Faded Times/g, cfg.shop.shortName || cfg.shop.name.replace(' Barbershop', ''));
@@ -72,6 +99,11 @@ function generateVariation(configPath, outputDir) {
   html = html.replace(/@fadedtimeslv/g, '@' + cfg.shop.instagram);
   html = html.replace(/\(702\) 272-2457/g, cfg.shop.phone);
   html = html.replace(/7022722457/g, cfg.shop.phoneRaw);
+  html = html.replace(/\(702\) 329-1212/g, cfg.shop.phone);
+  html = html.replace(/7023291212/g, cfg.shop.phoneRaw);
+  html = html.replace(/>FT</g, `>${cfg.shop.monogram}<`);
+  html = html.replace(/>CP</g, `>${cfg.shop.monogram}<`);
+  html = html.replace(/>LV</g, `>${cfg.shop.badge}<`);
 
   // Booksy URLs
   if (cfg.shop.booksyUrl) {
@@ -79,10 +111,8 @@ function generateVariation(configPath, outputDir) {
     html = html.replace(/https:\/\/booksy\.com/g, cfg.shop.booksyUrl);
   }
 
-  // 1. Full URL-encoded Map addresses
-  const newMapAddr = [cfg.location.address, cfg.location.city, cfg.location.state, cfg.location.zip].join(' ').replace(/ /g, '+');
-  const oldMapShort = '3868+W+Sahara+Ave+Las+Vegas+NV+89102';
-  const oldMapLong = '3868+West+Sahara+Avenue+Las+Vegas+NV+89102';
+  html = html.replace(new RegExp(oldMapShort.replace(/\+/g, '\\+'), 'g'), newMapAddr);
+  html = html.replace(new RegExp(oldMapLong.replace(/\+/g, '\\+'), 'g'), newMapAddr);
   html = html.replace(new RegExp(oldMapShort.replace(/\+/g, '\\+'), 'g'), newMapAddr);
   html = html.replace(new RegExp(oldMapLong.replace(/\+/g, '\\+'), 'g'), newMapAddr);
 
@@ -296,6 +326,7 @@ function generateVariation(configPath, outputDir) {
 
   // Save customized output
   fs.writeFileSync(path.join(out, 'index.html'), html, 'utf8');
+  fs.writeFileSync(path.join(out, 'shop-config.json'), JSON.stringify(cfg, null, 2), 'utf8');
   fs.writeFileSync(path.join(out, 'template.config.json'), JSON.stringify(cfg, null, 2), 'utf8');
   if (readme) fs.writeFileSync(path.join(out, 'README.md'), readme, 'utf8');
 
@@ -303,7 +334,11 @@ function generateVariation(configPath, outputDir) {
 }
 
 const args = process.argv.slice(2);
-let configFile = path.resolve(__dirname, '../template.config.json');
+const defaultCfg = fs.existsSync(path.resolve(__dirname, '../shop-config.json'))
+  ? path.resolve(__dirname, '../shop-config.json')
+  : path.resolve(__dirname, '../template.config.json');
+
+let configFile = defaultCfg;
 let outputDir = path.resolve(__dirname, '../dist/variation');
 
 for (let i = 0; i < args.length; i++) {
