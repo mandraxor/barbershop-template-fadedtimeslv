@@ -1,0 +1,373 @@
+{
+  "theme": "dark-gold",
+  "design": {
+    "palette": "gold-noir",
+    "style": "classic-speakeasy",
+    "enableDemoToolbar": true
+  },
+  "business": {
+    "name": "Faded Times Barbershop",
+    "shortName": "Faded Times",
+    "monogram": "FT",
+    "badge": "LV",
+    "tagline": "Precision Cuts. Timeless Style.",
+    "subTagline": "Las Vegas Premier Barbershop",
+    "description": "Premier modern barbershop located at 3868 W Sahara Ave, Las Vegas, NV 89102 in Valley Oaks Plaza. Specializing in skin fades, beard shaping, hot towel shaves, designs, and walk-ins welcome.",
+    "phone": "(702) 272-2457",
+    "phoneRaw": "7022722457",
+    "email": "contact@fadedtimeslv.com",
+    "website": "https://fadedtimeslv.com",
+    "address": "3868 W Sahara Ave, Las Vegas, NV 89102",
+    "crossStreets": "Sahara Ave & Valley View Blvd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89102",
+    "plaza": "Valley Oaks Plaza",
+    "bookingUrl": "https://booksy.com/en-us/72223_faded-times-barbershop_barber-shop_29251_las-vegas",
+    "booksyUrl": "https://booksy.com/en-us/72223_faded-times-barbershop_barber-shop_29251_las-vegas",
+    "instagram": "@fadedtimeslv",
+    "instagramUrl": "https://www.instagram.com/fadedtimeslv/",
+    "promoCode": "FADED10",
+    "promoDiscount": "10% OFF",
+    "experienceImage": "assets/images/lounge-interior.jpg"
+  },
+  "shop": {
+    "name": "Faded Times Barbershop",
+    "shortName": "Faded Times",
+    "monogram": "FT",
+    "badge": "LV",
+    "tagline": "Precision Cuts. Timeless Style.",
+    "subTagline": "Las Vegas Premier Barbershop",
+    "description": "Premier modern barbershop located at 3868 W Sahara Ave, Las Vegas, NV 89102 in Valley Oaks Plaza. Specializing in skin fades, beard shaping, hot towel shaves, designs, and walk-ins welcome.",
+    "phone": "(702) 272-2457",
+    "phoneRaw": "7022722457",
+    "email": "contact@fadedtimeslv.com",
+    "website": "https://fadedtimeslv.com",
+    "instagram": "fadedtimeslv",
+    "instagramUrl": "https://www.instagram.com/fadedtimeslv/",
+    "booksyUrl": "https://booksy.com/en-us/72223_faded-times-barbershop_barber-shop_29251_las-vegas",
+    "bookingUrl": "https://booksy.com/en-us/72223_faded-times-barbershop_barber-shop_29251_las-vegas",
+    "promoCode": "FADED10",
+    "promoDiscount": "10% OFF",
+    "experienceImage": "assets/images/lounge-interior.jpg"
+  },
+  "location": {
+    "plaza": "Valley Oaks Plaza",
+    "address": "3868 W Sahara Ave",
+    "crossStreet": "Sahara Ave & Valley View Blvd",
+    "crossStreets": "Sahara Ave & Valley View Blvd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89102",
+    "country": "US",
+    "neighborhood": "West Sahara",
+    "googleMapsUrl": "https://maps.google.com/?q=3868+W+Sahara+Ave+Las+Vegas+NV+89102",
+    "appleMapsUrl": "https://maps.apple.com/?address=3868+W+Sahara+Ave,Las+Vegas,NV+89102",
+    "coordinates": {
+      "lat": 36.1444,
+      "lng": -115.1916
+    }
+  },
+  "hours": {
+    "timezone": "America/Los_Angeles",
+    "schedule": {
+      "tuesday_friday": {
+        "days": "Tuesday – Friday",
+        "open": "9:00 AM",
+        "close": "6:00 PM",
+        "open24h": "09:00",
+        "close24h": "18:00"
+      },
+      "saturday": {
+        "days": "Saturday",
+        "open": "9:00 AM",
+        "close": "4:00 PM",
+        "open24h": "09:00",
+        "close24h": "16:00"
+      },
+      "sunday_monday": {
+        "days": "Sunday & Monday",
+        "status": "Closed"
+      }
+    },
+    "walkinPolicy": "Walk-ins Welcome Daily • Priority To Bookings"
+  },
+  "barbers": [
+    {
+      "name": "Richie 'Rich' Ramos",
+      "shortName": "Richie",
+      "initials": "RR",
+      "title": "Lead Barber & Owner",
+      "role": "Lead Barber & Owner",
+      "badge": "👑 LEAD BARBER & OWNER",
+      "specialties": "Precision Skin Fades, High Tapers, Beard Sculpting",
+      "rating": "5.0",
+      "experience": "12+ Years Exp",
+      "highlight": "Master craftsman specializing in precision skin fades, sharp lineups, and straight-razor detailing.",
+      "image": "assets/images/barber-master.jpg",
+      "instagram": "fadedtimeslv"
+    },
+    {
+      "name": "Alex 'Fadez' Morales",
+      "shortName": "Alex",
+      "initials": "AM",
+      "title": "Master Barber & Taper Specialist",
+      "role": "Master Barber & Taper Specialist",
+      "badge": "✂️ MASTER TAPER SPECIALIST",
+      "specialties": "Low Tapers, Beard Sculpting, Textured Crops",
+      "rating": "5.0",
+      "experience": "8+ Years Exp",
+      "highlight": "Known for surgical precision and seamless fade transitions on all hair types.",
+      "image": "assets/images/beard-shave.jpg",
+      "instagram": "fadedtimeslv"
+    },
+    {
+      "name": "Maya Cruz",
+      "shortName": "Maya",
+      "initials": "MC",
+      "title": "Stylist & Braider",
+      "role": "Stylist & Braider",
+      "badge": "👑 MASTER STYLIST & BRAIDER",
+      "specialties": "Protective Styles, Clean Tapers, Line-ups",
+      "rating": "5.0",
+      "experience": "10+ Years Exp",
+      "highlight": "Master braider offering clean line-ups, modern fades, and crisp edge styling.",
+      "image": "assets/images/fade-textured.jpg",
+      "instagram": "fadedtimeslv"
+    },
+    {
+      "name": "Carlos 'Artisan' Silva",
+      "shortName": "Carlos",
+      "initials": "CS",
+      "title": "Creative Hair Artist",
+      "role": "Creative Hair Artist",
+      "badge": "🎨 CREATIVE HAIR ARTIST",
+      "specialties": "Freestyle Razor Designs, Custom Parts",
+      "rating": "5.0",
+      "experience": "7+ Years Exp",
+      "highlight": "Turns haircuts into canvas artwork with sharp geometric lines and custom designs.",
+      "image": "assets/images/hair-design.jpg",
+      "instagram": "fadedtimeslv"
+    }
+  ],
+  "team": {
+    "owners": [
+      {
+        "name": "Richie 'Rich' Ramos",
+        "shortName": "Richie",
+        "initials": "RR",
+        "title": "Lead Barber & Owner",
+        "role": "Lead Barber & Owner",
+        "badge": "👑 LEAD BARBER & OWNER",
+        "specialty": "Precision Skin Fades, High Tapers, Beard Sculpting",
+        "experience": "12+ Years Exp",
+        "highlight": "Master craftsman specializing in precision skin fades, sharp lineups, and straight-razor detailing.",
+        "image": "assets/images/barber-master.jpg",
+        "instagram": "fadedtimeslv"
+      }
+    ],
+    "barbers": [
+      {
+        "name": "Alex 'Fadez' Morales",
+        "shortName": "Alex",
+        "initials": "AM",
+        "title": "Master Barber & Taper Specialist",
+        "role": "Master Barber & Taper Specialist",
+        "badge": "✂️ MASTER TAPER SPECIALIST",
+        "specialty": "Low Tapers, Beard Sculpting, Textured Crops",
+        "experience": "8+ Years Exp",
+        "highlight": "Known for surgical precision and seamless fade transitions on all hair types.",
+        "image": "assets/images/beard-shave.jpg",
+        "instagram": "fadedtimeslv"
+      },
+      {
+        "name": "Maya Cruz",
+        "shortName": "Maya",
+        "initials": "MC",
+        "title": "Stylist & Braider",
+        "role": "Stylist & Braider",
+        "badge": "👑 MASTER STYLIST & BRAIDER",
+        "specialty": "Protective Styles, Clean Tapers, Line-ups",
+        "experience": "10+ Years Exp",
+        "highlight": "Master braider offering clean line-ups, modern fades, and crisp edge styling.",
+        "image": "assets/images/fade-textured.jpg",
+        "instagram": "fadedtimeslv"
+      },
+      {
+        "name": "Carlos 'Artisan' Silva",
+        "shortName": "Carlos",
+        "initials": "CS",
+        "title": "Creative Hair Artist",
+        "role": "Creative Hair Artist",
+        "badge": "🎨 CREATIVE HAIR ARTIST",
+        "specialty": "Freestyle Razor Designs, Custom Parts",
+        "experience": "7+ Years Exp",
+        "highlight": "Turns haircuts into canvas artwork with sharp geometric lines and custom designs.",
+        "image": "assets/images/hair-design.jpg",
+        "instagram": "fadedtimeslv"
+      }
+    ]
+  },
+  "services": [
+    {
+      "key": "haircut",
+      "name": "Signature Haircut",
+      "price": 35,
+      "duration": 40,
+      "icon": "fa-scissors",
+      "popular": true,
+      "description": "Precision skin fade, taper, or classic scissor cut tailored to your head shape, completed with razor lineup and styling."
+    },
+    {
+      "key": "haircut_beard",
+      "name": "Haircut & Beard Sculpt",
+      "price": 45,
+      "duration": 50,
+      "icon": "fa-user-tie",
+      "popular": true,
+      "description": "Complete haircut service paired with hot towel beard shaping, crisp razor line definition, and nourishing organic beard balm."
+    },
+    {
+      "key": "beard_trim",
+      "name": "Beard Trim & Razor Edge",
+      "price": 25,
+      "duration": 30,
+      "icon": "fa-face-smile",
+      "popular": false,
+      "description": "Hot lather straight-razor cheek & neckline edging, volumetric beard reduction, clipper shaping, and warm towel treatment."
+    },
+    {
+      "key": "kids_cut",
+      "name": "Kid's Signature Cut",
+      "price": 25,
+      "duration": 30,
+      "icon": "fa-child",
+      "popular": false,
+      "description": "Patient, gentle, and sharp haircut for young gentlemen (ages 12 and under). Any modern style, fade, or design part."
+    },
+    {
+      "key": "lineup",
+      "name": "Line Up / Shape Up",
+      "price": 20,
+      "duration": 20,
+      "icon": "fa-wand-magic-sparkles",
+      "popular": false,
+      "description": "Crisp hairline perimeter detailing, temple tape, razor neck cleanup, and aftershave tonic to refresh your existing cut."
+    },
+    {
+      "key": "vip_treatment",
+      "name": "VIP Executive Experience",
+      "price": 65,
+      "duration": 75,
+      "icon": "fa-crown",
+      "popular": false,
+      "description": "The ultimate service: Custom haircut, hot lather straight-razor shave/beard trim, essential oil hot towel, face scrub, and styling."
+    }
+  ],
+  "lookbook": [
+    {
+      "id": 1,
+      "image": "assets/images/hair-design.jpg",
+      "category": "fades",
+      "title": "Razor Low Drop Fade",
+      "barber": "Richie 'Rich' Ramos",
+      "caption": "Razor Low Drop Fade • Cut by Richie #fadedtimeslv"
+    },
+    {
+      "id": 2,
+      "image": "assets/images/beard-shave.jpg",
+      "category": "beards",
+      "title": "Sculpted Beard & Taper",
+      "barber": "Alex Morales",
+      "caption": "Sculpted Beard Contour & Razor Line • Groomed by Alex #fadedtimeslv"
+    },
+    {
+      "id": 3,
+      "image": "assets/images/fade-textured.jpg",
+      "category": "tapers",
+      "title": "Textured Crop Fade",
+      "barber": "Maya Cruz",
+      "caption": "Textured Crop & Low Taper • Styled by Maya #fadedtimeslv"
+    },
+    {
+      "id": 4,
+      "image": "assets/images/hair-design.jpg",
+      "category": "designs",
+      "title": "Geometric Freestyle Art",
+      "barber": "Carlos Silva",
+      "caption": "Freestyle Razor Art & Part Design • Art by Carlos #fadedtimeslv"
+    },
+    {
+      "id": 5,
+      "image": "assets/images/kids-cut.jpg",
+      "category": "kids",
+      "title": "Kids High & Tight Fade",
+      "barber": "Richie 'Rich' Ramos",
+      "caption": "Kids High & Tight Fade • Cut by Richie #fadedtimeslv"
+    },
+    {
+      "id": 6,
+      "image": "assets/images/lounge-interior.jpg",
+      "category": "lounge",
+      "title": "Executive Barber Stations",
+      "barber": "Faded Times Barbershop",
+      "caption": "Executive Barber Stations • Faded Times Barbershop #fadedtimeslv"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Marcus T.",
+      "role": "Local Regular",
+      "rating": 5,
+      "date": "2 days ago",
+      "text": "Best barbershop on West Sahara. Richie always delivers the cleanest skin fade and razor lineup. Good music, clean shop, and always on point.",
+      "cut": "Signature Haircut & Beard",
+      "barber": "Richie 'Rich' Ramos"
+    },
+    {
+      "author": "Jason P.",
+      "role": "Verified Client",
+      "rating": 5,
+      "date": "1 week ago",
+      "text": "Alex gave me one of the tightest low tapers I've had in Vegas. The hot towel and beard contour were top notch. Found my new regular spot.",
+      "cut": "VIP Executive Experience",
+      "barber": "Alex Morales"
+    },
+    {
+      "author": "Derrick L.",
+      "role": "Sahara Area Resident",
+      "rating": 5,
+      "date": "2 weeks ago",
+      "text": "Maya is incredible with braids and tapers. Immaculate line-up and great vibes. Highly recommend Faded Times!",
+      "cut": "Signature Haircut",
+      "barber": "Maya Cruz"
+    },
+    {
+      "author": "Anthony G.",
+      "role": "Creative Director",
+      "rating": 5,
+      "date": "3 weeks ago",
+      "text": "Carlos is a master with freestyle designs. Clean razor lines and unmatched artistry. Best shop in town.",
+      "cut": "Freestyle Hair Art & Fade",
+      "barber": "Carlos Silva"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you take walk-ins or are appointments required?",
+      "answer": "Walk-ins are always welcome during all regular business hours! However, to guarantee your preferred chair and barber without waiting, we highly recommend booking online in advance."
+    },
+    {
+      "question": "Where are you located and is there parking available?",
+      "answer": "We are located at 3868 W Sahara Ave, Las Vegas, NV 89102 in Valley Oaks Plaza at Sahara Ave & Valley View Blvd. We have ample, free parking directly in front of the shop."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit/debit cards (Visa, Mastercard, AMEX, Discover), Apple Pay, Google Pay, Booksy direct pay, and cash."
+    },
+    {
+      "question": "What is included with a signature haircut?",
+      "answer": "Every signature haircut includes a consultation, precision clipper/scissor cut, hot lather razor neck cleanup, hair styling with premium matte products, and aftershave tonic."
+    }
+  ]
+}
