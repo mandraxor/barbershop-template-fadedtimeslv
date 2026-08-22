@@ -984,6 +984,7 @@ function initThemeToolbar(initialPalette, initialStyle) {
     paletteSelect.addEventListener('change', (e) => {
       const selected = e.target.value;
       document.documentElement.setAttribute('data-palette', selected);
+      document.body.setAttribute('data-palette', selected);
       showToast(`Applied Palette: ${selected}`, 'info');
     });
   }
@@ -992,14 +993,15 @@ function initThemeToolbar(initialPalette, initialStyle) {
     styleSelect.addEventListener('change', (e) => {
       const selected = e.target.value;
       document.documentElement.setAttribute('data-style', selected);
+      document.body.setAttribute('data-style', selected);
       showToast(`Applied Style: ${selected}`, 'info');
     });
   }
 
   if (copyBtn) {
     copyBtn.addEventListener('click', () => {
-      const currentPal = paletteSelect ? paletteSelect.value : (document.documentElement.getAttribute('data-palette') || 'gold-noir');
-      const currentSty = styleSelect ? styleSelect.value : (document.documentElement.getAttribute('data-style') || 'urban-street');
+      const currentPal = paletteSelect ? paletteSelect.value : (document.documentElement.getAttribute('data-palette') || 'urban-midnight');
+      const currentSty = styleSelect ? styleSelect.value : (document.documentElement.getAttribute('data-style') || 'urban-brutalist');
       const snippet = JSON.stringify({ design: { palette: currentPal, style: currentSty } }, null, 2);
 
       if (navigator.clipboard && navigator.clipboard.writeText) {
