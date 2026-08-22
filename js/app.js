@@ -636,12 +636,19 @@ function initLookbook() {
 function initFAQ() {
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
-    const header = item.querySelector('.faq-header');
+    const header = item.querySelector('.faq-header') || item.querySelector('.faq-toggle');
+    const content = item.querySelector('.faq-content');
+    if (!header) return;
     header.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      faqItems.forEach(i => i.classList.remove('active'));
-      if (!isActive) {
+      const isCurrentlyOpen = item.classList.contains('active') || (content && !content.classList.contains('hidden'));
+      faqItems.forEach(i => {
+        i.classList.remove('active');
+        const c = i.querySelector('.faq-content');
+        if (c) c.classList.add('hidden');
+      });
+      if (!isCurrentlyOpen) {
         item.classList.add('active');
+        if (content) content.classList.remove('hidden');
       }
     });
   });
@@ -843,6 +850,9 @@ function showToast(message, type = 'info') {
 
 // Global helper for promo copy
 window.copyPromoCode = function() {
-  navigator.clipboard.writeText('FADED10');
-  showToast('Promo Code "FADED10" copied to clipboard!', 'success');
+  const promo = window.SHOP_CONFIG?.business?.promoCode || window.SHOP_CONFIG?.shop?.promoCode || 'APEX10';
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(promo).catch(() => {});
+  }
+  showToast(`Promo Code "${promo}" copied to clipboard!`, 'success');
 };

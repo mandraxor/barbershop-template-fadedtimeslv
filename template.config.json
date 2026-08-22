@@ -1,36 +1,64 @@
 {
+  "theme": "dark-gold",
+  "business": {
+    "name": "Apex Barber Lounge",
+    "shortName": "Apex Lounge",
+    "monogram": "AB",
+    "badge": "LV",
+    "tagline": "Precision Cuts. Timeless Style.",
+    "subTagline": "Premier Barbershop & Grooming Lounge",
+    "description": "Premier modern barbershop and grooming lounge located at 740 S 4th St, Las Vegas. Specializing in precision skin fades, beard sculpting, razor edge lineups, and executive hot towel treatments.",
+    "phone": "(702) 555-0199",
+    "phoneRaw": "7025550199",
+    "email": "contact@apexbarberlounge.com",
+    "website": "https://apexbarberlounge.com",
+    "address": "740 S 4th St, Las Vegas, NV 89101",
+    "crossStreets": "4th St & Gass Ave",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89101",
+    "plaza": "Downtown Arts District",
+    "bookingUrl": "https://booksy.com",
+    "booksyUrl": "https://booksy.com",
+    "instagram": "@apexbarberlounge",
+    "instagramUrl": "https://www.instagram.com/apexbarberlounge/",
+    "promoCode": "APEX10",
+    "promoDiscount": "10% OFF"
+  },
   "shop": {
     "name": "Apex Barber Lounge",
-    "shortName": "Apex Barbershop",
+    "shortName": "Apex Lounge",
     "monogram": "AB",
-    "badge": "HQ",
-    "tagline": "Precision Cuts. Modern Style.",
+    "badge": "LV",
+    "tagline": "Precision Cuts. Timeless Style.",
     "subTagline": "Premier Barbershop & Grooming Lounge",
-    "description": "Premier modern barbershop and grooming lounge. Specializing in precision skin fades, beard sculpting, razor edge lineups, and executive hot towel treatments.",
-    "phone": "(555) 000-0000",
-    "phoneRaw": "5550000000",
+    "description": "Premier modern barbershop and grooming lounge located at 740 S 4th St, Las Vegas. Specializing in precision skin fades, beard sculpting, razor edge lineups, and executive hot towel treatments.",
+    "phone": "(702) 555-0199",
+    "phoneRaw": "7025550199",
     "email": "contact@apexbarberlounge.com",
     "website": "https://apexbarberlounge.com",
     "instagram": "apexbarberlounge",
     "instagramUrl": "https://www.instagram.com/apexbarberlounge/",
     "booksyUrl": "https://booksy.com",
+    "bookingUrl": "https://booksy.com",
     "promoCode": "APEX10",
     "promoDiscount": "10% OFF"
   },
   "location": {
-    "plaza": "Apex Plaza",
-    "address": "123 Main Street, Suite 100",
-    "crossStreet": "Main St & 1st Ave",
-    "city": "Metropolis",
+    "plaza": "Downtown Arts District",
+    "address": "740 S 4th St",
+    "crossStreet": "4th St & Gass Ave",
+    "crossStreets": "4th St & Gass Ave",
+    "city": "Las Vegas",
     "state": "NV",
-    "zip": "89000",
+    "zip": "89101",
     "country": "US",
-    "neighborhood": "Downtown Arts District",
-    "googleMapsUrl": "https://maps.google.com/?q=123+Main+Street+Suite+100+Metropolis+NV+89000",
-    "appleMapsUrl": "https://maps.apple.com/?address=123+Main+Street+Suite+100,Metropolis,NV+89000",
+    "neighborhood": "Downtown Las Vegas",
+    "googleMapsUrl": "https://maps.google.com/?q=740+S+4th+St+Las+Vegas+NV+89101",
+    "appleMapsUrl": "https://maps.apple.com/?address=740+S+4th+St,Las+Vegas,NV+89101",
     "coordinates": {
-      "lat": 36.1699,
-      "lng": -115.1398
+      "lat": 36.1627,
+      "lng": -115.1481
     }
   },
   "hours": {
@@ -57,57 +85,108 @@
     },
     "walkinPolicy": "Walk-ins Welcome Daily • Priority To Bookings"
   },
-  "theme": {
-    "accentColor": "gold",
-    "primaryHex": "#d4af37",
-    "primaryGradient": "linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa820a 100%)",
-    "bgPrimary": "#0a0c10",
-    "bgCard": "#171b24"
-  },
+  "barbers": [
+    {
+      "name": "Marcus 'Vance' Cole",
+      "initials": "MC",
+      "title": "Master Barber & Shop Lead",
+      "role": "Master Barber & Shop Lead",
+      "badge": "👑 MASTER BARBER & SHOP LEAD",
+      "specialties": "Precision Skin Fades, High Tapers, Beard Sculpting",
+      "rating": "5.0",
+      "experience": "12+ Years Exp",
+      "highlight": "Master craftsman specializing in signature skin fades and precision straight-razor detailing.",
+      "image": "assets/images/barber-master.jpg",
+      "instagram": "apexbarberlounge"
+    },
+    {
+      "name": "Dominic Reyes",
+      "initials": "DR",
+      "title": "Senior Taper Specialist",
+      "role": "Senior Taper Specialist",
+      "badge": "✂️ SENIOR TAPER SPECIALIST",
+      "specialties": "Low Tapers, Beard Sculpting, Textured Crops",
+      "rating": "5.0",
+      "experience": "8+ Years Exp",
+      "highlight": "Expert in modern low tapers, razor fade transitions, and textured scissor work.",
+      "image": "assets/images/beard-shave.jpg",
+      "instagram": "apexbarberlounge"
+    },
+    {
+      "name": "Elena 'Nesa' Cruz",
+      "initials": "EC",
+      "title": "Master Stylist & Braider",
+      "role": "Master Stylist & Braider",
+      "badge": "👑 MASTER STYLIST & BRAIDER",
+      "specialties": "Protective Styles, Clean Tapers, Line-ups",
+      "rating": "5.0",
+      "experience": "10+ Years Exp",
+      "highlight": "Specialist in protective styles, braiding patterns, flawless edge lineups, and modern fades.",
+      "image": "assets/images/fade-textured.jpg",
+      "instagram": "apexbarberlounge"
+    },
+    {
+      "name": "Jay 'Artisan' Miller",
+      "initials": "JM",
+      "title": "Creative Hair Artist",
+      "role": "Creative Hair Artist",
+      "badge": "🎨 CREATIVE HAIR ARTIST",
+      "specialties": "Freestyle Razor Designs, Custom Parts",
+      "rating": "5.0",
+      "experience": "7+ Years Exp",
+      "highlight": "Turns haircutting into artwork with sharp geometric lines and custom freestyle parts.",
+      "image": "assets/images/hair-design.jpg",
+      "instagram": "apexbarberlounge"
+    }
+  ],
   "team": {
     "owners": [
       {
-        "name": "Lead Barber",
-        "initials": "LB",
-        "title": "Master Barber & Lead Craftsman",
-        "badge": "👑 Master Barber / Top Rated",
-        "specialty": "Precision Skin Fades, High Tapers, Beard Sculpting & Razor Finishes",
-        "experience": "10+ Years Craftsmanship",
-        "highlight": "Master craftsman delivering surgical skin fades and signature tailored cuts.",
+        "name": "Marcus 'Vance' Cole",
+        "initials": "MC",
+        "title": "Master Barber & Shop Lead",
+        "role": "Master Barber & Shop Lead",
+        "badge": "👑 MASTER BARBER & SHOP LEAD",
+        "specialty": "Precision Skin Fades, High Tapers, Beard Sculpting",
+        "experience": "12+ Years Exp",
+        "highlight": "Master craftsman specializing in signature skin fades and precision straight-razor detailing.",
         "image": "assets/images/barber-master.jpg",
         "instagram": "apexbarberlounge"
       }
     ],
     "barbers": [
       {
-        "name": "Fade Specialist",
-        "initials": "FS",
-        "title": "Senior Barber & Taper Specialist",
-        "badge": "Fade Specialist",
-        "specialty": "Skin Fades, Modern Tapers, Texture Crops & Beard Details",
-        "experience": "Master Craftsman",
-        "highlight": "Specialist in high-contrast tapers, drop fades, and modern scissor textures.",
+        "name": "Dominic Reyes",
+        "initials": "DR",
+        "title": "Senior Taper Specialist",
+        "role": "Senior Taper Specialist",
+        "badge": "✂️ SENIOR TAPER SPECIALIST",
+        "specialty": "Low Tapers, Beard Sculpting, Textured Crops",
+        "experience": "8+ Years Exp",
+        "highlight": "Expert in modern low tapers, razor fade transitions, and textured scissor work.",
+        "image": "assets/images/beard-shave.jpg",
+        "instagram": "apexbarberlounge"
+      },
+      {
+        "name": "Elena 'Nesa' Cruz",
+        "initials": "EC",
+        "title": "Master Stylist & Braider",
+        "role": "Master Stylist & Braider",
+        "badge": "👑 MASTER STYLIST & BRAIDER",
+        "specialty": "Protective Styles, Clean Tapers, Line-ups",
+        "experience": "10+ Years Exp",
+        "highlight": "Specialist in protective styles, braiding patterns, flawless edge lineups, and modern fades.",
         "image": "assets/images/fade-textured.jpg",
         "instagram": "apexbarberlounge"
       },
       {
-        "name": "Stylist & Braider",
-        "initials": "SB",
-        "title": "Master Barber & Braider",
-        "badge": "Braiding Expert",
-        "specialty": "Men's & Women's Braids, Precision Haircuts, Cornrows & Loc Maintenance",
-        "experience": "Master Stylist",
-        "highlight": "Dual-specialist providing clean scissor tapers and protective braiding styles.",
-        "image": "assets/images/kids-cut.jpg",
-        "instagram": "apexbarberlounge"
-      },
-      {
-        "name": "Creative Artist",
-        "initials": "CA",
-        "title": "Master Barber & Hair Artist",
-        "badge": "Creative Hair Artist",
-        "specialty": "Freestyle Parts, Geometric Razor Art, Kids Styling & Custom Fades",
-        "experience": "Creative Stylist",
+        "name": "Jay 'Artisan' Miller",
+        "initials": "JM",
+        "title": "Creative Hair Artist",
+        "role": "Creative Hair Artist",
+        "badge": "🎨 CREATIVE HAIR ARTIST",
+        "specialty": "Freestyle Razor Designs, Custom Parts",
+        "experience": "7+ Years Exp",
         "highlight": "Turns haircutting into artwork with sharp geometric lines and custom freestyle parts.",
         "image": "assets/images/hair-design.jpg",
         "instagram": "apexbarberlounge"
@@ -118,160 +197,162 @@
     {
       "key": "haircut",
       "name": "Signature Haircut",
-      "subtitle": "Custom Tailored Cut & Razor Finish",
-      "price": 40,
+      "price": 35,
       "duration": 40,
-      "popular": false,
-      "description": "Tailored precision skin fade, drop fade, low taper, textured crop, or classic gentleman cut. Includes hot lather neck shave and premium matte styling product finish.",
-      "includes": [
-        "Custom fade & shear work",
-        "Straight razor hairline lineup",
-        "Hot towel & cooling tonic"
-      ],
-      "icon": "fa-scissors"
-    },
-    {
-      "key": "haircut-beard",
-      "name": "Haircut & Beard Sculpting",
-      "subtitle": "Full Gentleman Transformation",
-      "price": 50,
-      "duration": 55,
+      "icon": "fa-scissors",
       "popular": true,
-      "description": "Full bespoke haircut of your choice combined with precision beard trim, straight razor cheek and neck lining, hot steam towel, and natural beard oil massage.",
-      "includes": [
-        "Fade of choice + razor finish",
-        "Beard length debulking & fade",
-        "Hot towel essential oil steam"
-      ],
-      "icon": "fa-user-tie"
+      "description": "Precision skin fade, taper, or classic scissor cut tailored to your head shape, completed with razor lineup and styling."
     },
     {
-      "key": "beard-trim",
-      "name": "Beard Trim & Shape",
-      "subtitle": "Precision Facial Hair Grooming",
-      "price": 20,
-      "duration": 25,
-      "popular": false,
-      "description": "Sculpting, length reduction, straight razor edging on cheekbones and neckline with hot towel treatment and hydrating finish.",
-      "includes": [
-        "Freehand clipper shape-up",
-        "Razor cheek & neck outline",
-        "Tea tree conditioning balm"
-      ],
-      "icon": "fa-spa"
+      "key": "haircut_beard",
+      "name": "Haircut & Beard Sculpt",
+      "price": 45,
+      "duration": 50,
+      "icon": "fa-user-tie",
+      "popular": true,
+      "description": "Complete haircut service paired with hot towel beard shaping, crisp razor line definition, and nourishing organic beard balm."
     },
     {
-      "key": "kids-cut",
-      "name": "Kid's Precision Cut",
-      "subtitle": "Gentle & Stylish (12 & Under)",
-      "price": 40,
-      "duration": 35,
+      "key": "beard_trim",
+      "name": "Beard Trim & Razor Edge",
+      "price": 25,
+      "duration": 30,
+      "icon": "fa-face-smile",
       "popular": false,
-      "description": "Patient, gentle master styling for kids 12 and under. High skin fades, classic gentleman taper, or scissor crops in a comfortable setting.",
-      "includes": [
-        "Ages 12 and under",
-        "Clean shear & clipper fade",
-        "Fun & patient barber approach"
-      ],
-      "icon": "fa-child"
+      "description": "Hot lather straight-razor cheek & neckline edging, volumetric beard reduction, clipper shaping, and warm towel treatment."
+    },
+    {
+      "key": "kids_cut",
+      "name": "Kid's Signature Cut",
+      "price": 25,
+      "duration": 30,
+      "icon": "fa-child",
+      "popular": false,
+      "description": "Patient, gentle, and sharp haircut for young gentlemen (ages 12 and under). Any modern style, fade, or design part."
     },
     {
       "key": "lineup",
-      "name": "Razor Edge Lineup",
-      "subtitle": "Shape-Up & Neck Clean",
+      "name": "Line Up / Shape Up",
       "price": 20,
       "duration": 20,
+      "icon": "fa-wand-magic-sparkles",
       "popular": false,
-      "description": "Quick hairline, temple, and nape clean up between full haircuts. Includes sharp straight razor detailing and cooling astringent.",
-      "includes": [
-        "Forehead & C-cup precision edge",
-        "Clean neck taper cleanup",
-        "Razor lineup with hot lather"
-      ],
-      "icon": "fa-wand-magic-sparkles"
+      "description": "Crisp hairline perimeter detailing, temple tape, razor neck cleanup, and aftershave tonic to refresh your existing cut."
     },
     {
-      "key": "vip-treatment",
-      "name": "Royal VIP Total Experience",
-      "subtitle": "The Ultimate Luxury Grooming",
+      "key": "vip_treatment",
+      "name": "VIP Executive Experience",
       "price": 65,
       "duration": 75,
+      "icon": "fa-crown",
       "popular": false,
-      "description": "The executive grooming package: Precision haircut, full beard sculpt & shave, charcoal facial cleanse mask, double hot towel steam, and scalp massage.",
-      "includes": [
-        "Full master haircut & fade",
-        "Beard treatment & straight razor",
-        "Facial mask & invigorating wash"
-      ],
-      "icon": "fa-crown"
+      "description": "The ultimate service: Custom haircut, hot lather straight-razor shave/beard trim, essential oil hot towel, face scrub, and styling."
+    }
+  ],
+  "lookbook": [
+    {
+      "id": 1,
+      "image": "assets/images/hair-design.jpg",
+      "category": "fades",
+      "title": "Razor Low Drop Fade",
+      "barber": "Marcus 'Vance' Cole",
+      "caption": "Crisp mid drop fade with textured volume on top. Razor sharp hairline finish."
+    },
+    {
+      "id": 2,
+      "image": "assets/images/beard-shave.jpg",
+      "category": "beards",
+      "title": "Sculpted Beard & Taper",
+      "barber": "Dominic Reyes",
+      "caption": "Precision taper blend with a sharp beard contour and hot towel straight razor cheekline."
+    },
+    {
+      "id": 3,
+      "image": "assets/images/fade-textured.jpg",
+      "category": "tapers",
+      "title": "Textured Crop Fade",
+      "barber": "Elena 'Nesa' Cruz",
+      "caption": "Modern textured crop with a seamless skin fade and styled matte finish."
+    },
+    {
+      "id": 4,
+      "image": "assets/images/hair-design.jpg",
+      "category": "designs",
+      "title": "Geometric Freestyle Art",
+      "barber": "Jay 'Artisan' Miller",
+      "caption": "Custom freestyle razor art with layered shadow fade transitions."
+    },
+    {
+      "id": 5,
+      "image": "assets/images/kids-cut.jpg",
+      "category": "kids",
+      "title": "Kids High & Tight Fade",
+      "barber": "Marcus 'Vance' Cole",
+      "caption": "Clean, styled high & tight skin fade for the young gentleman."
+    },
+    {
+      "id": 6,
+      "image": "assets/images/hero-interior.jpg",
+      "category": "lounge",
+      "title": "Lounge Chair Experience",
+      "barber": "Apex Team",
+      "caption": "Executive grooming stations equipped with plush leather barber chairs and luxury amenities."
     }
   ],
   "reviews": [
     {
-      "author": "Marcus R.",
-      "initials": "MR",
+      "author": "Brandon M.",
+      "role": "Verified Local Regular",
       "rating": 5,
-      "text": "Hands down the cleanest skin fade in town. I've tried multiple shops and nobody blends with this level of precision. The atmosphere is top notch and you walk out feeling like a million bucks.",
-      "service": "Signature Haircut",
-      "clientType": "Regular Client",
-      "barber": "Lead Barber",
-      "source": "Booksy Verified",
-      "category": "locals"
+      "date": "2 days ago",
+      "text": "Best barbershop experience in town hands down. The attention to detail on the skin fade and beard line is unmatched. Clean shop, great vibes, and always on time.",
+      "cut": "Signature Haircut & Beard",
+      "barber": "Marcus 'Vance' Cole"
     },
     {
-      "author": "Andre L.",
-      "initials": "AL",
+      "author": "David K.",
+      "role": "Business Executive",
       "rating": 5,
-      "text": "The hot towel straight razor beard treatment is pure luxury. Clean lines, zero irritation, and great attention to detail. True masters who take pride in their craft.",
-      "service": "Haircut & Beard Combo",
-      "clientType": "Beard Client",
-      "barber": "Fade Specialist",
-      "source": "Booksy Verified",
-      "category": "beards"
+      "date": "1 week ago",
+      "text": "The hot towel VIP treatment is incredible. Precision razor work, relaxing atmosphere, and premier customer service. I won't let anyone else touch my hair.",
+      "cut": "VIP Executive Experience",
+      "barber": "Dominic Reyes"
     },
     {
-      "author": "David T.",
-      "initials": "DT",
+      "author": "Carlos R.",
+      "role": "Arts District Resident",
       "rating": 5,
-      "text": "Needed a tight haircut on short notice and booked online easily. Convenient location, easy parking, and top-tier service from start to finish.",
-      "service": "Signature Haircut",
-      "clientType": "Visiting Client",
-      "barber": "Stylist & Braider",
-      "source": "Google Review",
-      "category": "tourists"
+      "date": "2 weeks ago",
+      "text": "Elena gave me one of the cleanest tapers I have ever had. The line-up is immaculate and the shop atmosphere is top tier. Highly recommend!",
+      "cut": "Signature Haircut",
+      "barber": "Elena 'Nesa' Cruz"
     },
     {
-      "author": "Jason T.",
-      "initials": "JT",
+      "author": "Tyler S.",
+      "role": "Creative Professional",
       "rating": 5,
-      "text": "Brought my son in for a fade and got my beard lined up. Patient, professional, and razor work was on point. Great vibe in the lounge, definitely our go-to spot!",
-      "service": "Kid's Cut & Lineup",
-      "clientType": "Local Family",
-      "barber": "Creative Artist",
-      "source": "Google Review",
-      "category": "locals"
+      "date": "3 weeks ago",
+      "text": "Jay's freestyle razor art is insane. If you want a custom design with razor sharp accuracy, this is the only place to go.",
+      "cut": "Freestyle Hair Art & Fade",
+      "barber": "Jay 'Artisan' Miller"
     }
   ],
-  "faq": [
+  "faqs": [
     {
-      "question": "Do I need an appointment or do you accept walk-ins?",
-      "answer": "Walk-ins are always welcome! However, to avoid waiting during peak hours, we recommend booking your chair online in advance."
+      "question": "Do you take walk-ins or are appointments required?",
+      "answer": "Walk-ins are always welcome during all regular business hours! However, to guarantee your preferred chair and craftsman without waiting, we highly recommend booking online in advance."
     },
     {
-      "question": "How do I book an appointment?",
-      "answer": "You can book directly 24/7 through our Booksy booking page with instant confirmation and real-time barber availability."
-    },
-    {
-      "question": "Where is the barbershop located and is there parking?",
-      "answer": "We are conveniently located at 123 Main Street, Suite 100 in Apex Plaza near Main St & 1st Ave. Plenty of free parking is available in the plaza lot."
+      "question": "Where are you located and is there parking available?",
+      "answer": "We are located at 740 S 4th St, Las Vegas, NV 89101 near 4th St & Gass Ave in the Downtown Arts District. We have ample, free dedicated parking directly in front of the lounge."
     },
     {
       "question": "What payment methods do you accept?",
-      "answer": "We accept Cash, Apple Pay, Google Pay, major Credit/Debit cards (Visa, Mastercard, AMEX), and contactless payments."
+      "answer": "We accept all major credit/debit cards (Visa, Mastercard, AMEX, Discover), Apple Pay, Google Pay, Booksy direct pay, and cash."
     },
     {
-      "question": "What is your cancellation or late arrival policy?",
-      "answer": "We appreciate at least 2 hours advance notice for cancellations. If you are running more than 10 minutes late, please give us a call at (555) 000-0000 so we can adjust your chair time."
+      "question": "What is included with a signature haircut?",
+      "answer": "Every signature haircut includes a consultation, precision clipper/scissor cut, hot lather razor neck cleanup, hair styling with premium matte products, and aftershave tonic."
     }
   ]
 }
