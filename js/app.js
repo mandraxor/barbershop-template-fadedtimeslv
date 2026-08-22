@@ -503,7 +503,7 @@ function submitBooking() {
         </div>
         <div class="flex justify-between items-center pt-1">
           <span class="text-gray-400 text-xs uppercase tracking-wider">Location</span>
-          <span class="text-gray-300 text-xs text-right">${window.SHOP_CONFIG?.location ? `${window.SHOP_CONFIG.location.address}, ${window.SHOP_CONFIG.location.city}, ${window.SHOP_CONFIG.location.state} ${window.SHOP_CONFIG.location.zip}` : '123 Main Street, Suite 100, Metropolis, NV 89000'}</span>
+          <span class="text-gray-300 text-xs text-right">${window.SHOP_CONFIG?.location ? `${window.SHOP_CONFIG.location.address}, ${window.SHOP_CONFIG.location.city}, ${window.SHOP_CONFIG.location.state} ${window.SHOP_CONFIG.location.zip}` : '740 S 4th St, Las Vegas, NV 89101'}</span>
         </div>
       </div>
     `;

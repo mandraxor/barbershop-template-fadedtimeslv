@@ -1,0 +1,21 @@
+{
+  "name": "barbershop-template-master",
+  "version": "1.0.0",
+  "description": "High-converting, modular master barbershop landing page and booking engine",
+  "main": "index.html",
+  "scripts": {
+    "audit": "node scripts/preflight-audit.js",
+    "build": "npm run audit && node -e \"console.log('✅ Build completed successfully.')\"",
+    "start": "node scripts/server-master-3006.js",
+    "generate": "node scripts/generate-variation.js"
+  },
+  "keywords": [
+    "barbershop",
+    "template",
+    "landing-page",
+    "booksy",
+    "booking"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
