@@ -1,162 +1,288 @@
 /* ==========================================================================
    APEX BARBER LOUNGE (@apexbarberlounge) - MASTER TEMPLATE STYLES
    Las Vegas, NV • 740 S 4th St
+   Dual-Axis Theme & Layout Engine
    ========================================================================== */
 
-:root {
-  --bg-primary: #0a0c10;
+/* --------------------------------------------------------------------------
+   1. COLOR PALETTES (6 PALETTES)
+   -------------------------------------------------------------------------- */
+
+:root, [data-palette="gold-noir"] {
+  --bg-main: #0b0b0d;
   --bg-secondary: #12151c;
-  --bg-card: #171b24;
-  --bg-card-hover: #1f2430;
-  --gold-primary: #d4af37;
-  --gold-light: #f3e5ab;
-  --gold-dark: #aa820a;
-  --gold-glow: rgba(212, 175, 55, 0.35);
-  --gold-gradient: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa820a 100%);
-  --text-main: #f3f4f6;
-  --text-muted: #9ca3af;
+  --bg-card: #141418;
+  --bg-card-hover: #1c1c24;
+  --accent: #d4af37;
+  --accent-light: #f5d77f;
+  --accent-dark: #aa820a;
+  --accent-glow: rgba(212, 175, 55, 0.35);
+  --accent-gradient: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa820a 100%);
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
   --text-dim: #6b7280;
-  --border-gold: rgba(212, 175, 55, 0.22);
+  --border-color: rgba(212, 175, 55, 0.25);
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --accent-red: #ef4444;
-  --accent-green: #10b981;
+  --btn-text: #07080b;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-}
-::-webkit-scrollbar-thumb {
-  background: #272d3b;
-  border-radius: 4px;
-  border: 2px solid var(--bg-primary);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-primary);
-}
-
-/* Horizontal scrollbar hide utility */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+[data-palette="emerald-botanical"] {
+  --bg-main: #0c1210;
+  --bg-secondary: #121a17;
+  --bg-card: #16221e;
+  --bg-card-hover: #1d2c27;
+  --accent: #10b981;
+  --accent-light: #6ee7b7;
+  --accent-dark: #047857;
+  --accent-glow: rgba(16, 185, 129, 0.35);
+  --accent-gradient: linear-gradient(135deg, #6ee7b7 0%, #10b981 50%, #047857 100%);
+  --text-primary: #f3f4f6;
+  --text-secondary: #a7f3d0;
+  --text-dim: #6ee7b7;
+  --border-color: rgba(16, 185, 129, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --btn-text: #052e16;
 }
 
-/* Base & Mobile/Tablet Touch Ergonomics */
-* {
-  -webkit-tap-highlight-color: transparent;
+[data-palette="burgundy-copper"] {
+  --bg-main: #140a0a;
+  --bg-secondary: #1a0f0f;
+  --bg-card: #241414;
+  --bg-card-hover: #311c1c;
+  --accent: #ea580c;
+  --accent-light: #fb923c;
+  --accent-dark: #b91c1c;
+  --accent-glow: rgba(234, 88, 12, 0.35);
+  --accent-gradient: linear-gradient(135deg, #fb923c 0%, #ea580c 50%, #b91c1c 100%);
+  --text-primary: #fef3c7;
+  --text-secondary: #fed7aa;
+  --text-dim: #fca5a5;
+  --border-color: rgba(234, 88, 12, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --btn-text: #1c0505;
 }
+
+[data-palette="midnight-cyan"] {
+  --bg-main: #06090e;
+  --bg-secondary: #0a0f18;
+  --bg-card: #0f172a;
+  --bg-card-hover: #1e293b;
+  --accent: #06b6d4;
+  --accent-light: #67e8f9;
+  --accent-dark: #0891b2;
+  --accent-glow: rgba(6, 182, 212, 0.35);
+  --accent-gradient: linear-gradient(135deg, #67e8f9 0%, #06b6d4 50%, #0891b2 100%);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-dim: #64748b;
+  --border-color: rgba(6, 182, 212, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --btn-text: #082f49;
+}
+
+[data-palette="saddle-leather"] {
+  --bg-main: #140f0c;
+  --bg-secondary: #1a1512;
+  --bg-card: #261f1a;
+  --bg-card-hover: #332a24;
+  --accent: #d97706;
+  --accent-light: #fcd34d;
+  --accent-dark: #92400e;
+  --accent-glow: rgba(217, 119, 6, 0.35);
+  --accent-gradient: linear-gradient(135deg, #fcd34d 0%, #d97706 50%, #92400e 100%);
+  --text-primary: #fafaf9;
+  --text-secondary: #d6d3d1;
+  --text-dim: #a8a29e;
+  --border-color: rgba(217, 119, 6, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --btn-text: #1c0f06;
+}
+
+[data-palette="platinum-slate"] {
+  --bg-main: #0b0f17;
+  --bg-secondary: #111827;
+  --bg-card: #1e293b;
+  --bg-card-hover: #334155;
+  --accent: #e2e8f0;
+  --accent-light: #ffffff;
+  --accent-dark: #94a3b8;
+  --accent-glow: rgba(226, 232, 240, 0.35);
+  --accent-gradient: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%);
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-dim: #94a3b8;
+  --border-color: rgba(226, 232, 240, 0.25);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --btn-text: #0f172a;
+}
+
+/* --------------------------------------------------------------------------
+   2. VIBE & LAYOUT STYLES (4 STYLES)
+   -------------------------------------------------------------------------- */
+
+:root, [data-style="urban-street"] {
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --heading-transform: uppercase;
+  --heading-weight: 900;
+  --heading-letter-spacing: -0.02em;
+  --card-radius: 12px;
+  --badge-radius: 4px;
+  --btn-radius: 10px;
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  --border-width: 1.5px;
+}
+
+[data-style="classic-speakeasy"] {
+  --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --heading-transform: uppercase;
+  --heading-weight: 800;
+  --heading-letter-spacing: 0.06em;
+  --card-radius: 16px;
+  --badge-radius: 8px;
+  --btn-radius: 12px;
+  --card-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.65), 0 0 15px var(--accent-glow);
+  --border-width: 1px;
+}
+
+[data-style="minimal-editorial"] {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --heading-transform: none;
+  --heading-weight: 700;
+  --heading-letter-spacing: -0.01em;
+  --card-radius: 6px;
+  --badge-radius: 2px;
+  --btn-radius: 4px;
+  --card-shadow: none;
+  --border-width: 1px;
+}
+
+[data-style="compact-modern"] {
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --heading-transform: uppercase;
+  --heading-weight: 800;
+  --heading-letter-spacing: 0.02em;
+  --card-radius: 24px;
+  --badge-radius: 9999px;
+  --btn-radius: 9999px;
+  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+  --border-width: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   3. CORE ELEMENT & UTILITY MAPPINGS
+   -------------------------------------------------------------------------- */
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-main);
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
   touch-action: manipulation;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  background-color: var(--bg-main);
 }
 
-/* Prevent iOS Safari 16px input zoom */
-input, select, textarea, button {
-  font-size: 16px;
-  touch-action: manipulation;
+h1, h2, h3, .font-serif {
+  font-family: var(--font-heading) !important;
+  text-transform: var(--heading-transform);
+  letter-spacing: var(--heading-letter-spacing);
 }
 
-@media (min-width: 640px) {
-  input, select, textarea {
-    font-size: 0.875rem;
-  }
-}
-
-.font-serif-luxury {
-  font-family: 'Cinzel', Georgia, serif;
-}
-
-.font-heading {
-  font-family: 'Playfair Display', Georgia, serif;
-}
-
-/* Gold Text Gradient */
-.text-gold-gradient {
-  background: linear-gradient(135deg, #fce8a6 0%, #d4af37 50%, #b8860b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gold-shimmer {
-  background: linear-gradient(90deg, #d4af37 0%, #fff2b2 50%, #d4af37 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 4s linear infinite;
-}
-
-@keyframes shimmer {
-  to {
-    background-position: 200% center;
-  }
-}
-
-/* Button & Element Glow */
-.gold-glow {
-  box-shadow: 0 0 25px var(--gold-glow);
-}
-
-.gold-glow-hover:hover {
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.45);
-  transform: translateY(-2px);
-}
-
-.gold-glow-hover:active {
-  transform: scale(0.98);
-}
-
+/* Luxury Card */
 .card-luxury {
   background-color: var(--bg-card);
-  border: 1px solid var(--border-gold);
-  border-radius: 1.25rem;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .card-luxury:hover {
     background-color: var(--bg-card-hover);
-    border-color: rgba(212, 175, 55, 0.5);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.15);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px -8px rgba(0, 0, 0, 0.7), 0 0 20px var(--accent-glow);
   }
 }
 
-.card-luxury:active {
-  transform: scale(0.99);
+/* Dynamic Accent Text Gradient */
+.text-gold-gradient, .text-gold-shimmer {
+  background: var(--accent-gradient);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dynamic Button & Border Accents */
+.open-booking-trigger,
+.bg-gradient-to-r.from-amber-400.to-amber-600,
+.bg-gradient-to-r.from-amber-400.via-amber-500.to-amber-600 {
+  background: var(--accent-gradient) !important;
+  color: var(--btn-text) !important;
+  border-radius: var(--btn-radius) !important;
+  box-shadow: 0 4px 20px var(--accent-glow) !important;
+}
+
+.open-booking-trigger:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 6px 25px var(--accent-glow) !important;
+}
+
+.border-amber-400\/40,
+.border-amber-400\/30,
+.border-amber-400\/35,
+.border-amber-400\/20 {
+  border-color: var(--border-color) !important;
+}
+
+.text-amber-400,
+.text-amber-300 {
+  color: var(--accent) !important;
+}
+
+.bg-amber-400 {
+  background-color: var(--accent) !important;
+  color: var(--btn-text) !important;
+}
+
+.bg-amber-400\/10,
+.bg-amber-400\/20 {
+  background-color: var(--accent-glow) !important;
+}
+
+/* Dynamic Badges */
+.shop-badge,
+.today-badge,
+[class*="rounded-full"][class*="bg-amber-"] {
+  border-radius: var(--badge-radius) !important;
 }
 
 /* Glassmorphic Navbar */
 .glass-nav {
-  background: rgba(10, 12, 16, 0.92);
+  background: rgba(11, 11, 13, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  border-bottom: 1px solid var(--border-color);
 }
 
-/* Hero Overlay Gradients */
+/* Hero Overlay Gradient */
 .hero-gradient-overlay {
   background: linear-gradient(
     180deg,
-    rgba(10, 12, 16, 0.8) 0%,
-    rgba(10, 12, 16, 0.92) 65%,
-    #0a0c10 100%
+    rgba(11, 11, 13, 0.75) 0%,
+    rgba(11, 11, 13, 0.92) 65%,
+    var(--bg-main) 100%
   );
 }
 
@@ -167,146 +293,32 @@ input, select, textarea, button {
 }
 
 @keyframes pulseGreen {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-  }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
-.pulse-gold {
-  box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
-  animation: pulseGold 2s infinite;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: #272d3b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
 
-@keyframes pulseGold {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
-  }
+/* Floating Demo Toolbar Styles */
+#theme-demo-toolbar {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Lookbook Instagram Card Overlay (Optimized for Touch & Hover) */
-.ig-card-overlay {
-  opacity: 1;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.88) 100%);
-  transition: all 0.3s ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .ig-card-overlay {
-    opacity: 0;
-  }
-  .group:hover .ig-card-overlay {
-    opacity: 1;
-  }
-}
-
-/* Responsive Modal Animations & Mobile Bottom-Sheet Behavior */
-.modal-backdrop {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  padding: 0;
-}
-
-.modal-backdrop.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.modal-content-box {
-  transform: translateY(100%);
-  opacity: 0;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  max-height: 92vh;
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .modal-backdrop {
-    padding: 1.5rem;
-  }
-  .modal-content-box {
-    transform: scale(0.96) translateY(20px);
-    max-height: 88vh;
-  }
-  .modal-backdrop.active .modal-content-box {
-    transform: scale(1) translateY(0);
-    opacity: 1;
-  }
-}
-
-@media (max-width: 639px) {
-  .modal-backdrop.active .modal-content-box {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Badge Styling */
-.badge-gold {
-  background: rgba(212, 175, 55, 0.12);
-  color: #f3e5ab;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-}
-
-/* FAQ Accordion Styling */
-.faq-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
-}
-
-.faq-item.active .faq-content {
-  max-height: 400px;
-}
-
-.faq-item.active .faq-icon {
-  transform: rotate(180deg);
-}
-
-/* Mobile Sticky Bottom Bar Safe Areas */
-.mobile-bottom-bar {
-  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6);
-}
-
-/* Mobile Drawer Animation */
-#mobile-drawer {
-  transform: translateX(100%);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-  opacity: 0;
-  pointer-events: none;
-}
-
-#mobile-drawer.open {
-  transform: translateX(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Touch Active States */
-button:active, a:active {
-  opacity: 0.88;
-}
-
-/* Map Touch Control overlay */
-.map-container iframe {
-  touch-action: pan-x pan-y;
+#theme-demo-panel {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }

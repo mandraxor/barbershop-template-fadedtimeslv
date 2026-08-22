@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeSystem();
   initShopStatus();
   initBookingSystem();
   initLookbook();
@@ -856,3 +857,157 @@ window.copyPromoCode = function() {
   }
   showToast(`Promo Code "${promo}" copied to clipboard!`, 'success');
 };
+
+/* ==========================================================================
+   8. DUAL-AXIS THEME & LAYOUT ENGINE (PALETTES & STYLES)
+   ========================================================================== */
+function initThemeSystem() {
+  const design = window.SHOP_CONFIG?.design || {};
+  const currentPalette = design.palette || 'gold-noir';
+  const currentStyle = design.style || 'urban-street';
+
+  document.documentElement.setAttribute('data-palette', currentPalette);
+  document.documentElement.setAttribute('data-style', currentStyle);
+
+  if (design.enableDemoToolbar !== false) {
+    initThemeToolbar(currentPalette, currentStyle);
+  }
+}
+
+function initThemeToolbar(initialPalette, initialStyle) {
+  if (document.getElementById('theme-demo-toolbar')) return;
+
+  const palettes = [
+    { id: 'gold-noir', name: 'Gold Noir (Dark / Gold)' },
+    { id: 'emerald-botanical', name: 'Emerald Botanical (Charcoal / Green)' },
+    { id: 'burgundy-copper', name: 'Burgundy Copper (Mahogany / Copper)' },
+    { id: 'midnight-cyan', name: 'Midnight Cyan (Jet Black / Cyan)' },
+    { id: 'saddle-leather', name: 'Saddle Leather (Espresso / Amber)' },
+    { id: 'platinum-slate', name: 'Platinum Slate (Deep Slate / Silver)' }
+  ];
+
+  const styles = [
+    { id: 'urban-street', name: 'Urban Street (Bold / High-Contrast)' },
+    { id: 'classic-speakeasy', name: 'Classic Speakeasy (Serif / Vintage)' },
+    { id: 'minimal-editorial', name: 'Minimal Editorial (Clean / Subtle)' },
+    { id: 'compact-modern', name: 'Compact Modern (Pills / Rounded 16-24px)' }
+  ];
+
+  const toolbar = document.createElement('div');
+  toolbar.id = 'theme-demo-toolbar';
+  toolbar.className = 'fixed bottom-20 md:bottom-6 right-4 sm:right-6 z-50 flex flex-col items-end font-sans';
+  toolbar.innerHTML = `
+    <!-- Floating Collapsible Trigger -->
+    <button id="theme-demo-toggle-btn" class="px-4 py-2.5 rounded-full bg-dark-950/95 border border-amber-400/40 text-amber-300 text-xs font-bold shadow-2xl backdrop-blur-xl hover:scale-105 transition-all flex items-center space-x-2">
+      <i class="fa-solid fa-palette text-amber-400 text-sm"></i>
+      <span>Theme & Style Toolbar</span>
+      <i id="theme-demo-chevron" class="fa-solid fa-chevron-up text-[10px] ml-1 transition-transform"></i>
+    </button>
+
+    <!-- Floating Customization Panel -->
+    <div id="theme-demo-panel" class="hidden mt-2 p-5 rounded-2xl bg-dark-950/95 border border-amber-400/30 shadow-2xl backdrop-blur-2xl w-80 text-left text-xs space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-gray-800">
+        <div>
+          <h4 class="font-bold text-white text-sm">Live Theme Customizer</h4>
+          <p class="text-[10px] text-gray-400 mt-0.5">Dual-Axis Preview Engine</p>
+        </div>
+        <button id="theme-demo-close-btn" class="w-6 h-6 rounded-lg bg-dark-800 text-gray-400 hover:text-white flex items-center justify-center text-xs">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Dropdown 1: Color Palette -->
+      <div>
+        <label class="block text-gray-300 font-bold uppercase tracking-wider text-[10px] mb-1.5 flex items-center">
+          <i class="fa-solid fa-droplet text-amber-400 mr-1.5"></i> Color Palette (6)
+        </label>
+        <select id="theme-palette-select" class="w-full px-3 py-2 rounded-xl bg-dark-850 border border-gray-700 text-white text-xs font-semibold focus:border-amber-400 focus:outline-none transition-colors">
+          ${palettes.map(p => `<option value="${p.id}" ${p.id === initialPalette ? 'selected' : ''}>${p.name}</option>`).join('')}
+        </select>
+      </div>
+
+      <!-- Dropdown 2: Vibe & Style -->
+      <div>
+        <label class="block text-gray-300 font-bold uppercase tracking-wider text-[10px] mb-1.5 flex items-center">
+          <i class="fa-solid fa-wand-magic-sparkles text-amber-400 mr-1.5"></i> Vibe & Style (4)
+        </label>
+        <select id="theme-style-select" class="w-full px-3 py-2 rounded-xl bg-dark-850 border border-gray-700 text-white text-xs font-semibold focus:border-amber-400 focus:outline-none transition-colors">
+          ${styles.map(s => `<option value="${s.id}" ${s.id === initialStyle ? 'selected' : ''}>${s.name}</option>`).join('')}
+        </select>
+      </div>
+
+      <!-- Copy Config Action -->
+      <div class="pt-2 border-t border-gray-800 flex items-center justify-between">
+        <button id="theme-copy-config-btn" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-600 text-dark-950 font-black uppercase tracking-wider text-[11px] hover:brightness-110 active:scale-95 transition-all flex items-center justify-center">
+          <i class="fa-regular fa-copy mr-1.5"></i> Copy Config JSON
+        </button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(toolbar);
+
+  const toggleBtn = document.getElementById('theme-demo-toggle-btn');
+  const panel = document.getElementById('theme-demo-panel');
+  const closeBtn = document.getElementById('theme-demo-close-btn');
+  const chevron = document.getElementById('theme-demo-chevron');
+  const paletteSelect = document.getElementById('theme-palette-select');
+  const styleSelect = document.getElementById('theme-style-select');
+  const copyBtn = document.getElementById('theme-copy-config-btn');
+
+  function togglePanel(open) {
+    const isHidden = panel.classList.contains('hidden');
+    const shouldOpen = open !== undefined ? open : isHidden;
+    if (shouldOpen) {
+      panel.classList.remove('hidden');
+      if (chevron) chevron.className = 'fa-solid fa-chevron-down text-[10px] ml-1 transition-transform';
+    } else {
+      panel.classList.add('hidden');
+      if (chevron) chevron.className = 'fa-solid fa-chevron-up text-[10px] ml-1 transition-transform';
+    }
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      togglePanel();
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      togglePanel(false);
+    });
+  }
+
+  if (paletteSelect) {
+    paletteSelect.addEventListener('change', (e) => {
+      const selected = e.target.value;
+      document.documentElement.setAttribute('data-palette', selected);
+      showToast(`Applied Palette: ${selected}`, 'info');
+    });
+  }
+
+  if (styleSelect) {
+    styleSelect.addEventListener('change', (e) => {
+      const selected = e.target.value;
+      document.documentElement.setAttribute('data-style', selected);
+      showToast(`Applied Style: ${selected}`, 'info');
+    });
+  }
+
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      const currentPal = paletteSelect ? paletteSelect.value : (document.documentElement.getAttribute('data-palette') || 'gold-noir');
+      const currentSty = styleSelect ? styleSelect.value : (document.documentElement.getAttribute('data-style') || 'urban-street');
+      const snippet = JSON.stringify({ design: { palette: currentPal, style: currentSty } }, null, 2);
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(snippet).catch(() => {});
+      }
+      showToast('Copied design config to clipboard!', 'success');
+    });
+  }
+}
+

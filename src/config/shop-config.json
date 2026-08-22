@@ -1,5 +1,10 @@
 {
   "theme": "dark-gold",
+  "design": {
+    "palette": "gold-noir",
+    "style": "urban-street",
+    "enableDemoToolbar": true
+  },
   "business": {
     "name": "Apex Barber Lounge",
     "shortName": "Apex Lounge",
