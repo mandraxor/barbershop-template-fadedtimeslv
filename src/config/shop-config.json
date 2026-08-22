@@ -6,7 +6,7 @@
     "monogram": "AB",
     "badge": "LV",
     "tagline": "Precision Cuts. Timeless Style.",
-    "subTagline": "Premier Barbershop & Grooming Lounge",
+    "subTagline": "Premier Modern Grooming Lounge",
     "description": "Premier modern barbershop and grooming lounge located at 740 S 4th St, Las Vegas. Specializing in precision skin fades, beard sculpting, razor edge lineups, and executive hot towel treatments.",
     "phone": "(702) 555-0199",
     "phoneRaw": "7025550199",
@@ -23,7 +23,8 @@
     "instagram": "@apexbarberlounge",
     "instagramUrl": "https://www.instagram.com/apexbarberlounge/",
     "promoCode": "APEX10",
-    "promoDiscount": "10% OFF"
+    "promoDiscount": "10% OFF",
+    "experienceImage": "assets/images/lounge-interior.jpg"
   },
   "shop": {
     "name": "Apex Barber Lounge",
@@ -31,7 +32,7 @@
     "monogram": "AB",
     "badge": "LV",
     "tagline": "Precision Cuts. Timeless Style.",
-    "subTagline": "Premier Barbershop & Grooming Lounge",
+    "subTagline": "Premier Modern Grooming Lounge",
     "description": "Premier modern barbershop and grooming lounge located at 740 S 4th St, Las Vegas. Specializing in precision skin fades, beard sculpting, razor edge lineups, and executive hot towel treatments.",
     "phone": "(702) 555-0199",
     "phoneRaw": "7025550199",
@@ -42,7 +43,8 @@
     "booksyUrl": "https://booksy.com",
     "bookingUrl": "https://booksy.com",
     "promoCode": "APEX10",
-    "promoDiscount": "10% OFF"
+    "promoDiscount": "10% OFF",
+    "experienceImage": "assets/images/lounge-interior.jpg"
   },
   "location": {
     "plaza": "Downtown Arts District",
@@ -88,6 +90,7 @@
   "barbers": [
     {
       "name": "Marcus 'Vance' Cole",
+      "shortName": "Vance",
       "initials": "MC",
       "title": "Master Barber & Shop Lead",
       "role": "Master Barber & Shop Lead",
@@ -101,6 +104,7 @@
     },
     {
       "name": "Dominic Reyes",
+      "shortName": "Dominic",
       "initials": "DR",
       "title": "Senior Taper Specialist",
       "role": "Senior Taper Specialist",
@@ -114,6 +118,7 @@
     },
     {
       "name": "Elena 'Nesa' Cruz",
+      "shortName": "Elena",
       "initials": "EC",
       "title": "Master Stylist & Braider",
       "role": "Master Stylist & Braider",
@@ -127,6 +132,7 @@
     },
     {
       "name": "Jay 'Artisan' Miller",
+      "shortName": "Jay",
       "initials": "JM",
       "title": "Creative Hair Artist",
       "role": "Creative Hair Artist",
@@ -143,6 +149,7 @@
     "owners": [
       {
         "name": "Marcus 'Vance' Cole",
+        "shortName": "Vance",
         "initials": "MC",
         "title": "Master Barber & Shop Lead",
         "role": "Master Barber & Shop Lead",
@@ -157,6 +164,7 @@
     "barbers": [
       {
         "name": "Dominic Reyes",
+        "shortName": "Dominic",
         "initials": "DR",
         "title": "Senior Taper Specialist",
         "role": "Senior Taper Specialist",
@@ -169,6 +177,7 @@
       },
       {
         "name": "Elena 'Nesa' Cruz",
+        "shortName": "Elena",
         "initials": "EC",
         "title": "Master Stylist & Braider",
         "role": "Master Stylist & Braider",
@@ -181,6 +190,7 @@
       },
       {
         "name": "Jay 'Artisan' Miller",
+        "shortName": "Jay",
         "initials": "JM",
         "title": "Creative Hair Artist",
         "role": "Creative Hair Artist",
@@ -192,7 +202,7 @@
         "instagram": "apexbarberlounge"
       }
     ]
-  },
+  ],
   "services": [
     {
       "key": "haircut",
@@ -256,7 +266,7 @@
       "category": "fades",
       "title": "Razor Low Drop Fade",
       "barber": "Marcus 'Vance' Cole",
-      "caption": "Crisp mid drop fade with textured volume on top. Razor sharp hairline finish."
+      "caption": "Razor Low Drop Fade • Cut by Vance"
     },
     {
       "id": 2,
@@ -264,7 +274,7 @@
       "category": "beards",
       "title": "Sculpted Beard & Taper",
       "barber": "Dominic Reyes",
-      "caption": "Precision taper blend with a sharp beard contour and hot towel straight razor cheekline."
+      "caption": "Sculpted Beard Contour & Razor Line • Groomed by Dominic"
     },
     {
       "id": 3,
@@ -272,7 +282,7 @@
       "category": "tapers",
       "title": "Textured Crop Fade",
       "barber": "Elena 'Nesa' Cruz",
-      "caption": "Modern textured crop with a seamless skin fade and styled matte finish."
+      "caption": "Textured Crop & Low Taper • Styled by Elena"
     },
     {
       "id": 4,
@@ -280,7 +290,7 @@
       "category": "designs",
       "title": "Geometric Freestyle Art",
       "barber": "Jay 'Artisan' Miller",
-      "caption": "Custom freestyle razor art with layered shadow fade transitions."
+      "caption": "Freestyle Razor Art & Part Design • Art by Jay"
     },
     {
       "id": 5,
@@ -288,15 +298,15 @@
       "category": "kids",
       "title": "Kids High & Tight Fade",
       "barber": "Marcus 'Vance' Cole",
-      "caption": "Clean, styled high & tight skin fade for the young gentleman."
+      "caption": "Kids High & Tight Fade • Cut by Vance"
     },
     {
       "id": 6,
-      "image": "assets/images/hero-interior.jpg",
+      "image": "assets/images/lounge-interior.jpg",
       "category": "lounge",
-      "title": "Lounge Chair Experience",
-      "barber": "Apex Team",
-      "caption": "Executive grooming stations equipped with plush leather barber chairs and luxury amenities."
+      "title": "Executive Barber Stations",
+      "barber": "Apex Barber Lounge",
+      "caption": "Executive Barber Stations • Apex Barber Lounge"
     }
   ],
   "reviews": [
@@ -305,7 +315,7 @@
       "role": "Verified Local Regular",
       "rating": 5,
       "date": "2 days ago",
-      "text": "Best barbershop experience in town hands down. The attention to detail on the skin fade and beard line is unmatched. Clean shop, great vibes, and always on time.",
+      "text": "Best barbershop experience in town hands down. The attention to detail Vance gives on the skin fade and beard line is unmatched. Clean shop, great vibes, and always on time.",
       "cut": "Signature Haircut & Beard",
       "barber": "Marcus 'Vance' Cole"
     },
@@ -314,7 +324,7 @@
       "role": "Business Executive",
       "rating": 5,
       "date": "1 week ago",
-      "text": "The hot towel VIP treatment is incredible. Precision razor work, relaxing atmosphere, and premier customer service. I won't let anyone else touch my hair.",
+      "text": "The hot towel VIP treatment with Dominic is incredible. Precision razor work, relaxing atmosphere, and premier customer service. I won't let anyone else touch my hair.",
       "cut": "VIP Executive Experience",
       "barber": "Dominic Reyes"
     },
@@ -323,7 +333,7 @@
       "role": "Arts District Resident",
       "rating": 5,
       "date": "2 weeks ago",
-      "text": "Elena gave me one of the cleanest tapers I have ever had. The line-up is immaculate and the shop atmosphere is top tier. Highly recommend!",
+      "text": "Elena gave me one of the cleanest tapers I have ever had. The line-up is immaculate and the lounge atmosphere is top tier. Highly recommend!",
       "cut": "Signature Haircut",
       "barber": "Elena 'Nesa' Cruz"
     },
