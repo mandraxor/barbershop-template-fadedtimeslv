@@ -39,7 +39,13 @@ function generateVariation(configPath, outputDir) {
   const raw = fs.readFileSync(configPath, 'utf8');
   const cfg = JSON.parse(raw);
 
-  console.log(`\nCompiling variation: ${cfg.shop.name} (${cfg.location.city}, ${cfg.location.state})`);
+  // Barbershop client variations never display the live theme toolbar
+  cfg.design = cfg.design || {};
+  cfg.design.enableDemoToolbar = false;
+  const palette = cfg.design.palette || 'gold-noir';
+  const style = cfg.design.style || 'urban-street';
+
+  console.log(`\nCompiling variation: ${cfg.shop.name} (${cfg.location.city}, ${cfg.location.state}) [Palette: ${palette}, Style: ${style}]`);
 
   // Ensure output directory exists
   if (!fs.existsSync(out)) {
@@ -54,6 +60,10 @@ function generateVariation(configPath, outputDir) {
   // 2. Read template index.html & README.md
   let html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   let readme = fs.existsSync(path.join(root, 'README.md')) ? fs.readFileSync(path.join(root, 'README.md'), 'utf8') : '';
+
+  // Set specific data-palette and data-style on html and body
+  html = html.replace(/data-palette="[^"]*"/g, `data-palette="${palette}"`);
+  html = html.replace(/data-style="[^"]*"/g, `data-style="${style}"`);
 
   // Clean title & meta description
   html = html.replace(/<title>.*?<\/title>/, `<title>${cfg.shop.name} | ${cfg.location.city}, ${cfg.location.state} (@${cfg.shop.instagram})</title>`);

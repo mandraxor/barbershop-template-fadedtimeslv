@@ -869,7 +869,8 @@ function initThemeSystem() {
   document.documentElement.setAttribute('data-palette', currentPalette);
   document.documentElement.setAttribute('data-style', currentStyle);
 
-  if (design.enableDemoToolbar !== false) {
+  // The theme and style selector toolbar is ONLY enabled on the master template
+  if (design.enableDemoToolbar === true) {
     initThemeToolbar(currentPalette, currentStyle);
   }
 }

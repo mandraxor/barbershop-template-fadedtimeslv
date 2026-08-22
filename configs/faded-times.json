@@ -3,7 +3,7 @@
   "design": {
     "palette": "gold-noir",
     "style": "classic-speakeasy",
-    "enableDemoToolbar": true
+    "enableDemoToolbar": false
   },
   "business": {
     "name": "Faded Times Barbershop",

@@ -3,7 +3,7 @@
   "design": {
     "palette": "speakeasy-heritage",
     "style": "classic-speakeasy",
-    "enableDemoToolbar": true
+    "enableDemoToolbar": false
   },
   "business": {
     "name": "Crowd Pleezers Barbershop",
