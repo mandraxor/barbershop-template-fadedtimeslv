@@ -4,6 +4,8 @@
    Dual-Axis High-Impact Theme & Layout Engine
    ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
 /* --------------------------------------------------------------------------
    1. COLOR PALETTES (5 FULL-SURFACE PALETTES)
    -------------------------------------------------------------------------- */
@@ -150,60 +152,202 @@
    2. VIBE & GEOMETRY STYLES (4 STYLES)
    -------------------------------------------------------------------------- */
 
-/* Style 1: Urban Brutalist (0px Sharp, 2px Solid Borders, Block Drop Shadows) */
+/* 1. URBAN BRUTALIST ('Oswald' Headings, 0px Sharp Geometry, 2px Borders) */
 :root, [data-style="urban-brutalist"], [data-style="urban-street"] {
-  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Oswald', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --heading-transform: uppercase;
-  --heading-weight: 900;
-  --heading-letter-spacing: -0.03em;
+  --heading-weight: 700;
+  --heading-letter-spacing: 0.03em;
   --card-radius: 0px;
   --badge-radius: 0px;
   --btn-radius: 0px;
   --border-width: 2px;
-  --card-shadow: 6px 6px 0px 0px var(--accent-glow);
 }
 
-/* Style 2: Classic Speakeasy (4px Radius, Ornate Top & Bottom Gold Borders, Serif) */
+[data-style="urban-brutalist"] h1,
+[data-style="urban-brutalist"] h2,
+[data-style="urban-brutalist"] h3,
+[data-style="urban-street"] h1,
+[data-style="urban-street"] h2,
+[data-style="urban-street"] h3 {
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em !important;
+}
+
+[data-style="urban-brutalist"] .card-luxury,
+[data-style="urban-brutalist"] .card-surface,
+[data-style="urban-brutalist"] .service-card,
+[data-style="urban-brutalist"] .barber-card,
+[data-style="urban-street"] .card-luxury {
+  border: 2px solid var(--border-color) !important;
+  box-shadow: 4px 4px 0px 0px var(--accent) !important;
+  border-radius: 0px !important;
+}
+
+[data-style="urban-brutalist"] button:not(#theme-demo-toolbar button),
+[data-style="urban-brutalist"] .open-booking-trigger,
+[data-style="urban-brutalist"] .btn-primary,
+[data-style="urban-street"] .open-booking-trigger {
+  border-radius: 0px !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.05em !important;
+  box-shadow: 3px 3px 0px 0px #ffffff !important;
+}
+
+[data-style="urban-brutalist"] [class*="rounded-"],
+[data-style="urban-brutalist"] .theme-badge,
+[data-style="urban-brutalist"] .shop-badge {
+  border-radius: 0px !important;
+}
+
+/* 2. CLASSIC SPEAKEASY ('Cinzel' Serif Headings, 4px Radius, Top/Bottom Gold) */
 [data-style="classic-speakeasy"] {
-  --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-heading: 'Cinzel', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --heading-transform: uppercase;
   --heading-weight: 800;
-  --heading-letter-spacing: 0.08em;
+  --heading-letter-spacing: 0.12em;
   --card-radius: 4px;
   --badge-radius: 4px;
   --btn-radius: 4px;
   --border-width: 1px;
-  --card-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5), 0 0 15px var(--accent-glow);
 }
 
-/* Style 3: Modern Curved (24px Rounded Pills, Frosted Glass Blur) */
-[data-style="modern-curved"], [data-style="compact-modern"] {
+[data-style="classic-speakeasy"] h1,
+[data-style="classic-speakeasy"] h2,
+[data-style="classic-speakeasy"] h3 {
+  font-family: 'Cinzel', serif !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
+
+[data-style="classic-speakeasy"] .card-luxury,
+[data-style="classic-speakeasy"] .card-surface,
+[data-style="classic-speakeasy"] .service-card,
+[data-style="classic-speakeasy"] .barber-card {
+  border: 1px solid var(--border-color) !important;
+  border-top: 2px solid var(--accent) !important;
+  border-bottom: 2px solid var(--accent) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+[data-style="classic-speakeasy"] button:not(#theme-demo-toolbar button),
+[data-style="classic-speakeasy"] .open-booking-trigger,
+[data-style="classic-speakeasy"] .btn-primary {
+  border-radius: 4px !important;
+  letter-spacing: 0.08em !important;
+}
+
+[data-style="classic-speakeasy"] [class*="rounded-"],
+[data-style="classic-speakeasy"] .theme-badge,
+[data-style="classic-speakeasy"] .shop-badge {
+  border-radius: 4px !important;
+}
+
+/* 3. MINIMAL EDITORIAL ('Plus Jakarta Sans' Light Headings, Borderless) */
+[data-style="minimal-editorial"] {
   --font-heading: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --heading-transform: uppercase;
+  --heading-weight: 300;
+  --heading-letter-spacing: 0.2em;
+  --card-radius: 0px;
+  --badge-radius: 0px;
+  --btn-radius: 2px;
+  --border-width: 0px;
+}
+
+[data-style="minimal-editorial"] h1,
+[data-style="minimal-editorial"] h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+}
+
+[data-style="minimal-editorial"] h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+
+[data-style="minimal-editorial"] .card-luxury,
+[data-style="minimal-editorial"] .card-surface,
+[data-style="minimal-editorial"] .service-card,
+[data-style="minimal-editorial"] .barber-card {
+  border: none !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  background-color: var(--bg-card) !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+[data-style="minimal-editorial"] button:not(#theme-demo-toolbar button),
+[data-style="minimal-editorial"] .open-booking-trigger,
+[data-style="minimal-editorial"] .btn-primary {
+  border-radius: 2px !important;
+  letter-spacing: 0.1em !important;
+}
+
+[data-style="minimal-editorial"] [class*="rounded-"],
+[data-style="minimal-editorial"] .theme-badge,
+[data-style="minimal-editorial"] .shop-badge {
+  border-radius: 0px !important;
+}
+
+/* 4. MODERN CURVED ('Inter' Headings, 24px Pill Cards & 9999px Buttons) */
+[data-style="modern-curved"], [data-style="compact-modern"] {
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --heading-transform: uppercase;
   --heading-weight: 800;
-  --heading-letter-spacing: 0.02em;
+  --heading-letter-spacing: -0.02em;
   --card-radius: 24px;
   --badge-radius: 9999px;
   --btn-radius: 9999px;
   --border-width: 1px;
-  --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
 }
 
-/* Style 4: Minimal Editorial (Borderless, Spaced Typography) */
-[data-style="minimal-editorial"] {
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
-  --heading-transform: uppercase;
-  --heading-weight: 700;
-  --heading-letter-spacing: 0.12em;
-  --card-radius: 0px;
-  --badge-radius: 0px;
-  --btn-radius: 0px;
-  --border-width: 0px;
-  --card-shadow: none;
+[data-style="modern-curved"] h1,
+[data-style="modern-curved"] h2,
+[data-style="modern-curved"] h3,
+[data-style="compact-modern"] h1,
+[data-style="compact-modern"] h2,
+[data-style="compact-modern"] h3 {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+}
+
+[data-style="modern-curved"] .card-luxury,
+[data-style="modern-curved"] .card-surface,
+[data-style="modern-curved"] .service-card,
+[data-style="modern-curved"] .barber-card,
+[data-style="compact-modern"] .card-luxury {
+  border-radius: 24px !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-style="modern-curved"] button:not(#theme-demo-toolbar button),
+[data-style="modern-curved"] .open-booking-trigger,
+[data-style="modern-curved"] .btn-primary,
+[data-style="compact-modern"] .open-booking-trigger {
+  border-radius: 9999px !important;
+}
+
+[data-style="modern-curved"] [class*="rounded-"],
+[data-style="modern-curved"] .theme-badge,
+[data-style="modern-curved"] .shop-badge {
+  border-radius: 9999px !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -248,41 +392,6 @@ section:nth-of-type(even) {
   background-color: var(--bg-secondary) !important;
 }
 
-/* Dynamic Cards */
-.card-luxury {
-  background-color: var(--bg-card) !important;
-  border: var(--border-width) solid var(--border-color) !important;
-  border-radius: var(--card-radius) !important;
-  box-shadow: var(--card-shadow, var(--card-shadow-default)) !important;
-  color: var(--text-primary) !important;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .card-luxury:hover {
-    background-color: var(--bg-card-hover) !important;
-    border-color: var(--accent) !important;
-    transform: translateY(-3px);
-  }
-}
-
-/* Style-specific Card Enhancements */
-[data-style="classic-speakeasy"] .card-luxury {
-  border-top: 2.5px solid var(--accent) !important;
-  border-bottom: 2.5px solid var(--accent) !important;
-}
-
-[data-style="modern-curved"] .card-luxury,
-[data-style="compact-modern"] .card-luxury {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-[data-style="minimal-editorial"] .card-luxury {
-  background-color: transparent !important;
-  border-bottom: 1.5px solid var(--border-color) !important;
-}
-
 /* Dynamic Buttons */
 .open-booking-trigger,
 .theme-btn-primary,
@@ -298,11 +407,6 @@ section:nth-of-type(even) {
 .theme-btn-primary:hover {
   filter: brightness(1.1);
   box-shadow: 0 6px 25px var(--accent-glow) !important;
-}
-
-/* Secondary Buttons & Pills */
-button, input, select, .theme-badge, .shop-badge {
-  border-radius: var(--btn-radius);
 }
 
 /* Dynamic Accent Text & Shimmer */
