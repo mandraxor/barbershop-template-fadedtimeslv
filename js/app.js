@@ -904,40 +904,40 @@ function initThemeToolbar(initialPalette, initialStyle) {
     </button>
 
     <!-- Floating Customization Panel -->
-    <div id="theme-demo-panel" class="hidden mt-2 p-5 rounded-2xl bg-dark-950/95 border border-amber-400/30 shadow-2xl backdrop-blur-2xl w-80 text-left text-xs space-y-4">
-      <div class="flex items-center justify-between pb-3 border-b border-gray-800">
+    <div id="theme-demo-panel" class="theme-customizer hidden mt-2 p-5 rounded-2xl border border-[#26262e] bg-[#111115] shadow-2xl backdrop-blur-2xl w-80 text-left text-xs space-y-4 text-white">
+      <div class="flex items-center justify-between pb-3 border-b border-[#26262e]">
         <div>
           <h4 class="font-bold text-white text-sm">Live Theme Customizer</h4>
-          <p class="text-[10px] text-gray-400 mt-0.5">Dual-Axis Preview Engine</p>
+          <p class="text-[10px] text-[#a1a1aa] mt-0.5">Dual-Axis Preview Engine</p>
         </div>
-        <button id="theme-demo-close-btn" class="w-6 h-6 rounded-lg bg-dark-800 text-gray-400 hover:text-white flex items-center justify-center text-xs">
+        <button id="theme-demo-close-btn" class="w-6 h-6 rounded-lg bg-[#1c1c24] border border-[#26262e] text-[#a1a1aa] hover:text-white flex items-center justify-center text-xs">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
       <!-- Dropdown 1: Color Palette -->
       <div>
-        <label class="block text-gray-300 font-bold uppercase tracking-wider text-[10px] mb-1.5 flex items-center">
-          <i class="fa-solid fa-droplet text-amber-400 mr-1.5"></i> Color Palette (6)
+        <label class="block text-[#d4d4d8] font-bold uppercase tracking-wider text-[10px] mb-1.5 flex items-center">
+          <i class="fa-solid fa-droplet text-amber-400 mr-1.5"></i> Color Palette (5)
         </label>
-        <select id="theme-palette-select" class="w-full px-3 py-2 rounded-xl bg-dark-850 border border-gray-700 text-white text-xs font-semibold focus:border-amber-400 focus:outline-none transition-colors">
-          ${palettes.map(p => `<option value="${p.id}" ${p.id === initialPalette ? 'selected' : ''}>${p.name}</option>`).join('')}
+        <select id="theme-palette-select" class="w-full px-3 py-2.5 rounded-xl bg-[#1c1c24] border border-[#33333f] text-white text-xs font-medium focus:border-amber-400 focus:outline-none transition-colors">
+          ${palettes.map(p => `<option value="${p.id}" class="bg-[#1c1c24] text-white" style="background-color: #1c1c24; color: #ffffff;" ${p.id === initialPalette ? 'selected' : ''}>${p.name}</option>`).join('')}
         </select>
       </div>
 
       <!-- Dropdown 2: Vibe & Style -->
       <div>
-        <label class="block text-gray-300 font-bold uppercase tracking-wider text-[10px] mb-1.5 flex items-center">
+        <label class="block text-[#d4d4d8] font-bold uppercase tracking-wider text-[10px] mb-1.5 flex items-center">
           <i class="fa-solid fa-wand-magic-sparkles text-amber-400 mr-1.5"></i> Vibe & Style (4)
         </label>
-        <select id="theme-style-select" class="w-full px-3 py-2 rounded-xl bg-dark-850 border border-gray-700 text-white text-xs font-semibold focus:border-amber-400 focus:outline-none transition-colors">
-          ${styles.map(s => `<option value="${s.id}" ${s.id === initialStyle ? 'selected' : ''}>${s.name}</option>`).join('')}
+        <select id="theme-style-select" class="w-full px-3 py-2.5 rounded-xl bg-[#1c1c24] border border-[#33333f] text-white text-xs font-medium focus:border-amber-400 focus:outline-none transition-colors">
+          ${styles.map(s => `<option value="${s.id}" class="bg-[#1c1c24] text-white" style="background-color: #1c1c24; color: #ffffff;" ${s.id === initialStyle ? 'selected' : ''}>${s.name}</option>`).join('')}
         </select>
       </div>
 
       <!-- Copy Config Action -->
-      <div class="pt-2 border-t border-gray-800 flex items-center justify-between">
-        <button id="theme-copy-config-btn" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-600 text-dark-950 font-black uppercase tracking-wider text-[11px] hover:brightness-110 active:scale-95 transition-all flex items-center justify-center">
+      <div class="pt-2 border-t border-[#26262e] flex items-center justify-between">
+        <button id="theme-copy-config-btn" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-600 text-neutral-950 font-black uppercase tracking-wider text-[11px] hover:brightness-110 active:scale-95 transition-all flex items-center justify-center shadow-md">
           <i class="fa-regular fa-copy mr-1.5"></i> Copy Config JSON
         </button>
       </div>
