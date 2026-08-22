@@ -4,298 +4,132 @@
 
 ---
 
-## Overview
+## 🎯 Overview & Trigger
 
-This document is the **authoritative specification** for generating any new barbershop variation from the master template. It was codified from the Crowd Pleezers build and encodes every error discovered and resolved during that process.
+Whenever the user or assistant initiates a shop rebrand matching:
+- `"Reface master template for [Shop Name]"`
+- `"Generate variation for [Shop Name]"`
+- `"Build site for [Shop Name]"`
+- `"Create a new barbershop site"`
 
-**Trigger phrase:** `"Reface master template for [New Shop Name]"` — executing this command initiates this full pipeline in order, with no steps skipped.
+**You must follow every phase in this document without skipping steps.**
 
 ---
 
-## PHASE 0 — Pre-Build: Config Authoring
+## PHASE 0 — Shop Data Extraction Protocol
 
-### 0.1 — Create the Shop Config File
+Before writing any configuration, extract and verify all shop details using the following checklist:
 
-Every variation begins with a single source-of-truth JSON file at:
+### 0.1 — Data Extraction Requirements
+1. **Business Identity**: Full Legal Name, Short/Display Name, 2-letter Monogram (e.g. `AB`), Tagline, Description.
+2. **Contact & Location**:
+   - Street Address, Suite/Unit, City, State, Zip Code, Neighborhood/Plaza.
+   - **Cross Streets**: Explicit intersection string (e.g. `"4th St & Gass Ave"` — never auto-append street suffixes).
+   - **Phone Verification**: Verify phone number from **at least two independent sources** (Booksy listing, Instagram bio, Google Maps listing, official website).
+3. **Digital Channels**:
+   - **Booking URL**: Verified Booksy profile URL with referral parameters if applicable.
+   - **Instagram Handle**: Raw handle (`@handle`) and full URL.
+4. **Master Craftsmen / Barber Roster**:
+   - Authentic names (e.g. `Marcus 'Vance' Cole`, not placeholder roles like "Lead Barber").
+   - Roles, specializations, years of experience, authentic ratings (e.g. `5.0 ★`).
+   - Clean portrait photo assignments with neutral, unbranded backgrounds.
+5. **Services Menu**:
+   - Full service title, realistic price in USD, duration in minutes, descriptive summary, FontAwesome icon.
+6. **Operating Hours**:
+   - Timezone string (e.g. `"America/Los_Angeles"`).
+   - Daily schedule with opening/closing hours and walk-in policy.
 
-```
-/configs/<shop-slug>.json
-```
+---
 
-The config **must** contain every field in the schema below. No field may be omitted. Hardcoding any of these values directly into HTML, JS, or CSS is **forbidden**.
+## PHASE 1 — Dual-Axis Theme & Layout Selection Guide
+
+Configure the visual identity using the `"design"` block in `src/config/shop-config.json`:
 
 ```json
-{
-  "shop": {
-    "name":           "Full Legal Business Name",
-    "shortName":      "Short Display Name",
-    "monogram":       "XX",
-    "badge":          "LV",
-    "tagline":        "Headline Line 1. Headline Line 2.",
-    "subTagline":     "One-line descriptor for nav/footer",
-    "description":    "SEO meta description paragraph",
-    "phone":          "(702) 000-0000",
-    "phoneRaw":       "7020000000",
-    "email":          "info@shopname.com",
-    "website":        "https://shopname.com",
-    "instagram":      "instagramhandle",
-    "instagramUrl":   "https://www.instagram.com/instagramhandle/",
-    "booksyUrl":      "https://booksy.com/en-us/...",
-    "promoCode":      "PROMO10",
-    "promoDiscount":  "10% OFF"
-  },
-  "location": {
-    "address":        "1234 W Example Blvd",
-    "city":           "Las Vegas",
-    "state":          "NV",
-    "zip":            "89101",
-    "plaza":          "Shopping Center Name",
-    "crossStreet":    "Example Blvd & Cross St",
-    "coordinates": {
-      "lat": 36.1234,
-      "lng": -115.1234
-    }
-  },
-  "hours": { "..." : "..." },
-  "team": {
-    "owners": [],
-    "barbers": []
-  },
-  "services": [],
-  "lookbook": [],
-  "reviews": []
+"design": {
+  "palette": "urban-midnight",
+  "style": "urban-brutalist",
+  "enableDemoToolbar": true
 }
 ```
 
-> **RULE 0.1.A — Zero Hardcoding:** Every business-specific string in `index.html`, `app.js`, CSS comments, `data-*` attributes, and calendar exports must resolve from this config. If a value does not exist in the config, add it to the config — do not hardcode it inline.
+### 🎨 Available Color Palettes (5)
+* **`clean-luxe-light`**: ☀️ **Full Light Mode**: Off-white background (`#f8f9fa`), crisp white cards (`#ffffff`), dark slate text (`#0f172a`), emerald green accents (`#059669`).
+* **`speakeasy-heritage`**: 🥃 **Warm Espresso & Copper**: Deep mahogany background (`#1a120b`), rich amber cards (`#261c14`), copper/amber accents (`#d97706`), cream text (`#fef3c7`).
+* **`urban-midnight`**: ⚡ **Stark Pitch Black**: Jet black background (`#000000`), slate cards (`#111115`), electric neon cyan accents (`#00f2fe`), cool white text.
+* **`emerald-sanctuary`**: 🌲 **Deep Forest**: Matte forest background (`#0a120e`), muted moss cards (`#13221a`), leaf green accents (`#10b981`), warm ivory text.
+* **`monochrome-editorial`**: 📰 **Slate & Platinum**: Dark slate background (`#0f172a`), slate cards (`#1e293b`), pure white accents (`#ffffff`).
 
-> **RULE 0.1.B — Phone Verification:** Always verify the phone number from at least **two independent sources** (Booksy listing, Instagram bio, Google Maps, or direct client confirmation) before writing it to the config. Never trust a single search result.
+### 📐 Available Vibe & Geometry Styles (4)
+* **`urban-brutalist`**: Sharp `0px` radius on all surfaces, thick `2px` high-contrast solid borders with block drop shadows, `'Oswald'` display typography.
+* **`classic-speakeasy`**: Refined `4px` radius, ornate top-and-bottom gold accent border lines, `'Cinzel'` roman serif typography.
+* **`minimal-editorial`**: Clean `0px` borderless cards with tonal background separation, lightweight `'Plus Jakarta Sans'` typography with wide tracking (`0.2em`).
+* **`modern-curved`**: Heavy `24px` pill cards, `9999px` capsule pill buttons, frosted glass blur (`backdrop-filter: blur(12px)`), `'Inter'` typography.
 
 ---
 
-## PHASE 1 — Generation: Running the Compiler
+## PHASE 2 — Zero Hardcoding & Schema Mirroring
 
-### 1.1 — Execute the Generator
+1. **Strict Centralization**:
+   - Write all shop details into `/configs/<shop-slug>.json` and mirror to `src/config/shop-config.json`.
+   - Never write business strings directly into HTML, JSX, CSS, or JS files.
+2. **Dual-Path Property Tolerance**:
+   - Support both `business` and `shop` keys at root.
+   - Support both `barbers` and `team` structures.
+3. **Programmatic Maps URLs**:
+   ```js
+   const mapsAddr = [cfg.location.address, cfg.location.city, cfg.location.state, cfg.location.zip]
+     .join(' ').replace(/ /g, '+');
+   ```
+4. **HTML-Aware Monogram Replacement**:
+   - Old monogram is replaced using `>FT<` or `.shop-monogram` hooks to avoid CSS false positives.
+
+---
+
+## PHASE 3 — Variation Compilation Pipeline
+
+Run the compiler script from the project root:
 
 ```bash
-node scripts/generate-variation.js \
-  --config configs/<shop-slug>.json \
-  --out ../<output-dir-name>
+# Compile variation into sibling repository
+node scripts/generate-variation.js --config configs/<shop-slug>.json --out ../barbershop-template-<slug>
 ```
 
-### 1.2 — Generator Must Replace ALL of the Following (in Order)
-
-Replacements **must** run in this exact order to avoid partial-match collisions where shorter strings clobber longer ones:
-
-#### Step 1 — Full URL-encoded Address Strings (longest first)
-- `3868+West+Sahara+Avenue+Las+Vegas+NV+89102` → encoded new address
-- `3868+W+Sahara+Ave+Las+Vegas+NV+89102` → encoded new address
-- Any partial match where zip changed but street did not (e.g. `3868+W+Sahara+Ave+..+<new-zip>`)
-- Google Maps embed iframe `src` URL
-
-#### Step 2 — Plain Text Multi-Word Address Strings
-- `3868 West Sahara Avenue` → `cfg.location.address`
-- `3868 W Sahara Ave` → `cfg.location.address`
-- `Valley Oaks Plaza • 3868 W Sahara Ave • Las Vegas, NV` → composed new string
-- `Las Vegas, NV 89102` → `city, state zip`
-
-#### Step 3 — Phone Numbers
-- `(702) 272-2457` → `cfg.shop.phone`
-- `7022722457` → `cfg.shop.phoneRaw`
-
-#### Step 4 — Shop Name (longest form first)
-- `Faded Times Barbershop` → `cfg.shop.name`
-- `Faded Times Vegas` → `cfg.shop.name`
-- `Faded Times` → `cfg.shop.shortName`
-- `FADED TIMES` → `cfg.shop.shortName.toUpperCase()`
-
-#### Step 5 — Instagram Handle & Hashtag Forms
-- `fadedtimeslv` (in text, `href`, `src`) → `cfg.shop.instagram`
-- `@fadedtimeslv` → `@cfg.shop.instagram`
-- `#FadedTimesLV` (inside `data-caption` attributes) → `#cfg.shop.instagram + 'LV'`
-
-#### Step 6 — Monogram
-- `>FT<` (HTML pattern — matches only tag content) → `>${cfg.shop.monogram}<`
-
-#### Step 7 — Individual Location Components
-- `Valley Oaks Plaza` → `cfg.location.plaza`
-- `NV 89102` → `cfg.location.state + ' ' + cfg.location.zip`
-- `89102` (bare zip) → `cfg.location.zip`
-- `Sahara & Valley View` → `cfg.location.crossStreet`
-- `Sahara Ave & Valley View Blvd` → `cfg.location.crossStreet`
-
-#### Step 8 — Coordinates (JSON-LD Structured Data)
-- `latitude": 36.1444` → `latitude": cfg.location.coordinates.lat`
-- `longitude": -115.1912` → `longitude": cfg.location.coordinates.lng`
-- `lat=36.1444&lng=-115.1912` → encoded coord params
-
-#### Step 9 — Booksy URL
-- All `booksy.com/en-us/[any-path]` URLs → `cfg.shop.booksyUrl`
-
-#### Step 10 — Description Text Blocks & Captions
-- Cross-street references in FAQ answers → `cfg.location.crossStreet`
-- Lookbook caption neighborhood name → `cfg.location.address` street portion
-- `data-caption` hashtags → `#${cfg.shop.instagram}LV`
-- Location description prose blocks
-
-#### Step 11 — JSON-LD Structured Data Fields
-- `"streetAddress": "3868 W Sahara Ave"` → new address
-- `"postalCode": "89102"` → `cfg.location.zip`
-- `"addressLocality": "Las Vegas, NV"` → `city, state`
-
-#### Step 12 — CSS File Header Comment
-- `/* FADED TIMES BARBERSHOP (@fadedtimeslv) */` → new shop name and handle
-
-#### Step 13 — JavaScript `app.js` Fallback Config Block
-- `name: "Faded Times Barbershop"` → `cfg.shop.name`
-- `instagram: "fadedtimeslv"` → `cfg.shop.instagram`
-
-### 1.3 — JavaScript Business Logic Must Be Config-Driven
-
-The following `app.js` functions **must** read exclusively from `window.SHOP_CONFIG` — never hardcoded:
-
-| Function | Config Fields Used |
-|---|---|
-| Booking confirmation card | `location.address`, `location.city`, `location.state`, `location.zip` |
-| `setupCalendarDownloads()` — Google Calendar | `shop.name`, `location.*`, `shop.phone` |
-| `setupCalendarDownloads()` — ICS `PRODID` | `shop.name` |
-| `setupCalendarDownloads()` — ICS `SUMMARY` | `shop.name` |
-| `setupCalendarDownloads()` — ICS `LOCATION` | `location.*` |
-| Lightbox fallback caption | `shop.name`, `shop.instagram` |
-| Lightbox `@handle` attribution | `shop.instagram` |
-| Shop status bar | `hours.*` |
+The compiler will:
+1. Deep-merge client configuration into template hooks.
+2. Generate valid, clean HTML with active `data-palette` and `data-style` attributes.
+3. Replace all business strings in the exact longest-first order.
+4. Copy photography assets and public directories.
 
 ---
 
-## PHASE 2 — Pre-Flight Verification (Required Before Any Commit)
+## PHASE 4 — Automated Pre-Flight Leak Audit
 
-### 2.1 — Automated String Scan (Blocking)
+Before committing or deploying any variation, execute the pre-flight audit:
 
-Run this sweep. **Zero hits required** to proceed (exception: `<meta name="keywords">` SEO tag may retain old terms for search discoverability):
+```bash
+# Run audit on master template
+npm run audit
 
-```powershell
-Select-String `
-  -Path 'index.html','js/app.js','css/styles.css' `
-  -Pattern 'Faded Times|fadedtimeslv|FadedTimesLV|Sahara Ave|Valley View Blvd|272-2457|7022722457|89102|Valley Oaks|Blvd Blvd|>FT<' `
-  | Select-Object Filename, LineNumber, Line
+# Run audit on compiled variation directory
+node scripts/preflight-audit.js --dir ../barbershop-template-<slug>
 ```
 
-### 2.2 — Visual Checklist (Required Before Client Delivery)
-
-Open the generated page at `http://localhost:<port>` and verify each:
-
-| Location | Item to Verify |
-|---|---|
-| Top announcement bar | ✅ Correct phone number |
-| Top announcement bar | ✅ Correct `@instagram` handle |
-| Nav logo | ✅ Correct monogram (2-letter, not `FT`) |
-| Nav logo | ✅ Correct shop name |
-| Nav call button | ✅ Correct phone number |
-| Mobile hamburger drawer | ✅ Correct monogram |
-| Mobile drawer | ✅ Correct shop name and address |
-| Mobile drawer directions link | ✅ Correct Maps URL (correct street, not Sahara) |
-| Hero headline | ✅ New shop tagline, not master template copy |
-| Hero phone link | ✅ Correct phone number |
-| Services grid | ✅ New shop's menu, prices, durations |
-| Lookbook section | ✅ `@newhandle` shown, not `@fadedtimeslv` |
-| Lookbook captions (click photos) | ✅ `#NewHashtag`, no `#FadedTimesLV` |
-| Barbers section | ✅ Correct names, roles, experience labels |
-| Booking modal header | ✅ Correct monogram (not `FT`) |
-| Booking modal subtitle | ✅ Correct address |
-| Booking barber grid (step 1) | ✅ Correct barber names from config |
-| Booking confirmation (complete a test booking) | ✅ Correct address in confirmation card |
-| Google Calendar link | ✅ Correct shop name, correct address in event |
-| ICS download | ✅ Open in calendar app — correct `SUMMARY` and `LOCATION` |
-| Hours & Location card | ✅ Correct address, no `Blvd Blvd` typo |
-| Hours & Location card | ✅ Correct cross streets |
-| Google Maps embed | ✅ Centers on correct location |
-| All "Get Directions" / "Open Navigation" links | ✅ Correct Maps URL |
-| FAQ #3 answer | ✅ Correct address, correct cross streets, not Sahara Ave |
-| Footer monogram | ✅ Correct 2-letter monogram (not `FT`) |
-| Footer shop name | ✅ Correct |
-| Footer phone | ✅ Correct |
-| Footer address | ✅ Correct |
-| Mobile bottom bar phone link | ✅ Correct phone number |
-| Mobile bottom bar map link | ✅ Correct Maps URL |
+### Pre-Flight Audit Rules:
+* **Competitor Leak Check**: Fails if it detects `"Faded Times"`, `"Crowd Pleezers"`, `"Sahara"`, `"Charleston"`, `"Valley View"`, `"Valley Oaks"`, `>FT<`, `>CP<`.
+* **Placeholder Leak Check**: Fails if it detects `"(555)"`, `"555-0000"`, `"5550000000"`, `"Metropolis"`, `"Lead Barber"`, `"Fade Specialist"`, `"Barbershop Barbershop"`, `"Blvd Blvd"`.
+* **Legacy Asset Check**: Fails if it detects old competitor photos (e.g. `crew-lasvegas`).
+* **Phone Verification Check**: Fails if any hardcoded phone numbers don't match `shop-config.json`'s `business.phone`.
 
 ---
 
-## PHASE 3 — Commit & Publish
+## PHASE 5 — Git Deployment Checklist
 
-Only after Phase 2 passes with **zero automated blockers** and **all visual items checked**:
-
-```powershell
-# Commit to variation repo
+1. Pre-flight audit passes with `✅ Pre-flight audit passed: Zero competitor leaks or placeholder artifacts detected.`
+2. Verify interactive preview on `localhost:3006`.
+3. Commit and push:
+```bash
 git add -A
-git commit -m "feat: [Shop Name] — initial variation build from master template"
+git commit -m "feat: [Shop Name] — compiled variation from master template"
 git push origin main
 ```
-
-For a new client repository:
-```powershell
-# Create repo first at github.com/mandraxor/barbershop-template-<slug>
-git remote add origin https://github.com/mandraxor/barbershop-template-<slug>.git
-git branch -M main
-git push -u origin main
-```
-
----
-
-## PHASE 4 — Post-Build Standards
-
-### Monogram Generation Rule
-
-`monogram` must be **explicitly set** in the config. The generator derives it as a fallback:
-
-```js
-const monogram = cfg.shop.monogram ||
-  (cfg.shop.shortName || cfg.shop.name)
-    .split(' ')
-    .filter(w => /^[A-Z]/.test(w))
-    .map(w => w[0])
-    .join('')
-    .substring(0, 2)
-    .toUpperCase();
-```
-
-### Maps URL Construction Rule
-
-All Maps URLs must be built programmatically — never typed as encoded strings:
-
-```js
-const mapsAddr = [
-  cfg.location.address,
-  cfg.location.city,
-  cfg.location.state,
-  cfg.location.zip
-].join(' ').replace(/ /g, '+');
-// Result: "4960+W+Charleston+Blvd+Las+Vegas+NV+89146"
-```
-
-### Cross-Street Rule
-
-**Never** compute cross streets from the address field — always store explicitly in `cfg.location.crossStreet`. This field is used in:
-- FAQ location answer
-- Location card subtitle
-- Mobile drawer directions button label
-
----
-
-## KNOWN FAILURE PATTERNS (Crowd Pleezers Build — Aug 2026)
-
-| Bug Observed | Root Cause | Prevention |
-|---|---|---|
-| Nav/drawer/footer/modal monogram still `FT` | Generator matched `FT` too narrowly; missed footer and booking modal | Match `>FT<` HTML pattern across ALL occurrences |
-| Maps links pointed to old street (zip changed, street didn't) | Replacement ran zip before full address+zip combo | Always replace full `street+city+state+zip` string first |
-| Map embed iframe still showed old location | Separate URL format from `?q=` links not covered | Explicitly replace both Maps embed and link URL patterns |
-| `Blvd Blvd` typo in location card | Generator appended "Blvd" to `crossStreet` field that already contained it | Store `crossStreet` as complete phrase; never append units |
-| FAQ cross-streets not updated | FAQ answer text not covered by generator replacement patterns | Include FAQ-specific patterns in replacement list |
-| `data-caption` hashtag `#FadedTimesLV` visible in lightbox | Replacements only covered rendered text, not `data-*` attributes | Explicitly scan and replace `data-caption` content |
-| Booking confirmation showed old address and phone | `app.js` calendar/confirmation functions were never refactored | All business strings in `app.js` must read from `window.SHOP_CONFIG` |
-| ICS/Google Calendar said "Faded Times Barbershop" | `setupCalendarDownloads()` was not config-driven | Refactor function to use `SHOP_CONFIG` before any client delivery |
-| CSS comment header showed old shop name | CSS file not included in generator's replacement scope | Add CSS comment header to replacement list |
-| Wrong phone number (previous listing, not verified) | Single source of truth; first search result used uncritically | Always cross-verify phone from Booksy + Instagram bio + Google Maps |
-
----
-
-*This specification is version-controlled in the master template repository at `/REBRAND_WORKFLOW.md`. Update it whenever a new failure pattern is discovered or the pipeline is extended.*
