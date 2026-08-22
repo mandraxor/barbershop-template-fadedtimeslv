@@ -1,8 +1,8 @@
 {
   "theme": "dark-gold",
   "design": {
-    "palette": "gold-noir",
-    "style": "urban-street",
+    "palette": "urban-midnight",
+    "style": "urban-brutalist",
     "enableDemoToolbar": true
   },
   "business": {

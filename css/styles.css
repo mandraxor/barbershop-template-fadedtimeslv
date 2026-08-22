@@ -1,14 +1,120 @@
 /* ==========================================================================
    APEX BARBER LOUNGE (@apexbarberlounge) - MASTER TEMPLATE STYLES
    Las Vegas, NV • 740 S 4th St
-   Dual-Axis Theme & Layout Engine
+   Dual-Axis High-Impact Theme & Layout Engine
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. COLOR PALETTES (6 PALETTES)
+   1. DRAMATIC PALETTES (5 HIGH-CONTRAST PALETTES)
    -------------------------------------------------------------------------- */
 
-:root, [data-palette="gold-noir"] {
+/* Palette 1: Clean Luxe Light (Full Light Mode) */
+[data-palette="clean-luxe-light"] {
+  --bg-main: #f8f9fa;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --accent: #059669;
+  --accent-light: #10b981;
+  --accent-dark: #047857;
+  --accent-glow: rgba(5, 150, 105, 0.25);
+  --accent-gradient: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-dim: #64748b;
+  --border-color: rgba(15, 23, 42, 0.12);
+  --border-subtle: rgba(15, 23, 42, 0.06);
+  --btn-text: #ffffff;
+  --nav-bg: rgba(248, 249, 250, 0.94);
+  --hero-overlay: linear-gradient(180deg, rgba(248, 249, 250, 0.82) 0%, rgba(248, 249, 250, 0.95) 65%, #f8f9fa 100%);
+}
+
+/* Palette 2: Speakeasy Heritage (Warm Mahogany & Copper) */
+[data-palette="speakeasy-heritage"] {
+  --bg-main: #1a120b;
+  --bg-secondary: #221810;
+  --bg-card: #261c14;
+  --bg-card-hover: #33251b;
+  --accent: #d97706;
+  --accent-light: #f59e0b;
+  --accent-dark: #92400e;
+  --accent-glow: rgba(217, 119, 6, 0.35);
+  --accent-gradient: linear-gradient(135deg, #fcd34d 0%, #d97706 50%, #92400e 100%);
+  --text-primary: #fef3c7;
+  --text-secondary: #d6d3d1;
+  --text-dim: #a8a29e;
+  --border-color: rgba(217, 119, 6, 0.32);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --btn-text: #1c0f06;
+  --nav-bg: rgba(26, 18, 11, 0.94);
+  --hero-overlay: linear-gradient(180deg, rgba(26, 18, 11, 0.78) 0%, rgba(26, 18, 11, 0.92) 65%, #1a120b 100%);
+}
+
+/* Palette 3: Urban Midnight (Pitch Black & Electric Cyan - Default) */
+:root, [data-palette="urban-midnight"] {
+  --bg-main: #000000;
+  --bg-secondary: #08080c;
+  --bg-card: #111115;
+  --bg-card-hover: #1a1a22;
+  --accent: #00f2fe;
+  --accent-light: #38bdf8;
+  --accent-dark: #0284c7;
+  --accent-glow: rgba(0, 242, 254, 0.4);
+  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #00f2fe 50%, #0284c7 100%);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-dim: #64748b;
+  --border-color: rgba(0, 242, 254, 0.35);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --btn-text: #000000;
+  --nav-bg: rgba(0, 0, 0, 0.94);
+  --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.92) 65%, #000000 100%);
+}
+
+/* Palette 4: Emerald Sanctuary (Deep Forest & Vibrant Leaf) */
+[data-palette="emerald-sanctuary"] {
+  --bg-main: #0a120e;
+  --bg-secondary: #0f1a14;
+  --bg-card: #13221a;
+  --bg-card-hover: #1a2e24;
+  --accent: #10b981;
+  --accent-light: #34d399;
+  --accent-dark: #047857;
+  --accent-glow: rgba(16, 185, 129, 0.38);
+  --accent-gradient: linear-gradient(135deg, #34d399 0%, #10b981 50%, #047857 100%);
+  --text-primary: #f3f4f6;
+  --text-secondary: #a7f3d0;
+  --text-dim: #6ee7b7;
+  --border-color: rgba(16, 185, 129, 0.32);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --btn-text: #052e16;
+  --nav-bg: rgba(10, 18, 14, 0.94);
+  --hero-overlay: linear-gradient(180deg, rgba(10, 18, 14, 0.78) 0%, rgba(10, 18, 14, 0.92) 65%, #0a120e 100%);
+}
+
+/* Palette 5: Monochrome Editorial (Stark Slate & Platinum White) */
+[data-palette="monochrome-editorial"] {
+  --bg-main: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --bg-card-hover: #334155;
+  --accent: #ffffff;
+  --accent-light: #f8fafc;
+  --accent-dark: #cbd5e1;
+  --accent-glow: rgba(255, 255, 255, 0.3);
+  --accent-gradient: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #cbd5e1 100%);
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-dim: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.32);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --btn-text: #0f172a;
+  --nav-bg: rgba(15, 23, 42, 0.94);
+  --hero-overlay: linear-gradient(180deg, rgba(15, 23, 42, 0.78) 0%, rgba(15, 23, 42, 0.92) 65%, #0f172a 100%);
+}
+
+/* Legacy Alias for backward compatibility */
+[data-palette="gold-noir"] {
   --bg-main: #0b0b0d;
   --bg-secondary: #12151c;
   --bg-card: #141418;
@@ -24,142 +130,76 @@
   --border-color: rgba(212, 175, 55, 0.25);
   --border-subtle: rgba(255, 255, 255, 0.08);
   --btn-text: #07080b;
-}
-
-[data-palette="emerald-botanical"] {
-  --bg-main: #0c1210;
-  --bg-secondary: #121a17;
-  --bg-card: #16221e;
-  --bg-card-hover: #1d2c27;
-  --accent: #10b981;
-  --accent-light: #6ee7b7;
-  --accent-dark: #047857;
-  --accent-glow: rgba(16, 185, 129, 0.35);
-  --accent-gradient: linear-gradient(135deg, #6ee7b7 0%, #10b981 50%, #047857 100%);
-  --text-primary: #f3f4f6;
-  --text-secondary: #a7f3d0;
-  --text-dim: #6ee7b7;
-  --border-color: rgba(16, 185, 129, 0.28);
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --btn-text: #052e16;
-}
-
-[data-palette="burgundy-copper"] {
-  --bg-main: #140a0a;
-  --bg-secondary: #1a0f0f;
-  --bg-card: #241414;
-  --bg-card-hover: #311c1c;
-  --accent: #ea580c;
-  --accent-light: #fb923c;
-  --accent-dark: #b91c1c;
-  --accent-glow: rgba(234, 88, 12, 0.35);
-  --accent-gradient: linear-gradient(135deg, #fb923c 0%, #ea580c 50%, #b91c1c 100%);
-  --text-primary: #fef3c7;
-  --text-secondary: #fed7aa;
-  --text-dim: #fca5a5;
-  --border-color: rgba(234, 88, 12, 0.3);
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --btn-text: #1c0505;
-}
-
-[data-palette="midnight-cyan"] {
-  --bg-main: #06090e;
-  --bg-secondary: #0a0f18;
-  --bg-card: #0f172a;
-  --bg-card-hover: #1e293b;
-  --accent: #06b6d4;
-  --accent-light: #67e8f9;
-  --accent-dark: #0891b2;
-  --accent-glow: rgba(6, 182, 212, 0.35);
-  --accent-gradient: linear-gradient(135deg, #67e8f9 0%, #06b6d4 50%, #0891b2 100%);
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-dim: #64748b;
-  --border-color: rgba(6, 182, 212, 0.28);
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --btn-text: #082f49;
-}
-
-[data-palette="saddle-leather"] {
-  --bg-main: #140f0c;
-  --bg-secondary: #1a1512;
-  --bg-card: #261f1a;
-  --bg-card-hover: #332a24;
-  --accent: #d97706;
-  --accent-light: #fcd34d;
-  --accent-dark: #92400e;
-  --accent-glow: rgba(217, 119, 6, 0.35);
-  --accent-gradient: linear-gradient(135deg, #fcd34d 0%, #d97706 50%, #92400e 100%);
-  --text-primary: #fafaf9;
-  --text-secondary: #d6d3d1;
-  --text-dim: #a8a29e;
-  --border-color: rgba(217, 119, 6, 0.28);
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --btn-text: #1c0f06;
-}
-
-[data-palette="platinum-slate"] {
-  --bg-main: #0b0f17;
-  --bg-secondary: #111827;
-  --bg-card: #1e293b;
-  --bg-card-hover: #334155;
-  --accent: #e2e8f0;
-  --accent-light: #ffffff;
-  --accent-dark: #94a3b8;
-  --accent-glow: rgba(226, 232, 240, 0.35);
-  --accent-gradient: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%);
-  --text-primary: #ffffff;
-  --text-secondary: #cbd5e1;
-  --text-dim: #94a3b8;
-  --border-color: rgba(226, 232, 240, 0.25);
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --btn-text: #0f172a;
+  --nav-bg: rgba(11, 11, 13, 0.94);
+  --hero-overlay: linear-gradient(180deg, rgba(11, 11, 13, 0.78) 0%, rgba(11, 11, 13, 0.92) 65%, #0b0b0d 100%);
 }
 
 /* --------------------------------------------------------------------------
-   2. VIBE & LAYOUT STYLES (4 STYLES)
+   2. DRAMATIC LAYOUT STYLES (4 DISTINCT GEOMETRIES & VIBES)
    -------------------------------------------------------------------------- */
 
-:root, [data-style="urban-street"] {
+/* Style 1: Urban Brutalist (Sharp 0px, Heavy 2px Borders, Block Accents) */
+:root, [data-style="urban-brutalist"], [data-style="urban-street"] {
   --font-heading: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --heading-transform: uppercase;
   --heading-weight: 900;
   --heading-letter-spacing: -0.02em;
-  --card-radius: 12px;
-  --badge-radius: 4px;
-  --btn-radius: 10px;
-  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-  --border-width: 1.5px;
+  --card-radius: 0px;
+  --badge-radius: 0px;
+  --btn-radius: 0px;
+  --border-width: 2px;
+  --card-shadow: 6px 6px 0px 0px var(--accent);
 }
 
+[data-style="urban-brutalist"] .card-luxury,
+[data-style="urban-street"] .card-luxury {
+  border-radius: 0px !important;
+  border: 2px solid var(--border-color) !important;
+  box-shadow: 5px 5px 0px 0px var(--accent-glow) !important;
+}
+
+[data-style="urban-brutalist"] .open-booking-trigger,
+[data-style="urban-brutalist"] button,
+[data-style="urban-brutalist"] input,
+[data-style="urban-brutalist"] select,
+[data-style="urban-brutalist"] .shop-badge,
+[data-style="urban-brutalist"] [class*="rounded-"] {
+  border-radius: 0px !important;
+}
+
+/* Style 2: Classic Speakeasy (4px Radius, Top/Bottom Ornate Gold Lines, Serif) */
 [data-style="classic-speakeasy"] {
   --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --heading-transform: uppercase;
   --heading-weight: 800;
-  --heading-letter-spacing: 0.06em;
-  --card-radius: 16px;
-  --badge-radius: 8px;
-  --btn-radius: 12px;
-  --card-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.65), 0 0 15px var(--accent-glow);
-  --border-width: 1px;
-}
-
-[data-style="minimal-editorial"] {
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
-  --heading-transform: none;
-  --heading-weight: 700;
-  --heading-letter-spacing: -0.01em;
-  --card-radius: 6px;
-  --badge-radius: 2px;
+  --heading-letter-spacing: 0.08em;
+  --card-radius: 4px;
+  --badge-radius: 4px;
   --btn-radius: 4px;
-  --card-shadow: none;
   --border-width: 1px;
+  --card-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.65), 0 0 15px var(--accent-glow);
 }
 
-[data-style="compact-modern"] {
+[data-style="classic-speakeasy"] .card-luxury {
+  border-radius: 4px !important;
+  border: 1px solid var(--border-color) !important;
+  border-top: 2.5px solid var(--accent) !important;
+  border-bottom: 2.5px solid var(--accent) !important;
+}
+
+[data-style="classic-speakeasy"] .open-booking-trigger,
+[data-style="classic-speakeasy"] button,
+[data-style="classic-speakeasy"] input,
+[data-style="classic-speakeasy"] select,
+[data-style="classic-speakeasy"] .shop-badge,
+[data-style="classic-speakeasy"] [class*="rounded-"] {
+  border-radius: 4px !important;
+}
+
+/* Style 3: Modern Curved (Heavy 24px Pill Shapes, Frosted Glass Blur) */
+[data-style="modern-curved"], [data-style="compact-modern"] {
   --font-heading: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --heading-transform: uppercase;
@@ -168,12 +208,61 @@
   --card-radius: 24px;
   --badge-radius: 9999px;
   --btn-radius: 9999px;
-  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
   --border-width: 1px;
+  --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+[data-style="modern-curved"] .card-luxury,
+[data-style="compact-modern"] .card-luxury {
+  border-radius: 24px !important;
+  border: 1px solid var(--border-color) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-style="modern-curved"] .open-booking-trigger,
+[data-style="modern-curved"] button,
+[data-style="modern-curved"] input,
+[data-style="modern-curved"] select,
+[data-style="modern-curved"] .shop-badge,
+[data-style="modern-curved"] [class*="rounded-"] {
+  border-radius: 9999px !important;
+}
+
+/* Style 4: Minimal Editorial (Borderless Cards, Spaced Serif Typography) */
+[data-style="minimal-editorial"] {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --heading-transform: uppercase;
+  --heading-weight: 700;
+  --heading-letter-spacing: 0.12em;
+  --card-radius: 0px;
+  --badge-radius: 0px;
+  --btn-radius: 0px;
+  --border-width: 0px;
+  --card-shadow: none;
+}
+
+[data-style="minimal-editorial"] .card-luxury {
+  border-radius: 0px !important;
+  border: none !important;
+  border-bottom: 1.5px solid var(--border-color) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+[data-style="minimal-editorial"] .open-booking-trigger,
+[data-style="minimal-editorial"] button,
+[data-style="minimal-editorial"] input,
+[data-style="minimal-editorial"] select,
+[data-style="minimal-editorial"] .shop-badge,
+[data-style="minimal-editorial"] [class*="rounded-"] {
+  border-radius: 0px !important;
 }
 
 /* --------------------------------------------------------------------------
-   3. CORE ELEMENT & UTILITY MAPPINGS
+   3. GLOBAL SURFACE & TYPOGRAPHY MAPPINGS
    -------------------------------------------------------------------------- */
 
 html {
@@ -190,47 +279,62 @@ body {
   position: relative;
   min-height: 100vh;
   background-color: var(--bg-main);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, .font-serif {
+h1, h2, h3, h4, .font-serif {
   font-family: var(--font-heading) !important;
   text-transform: var(--heading-transform);
   letter-spacing: var(--heading-letter-spacing);
 }
 
-/* Luxury Card */
-.card-luxury {
-  background-color: var(--bg-card);
-  border: var(--border-width) solid var(--border-color);
-  border-radius: var(--card-radius);
-  box-shadow: var(--card-shadow);
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+/* Transform all dark section wrappers to use theme CSS variables */
+.bg-dark-900,
+.bg-dark-950,
+section {
+  background-color: var(--bg-main) !important;
+  transition: background-color 0.3s ease;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .card-luxury:hover {
-    background-color: var(--bg-card-hover);
-    border-color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: 0 14px 32px -8px rgba(0, 0, 0, 0.7), 0 0 20px var(--accent-glow);
-  }
+section:nth-of-type(even) {
+  background-color: var(--bg-secondary) !important;
 }
 
-/* Dynamic Accent Text Gradient */
-.text-gold-gradient, .text-gold-shimmer {
+/* Clean text remapping */
+.text-white,
+.text-gray-100 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-200,
+.text-gray-300,
+.text-gray-400 {
+  color: var(--text-secondary) !important;
+}
+
+.text-gray-500,
+.text-gray-600 {
+  color: var(--text-dim) !important;
+}
+
+/* Dynamic Accent Text & Badges */
+.text-amber-400,
+.text-amber-300,
+.text-gold-gradient,
+.text-gold-shimmer {
+  color: var(--accent) !important;
   background: var(--accent-gradient);
-  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Dynamic Button & Border Accents */
 .open-booking-trigger,
+.bg-amber-400,
 .bg-gradient-to-r.from-amber-400.to-amber-600,
 .bg-gradient-to-r.from-amber-400.via-amber-500.to-amber-600 {
   background: var(--accent-gradient) !important;
   color: var(--btn-text) !important;
-  border-radius: var(--btn-radius) !important;
   box-shadow: 0 4px 20px var(--accent-glow) !important;
 }
 
@@ -242,48 +346,27 @@ h1, h2, h3, .font-serif {
 .border-amber-400\/40,
 .border-amber-400\/30,
 .border-amber-400\/35,
-.border-amber-400\/20 {
+.border-amber-400\/20,
+.border-gray-800,
+.border-gray-700 {
   border-color: var(--border-color) !important;
 }
 
-.text-amber-400,
-.text-amber-300 {
-  color: var(--accent) !important;
-}
-
-.bg-amber-400 {
-  background-color: var(--accent) !important;
-  color: var(--btn-text) !important;
-}
-
-.bg-amber-400\/10,
-.bg-amber-400\/20 {
-  background-color: var(--accent-glow) !important;
-}
-
-/* Dynamic Badges */
-.shop-badge,
-.today-badge,
-[class*="rounded-full"][class*="bg-amber-"] {
-  border-radius: var(--badge-radius) !important;
-}
-
-/* Glassmorphic Navbar */
+/* Glassmorphic Navbar & Hero Overlays */
 .glass-nav {
-  background: rgba(11, 11, 13, 0.92);
+  background: var(--nav-bg) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color) !important;
 }
 
-/* Hero Overlay Gradient */
 .hero-gradient-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(11, 11, 13, 0.75) 0%,
-    rgba(11, 11, 13, 0.92) 65%,
-    var(--bg-main) 100%
-  );
+  background: var(--hero-overlay) !important;
+}
+
+footer {
+  background-color: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border-color) !important;
 }
 
 /* Pulsing Status Dot */
@@ -312,13 +395,4 @@ h1, h2, h3, .font-serif {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
-}
-
-/* Floating Demo Toolbar Styles */
-#theme-demo-toolbar {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-#theme-demo-panel {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }

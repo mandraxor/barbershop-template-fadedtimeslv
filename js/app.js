@@ -878,19 +878,18 @@ function initThemeToolbar(initialPalette, initialStyle) {
   if (document.getElementById('theme-demo-toolbar')) return;
 
   const palettes = [
-    { id: 'gold-noir', name: 'Gold Noir (Dark / Gold)' },
-    { id: 'emerald-botanical', name: 'Emerald Botanical (Charcoal / Green)' },
-    { id: 'burgundy-copper', name: 'Burgundy Copper (Mahogany / Copper)' },
-    { id: 'midnight-cyan', name: 'Midnight Cyan (Jet Black / Cyan)' },
-    { id: 'saddle-leather', name: 'Saddle Leather (Espresso / Amber)' },
-    { id: 'platinum-slate', name: 'Platinum Slate (Deep Slate / Silver)' }
+    { id: 'clean-luxe-light', name: '☀️ Clean Luxe Light (Full Light Mode)' },
+    { id: 'speakeasy-heritage', name: '🥃 Speakeasy Heritage (Mahogany & Copper)' },
+    { id: 'urban-midnight', name: '⚡ Urban Midnight (Pitch Black & Electric Cyan)' },
+    { id: 'emerald-sanctuary', name: '🌲 Emerald Sanctuary (Forest & Leaf Green)' },
+    { id: 'monochrome-editorial', name: '📰 Monochrome Editorial (Slate & Platinum)' }
   ];
 
   const styles = [
-    { id: 'urban-street', name: 'Urban Street (Bold / High-Contrast)' },
-    { id: 'classic-speakeasy', name: 'Classic Speakeasy (Serif / Vintage)' },
-    { id: 'minimal-editorial', name: 'Minimal Editorial (Clean / Subtle)' },
-    { id: 'compact-modern', name: 'Compact Modern (Pills / Rounded 16-24px)' }
+    { id: 'urban-brutalist', name: '⬛ Urban Brutalist (Sharp 0px / 2px Heavy Borders)' },
+    { id: 'classic-speakeasy', name: '🏛️ Classic Speakeasy (4px / Serif / Top & Bottom Gold)' },
+    { id: 'modern-curved', name: '💊 Modern Curved (24px Pill / Frosted Glass)' },
+    { id: 'minimal-editorial', name: '📐 Minimal Editorial (Borderless / Spaced Typography)' }
   ];
 
   const toolbar = document.createElement('div');
